@@ -1,0 +1,347 @@
+
+
+
+{% if qq %}
+
+    <table style="margin-top:1%;margin-bottom:02%" class="table table-bordered " >
+        <tr>
+            <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.9em;">Edit all entries <span style='color:blue'> {{exam}} </span>   <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session
+            </td>
+        </tr>
+
+
+    </table>  
+
+
+
+
+    {% if others %}
+    <div style="text-align:center">Touch the paperclip to add options</div>
+
+
+
+        {% for h in qq %}
+
+
+                    <table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+                        <div style="margin-top:02%;margin-bottom:-3.1%">Q {{forloop.counter}}.</div>
+                        <tr>
+
+                            <td >
+                                <a href="#" style='color:red' onClick= "editqstoda({{h.question.qstcode}})">{{ h.question.q1 }}</a>
+                             </td >
+
+
+                             {% if h.question.image != '/ax/image' %}
+                            <td>
+                                <a href="#" style='color:red' onClick= "editimagoda({{h.question.qstcode}})">
+                                <img  src="/static/{{h.question.image}}" alt="{{choose}}">
+                                </a>
+                            </td>
+                             {% endif %}
+
+                        </tr>
+                    </table>
+
+
+                        {% if h.options %}
+                            {% if h.msg == 'txt' %}
+                                {% for kl in h.options %}
+                                   <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                        <tr>                                                
+                                            <td>
+                                                <a href="#" onClick= "editoptA({{h.question.qstcode}})">A. {{kl.a}}</a>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editoptB({{h.question.qstcode}})">B.  {{kl.b}}</a>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editoptC({{h.question.qstcode}})">C.  {{kl.c}}</a>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editoptD({{h.question.qstcode}})">D.  {{kl.d}}<a/>
+                                            </td>
+
+                                            <td > <a href="#" onClick= "editodaans({{ h.question.qstcode}})">Ans = {{ h.ans }}</a>
+                                             </td >
+                                        </tr>
+                                    </table>
+                                {% endfor %}
+
+                            {% else %}
+
+                                {% for kl in h.options %}
+                                    <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                        <tr style='border:0px solid black' align='center'>
+                                            <td>
+                                                <a href="#" onClick= "editoptA({{h.question.qstcode}})">A.
+                                            <img  src="/static/{{kl.a}}" alt="{{choose}}">
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editoptB({{h.question.qstcode}})">B.
+                                            <img  src="/static/{{kl.b}}" alt="{{choose}}">
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editoptC({{h.question.qstcode}})">C.
+                                            <img  src="/static/{{kl.c}}" alt="{{choose}}">
+                                                </a>
+
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editoptD({{h.question.qstcode}})">D.
+                                            <img  src="/static/{{kl.d}}" alt="{{choose}}">
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" onClick= "editodaans({{ h.question.qstcode}})">Ans = {{h.ans}}</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                {% endfor %}
+
+                            {% endif %}
+
+                        {% else %}
+                            <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                <div>No options found</div>
+                            </table>
+                        {% endif %}
+        {% endfor %}
+    {% endif %}
+
+{% endif %}
+
+
+
+
+ 
+
+
+
+
+
+<div id="myDialog" ></div>
+
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function editqstoda(vid){
+        var state = vid;
+        // alert(vid)
+        var url = "/cbt/enter/option/othersedit/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script >
+    function editoptA(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/otheredt/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script >
+    function editoptB(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/otheredtB/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script >
+    function editoptC(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/otheredtC/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script >
+    function editoptD(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/otheredtD/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+    function editimagoda(vid){
+        var state = vid;
+        // alert(vid)
+        var url = "/cbt/enter/option/otherseditimag/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+<script >
+    function editodaans(vid){
+        var state = vid;
+        // alert(vid);
+        var url = "/cbt/enter/otheroption/answerss/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:'auto',
+                    width:'auto',
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>
+
+<script type="text/javascript" language="javascript">
+            function getdialogans(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    title:'edit answer',
+                    position: ["center", "middle"],
+                    height:'auto',
+                    width:'auto',
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>
+</html>
+
+
+

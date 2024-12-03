@@ -1,0 +1,307 @@
+{% extends 'welcome1.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+   <table style="margin-top:0.8%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+        <tr >
+
+            <td style=" text-align:right;float:centre">
+
+                <img style="width: 8em; height: 8em;text-align:right" src="/static/{{ school.logo }}" alt="{{ school.name }}" >
+            </td>
+
+            <td  style="text-align:center;font-family:verdana;font-size:1em">
+                <span style="font-size:2em"> {{ school.name  }}</span><br>
+                <span style="font-size:1.1em"> {{ school.address }}</span>
+            </td>
+
+          <td style=" text-align:right;float:centre">
+                <img style="width: 8em; height: 8em;" src="/static/{{ form.studentpicture }}" alt="{{ k.studentinfo.fullname  }}">
+          </td>
+
+        </tr>
+</table>
+
+   <table style="margin-top:0.8%;margin-bottom:0.1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+
+<div style='text-align:center'>{{term}} End Term {{exam}} Examinations {{subject}} {{klass}},  {{session}}  Session</div>
+   </table>
+
+
+
+   <table style="margin-top:0.6%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+              <tr>
+                <td style="font-weight:bold">Name </td>
+                <td>{{name}}  </td>
+<!--                 <td style="font-weight:bold">Subject</td>
+                <td> {{subject}} </td> -->
+            </tr>
+
+</table>
+
+<div style="text-align:center; color:red"> Time Left: <span style="color:black"> 0 hr 20 Mins</span></div>
+
+  <table>
+
+        <td style=" color:blue;font-weight:bold;text-align:center;text-size= 14px" colspan="1"><a style='color: red' >Q {{ count }} of {{questioncount}}: </a> {{ question }}</td>
+  </table>
+
+<div>{{err}}</div>
+
+{% if image != '/ax/image' %}
+ <table style="margin-top:0%;margin-bottom:0%" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+    <div style= 'text-align:center'>          
+          <img src="/static/{{image}}" alt="{{getdetails.question.image}}">
+</div>
+</table>
+
+{% endif %}
+
+<table style = "margin-top:0%; margin-bottom:0%;color:red" width="100%" class="table  table-bordered" id="dataTables-example ">
+    <span style = "color:red">{{msg}}</span>
+</table>
+
+           
+  {% for k in options %}
+
+  <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example ">
+
+    
+  <form action="/cbt/take_test/next/" method="post" enctype="multipart/form-data" role="form">
+
+
+{% if a == k.a %}
+
+    <tr>
+            {% if pos = 'low' %}
+                <td>
+                    <input type="radio" name="gender" value='{{ k.a}}' ><a style='text-decoration: line-through'>(A). </a>{{ k.a}}<br>
+                </td>
+            {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+                            <td>
+                                <input type="radio" name="gender" value='{{ k.a}}' ><a style='text-decoration: line-through'>(A). </a>
+                        
+                          <img src="/static/{{k.a}}" alt="{{getdetails.question.image}}">
+                           </td>
+                </table>
+            {% endif %}
+        </tr>
+
+
+  {% else %}
+
+
+
+        {% if pos = 'low' %}
+            <tr class="custom-control custom-radio">
+                    <td>
+                        <input type="radio" name="gender" id="A" value='{{ k.a}}' >
+                        <label class="custom-control-label" for="A">(A). {{ k.a}}</label>
+                    </td>
+
+        {% else %}
+                      <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example ">
+                            <td>
+                                <input type="radio" name="gender" value='{{ k.a}}' >(A).
+                        
+                                <img src="/static/{{k.a}}" alt="{{getdetails.question.image}}">
+                            </td>                   
+                    </table>
+            </tr>
+        {% endif %}
+
+           
+{% endif %}
+
+
+
+
+
+
+
+
+{% if a == k.b %}
+        <tr>
+            {% if pos = 'low' %}
+                <td>
+                    <input type="radio" name="gender" value='{{ k.b}}' ><a style='text-decoration: line-through'>(B). </a>{{ k.b}} <br>
+                </td>
+            {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">                
+                    <td>
+                            <input type="radio" name="gender" value='{{ k.b}}' ><a style='text-decoration: line-through'>(B). </a>
+                    
+                         <img  src="/static/{{k.a}}" alt="{{getdetails.question.image}}">
+                    </td>        
+                </table>
+            {% endif %}
+        </tr>
+
+{% else %}
+
+ 
+        {% if pos = 'low' %}
+            <tr >
+                <td>
+                    <input type="radio" name="gender" id="B" value='{{ k.b}}'>
+                    <label class="custom-control-label" for="B">(B).{{ k.b}}</label>
+                </td>
+
+        {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example ">
+                   <td>
+                    <input type="radio" name="gender" value='{{ k.b}}' >(B).
+            
+                   <img src="/static/{{k.b}}" alt="{{getdetails.question.image}}">
+                  </td>     
+        
+                </table>
+            </tr>
+        {% endif %}
+
+
+{% endif %}
+
+   
+
+
+
+   
+{% if a == k.c %}
+        <tr>
+            {% if pos = 'low' %}
+                <td>
+                    <input type="radio" name="gender" value='{{ k.c}}' ><a style='text-decoration: line-through'>(C). </a>{{ k.c}} <br>
+                </td>
+
+            {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+                    <td>
+                        <input type="radio" name="gender" value='{{ k.c}}' ><a style='text-decoration: line-through'>(C). </a>
+            
+                        <img src="/static/{{k.c}}" alt="{{getdetails.question.image}}">
+                    </td>
+        
+                </table>
+            {% endif %}
+        </tr>
+
+ {% else %}
+ 
+        {% if pos = 'low' %}
+            <tr>
+                <td>
+                    <input type="radio" name="gender" id="C" value='{{ k.c}}'>
+                    <label class="custom-control-label" for="C">(C).{{ k.c}}</label>
+                </td>
+        {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example ">
+                    <td>
+                        <input type="radio" name="gender" value='{{ k.c}}' >(C).
+            
+                        <img src="/static/{{k.c}}" alt="{{getdetails.question.image}}">
+                        
+                    </td>
+                </table>
+            </tr>
+        {% endif %}
+
+
+{% endif %}
+           
+
+
+{% if a == k.d %}
+        <tr>
+            {% if pos = 'low' %}
+                <td>
+                    <input type="radio" name="gender" value='{{ k.d}}' ><a style='text-decoration: line-through'>(D). </a>{{ k.d}} <br>
+                </td>
+
+            {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+                    <td>
+                        <input type="radio" name="gender" value='{{ k.d}}' ><a style='text-decoration: line-through'>(D). </a>
+            
+                        <img src="/static/{{k.d}}" alt="{{getdetails.question.image}}">
+                    </td>     
+        
+                </table>
+            {% endif %}
+        </tr>
+ {% else %}
+ 
+        {% if pos = 'low' %}
+            <tr>
+                <td>
+                    <input type="radio" name="gender" id="D" value='{{ k.d}}'>
+                    <label class="custom-control-label" for="D">(D).{{ k.d}}</label>
+                </td>
+
+        {% else %}
+                <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+                    <td>
+                        <input type="radio" name="gender" value='{{ k.d}}' >(D).
+            
+                        <img src="/static/{{k.d}}" alt="{{getdetails.question.image}}">
+                    </td>      
+        
+                </table>
+            </tr>
+        {% endif %}
+
+
+{% endif %}
+
+</table>
+
+
+<table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+    <td>     
+        <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test/previous/" ><i class="fa fa-backward fa-1x"></i></button>
+    </td>
+
+    <td>
+        <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test/skip/" ><i class="fa fa-mail-forward fa-1x"></i></button>
+    </td>
+    <td>
+        <button class="btn btn-lg btn-success btn-block" type ='submit' ><i class="fa fa-forward fa-1x"></i> </button>
+    </td>
+</table>
+
+ 
+ </form>
+
+
+
+ <div style="text-align:center;font-weight:bold; color:brown">IF YOU DON'T HAVE THE ANSWER, JUST HIT THE MIDDLE BUTTON</div>
+
+</table>
+
+
+{% endfor %}
+
+
+<script type="text/javascript" >
+    $(document).ready(function() {
+        $("#myDialog").hide();
+        $("#comment").hide();
+
+    });
+</script>
+
+
+<script type="text/javascript" language="javascript">
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+};
+
+</script>
+{% endblock %}

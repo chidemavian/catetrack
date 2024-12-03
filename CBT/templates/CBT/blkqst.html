@@ -1,0 +1,244 @@
+
+
+
+
+   <table style="margin-top:0%;margin-bottom:0%;font-size:0.7em" class="table  table-bordered">
+
+    <tr style="text-align:center">
+
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td ><a href="#" onClick= "autopost2()" >Comprehension</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+                <tr>
+                    <td ><a href="#" onClick= "autopost2()">Passage</a></td>
+                     <td > <a href="#" onClick= "autoobjq()">Questions</a></td>
+                </tr>            
+            </table>
+
+        </td>
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td style="background:blue"><a href="#" onClick= "autoblock2()" style="color:white">Block</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0%;font-size:0.9em" class="table  table-bordered">
+
+                <tr>
+                    <td><a href="#" onClick= "autoblock2()">Instruction</a></td>
+
+                     <td style="background:grey"> <a href="#" onClick= "autbklq()" style="color:white">Questions</a></td>
+                </tr> 
+
+            </table>
+
+        </td>
+          <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td><a href="#" onClick= "autoothers()" style="color:whte">Others</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0%;font-size:0.9em" class="table  table-bordered">
+                <tr>
+                    <!-- <td><a href="#" onClick= "autoothers()">Instruction</a></td> -->
+
+                     <td> <a href="#" onClick= "autoothers()" style="color:whdite">Questions</a></td>
+                </tr>         
+            </table>
+
+        </td>
+
+    </tr>
+
+
+</table>
+
+
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:1em;"><span style='color:blue'>{{exam}} </span>Block questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session</td>
+            </tr>
+      </table>
+
+
+
+{% if q %}
+{% for h in q %}
+
+            <table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+            <div style="margin-top:02%;margin-bottom:-3.1%">Block {{forloop.counter}}</div>
+
+              <tr>
+          <td >
+            <a href="#" onClick= "edinstr({{h.inst.code}})" style='color:green'>{{ h.inst.instruction }}</a>
+          </td >
+
+                     <td>
+            <a href="#" onClick= "addblkqsts({{h.inst.code}})" >
+            <i class="fa fa-plus fa-fw"></i>
+
+            </a>
+         </td>
+               </tr>
+
+            </table>
+        {% for p in h.qst %}
+                <table style="margin-top:0%;margin-bottom:0%" class="table table-bordered " >
+                    <tr>
+                       <td > {{forloop.counter}}.</td >
+
+
+
+                    {% if p.q1 != "" %}
+
+                    <td >
+                        <a href="#" onClick= "editblkqst({{p.id}})">{{ p.q1 }}</a>
+                     </td >
+                     {% endif %}
+
+                     {% if p.image != "studentpix/user.png" %}
+                <td>
+                <a href="#" onClick= "getdialogopt({{ pin.question.id}})" title="Edit Option A.">
+                  <img src="/static/{{p.image}}" altp="{{getdetails.question.image}}">  
+                            
+                     </a>
+                </td>
+                {% endif %}
+        
+
+                   </tr>
+
+                </table>
+        {% endfor %}
+{% endfor %}
+
+{% endif %}
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam }}" >
+                </td>
+            </tr>
+</table>
+
+
+
+
+  <div id="myDialog" ></div>
+<script >
+    function edinstr(vid){
+        // alert(vid);
+        var state = vid;
+        var url = "/cbt/enter/question/editblkqstinst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+<script >
+    function editblkqst(vid){
+        
+        var state = vid;
+        // alert(vid);      
+        var url = "/cbt/enter/question/justeditblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script >
+    function addblkqsts(vid){
+
+        var state = vid;
+        // +':'+$("#id_session").val()+':'+$("#id_klass").val()+':'+$("#id_subject").val()+':'+"{{Exam}}"+':'+$("#id_term").val();
+        
+        // alert(state);
+        var url = "/cbt/enter/question/addblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+        <script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    // position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Add block questions' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+</script>

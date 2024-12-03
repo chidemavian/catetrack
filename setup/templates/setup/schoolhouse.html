@@ -1,0 +1,130 @@
+
+
+
+{%extends 'setup/typography.html' %}
+{% block content %}
+
+
+
+    <div align ="center" style="background-color:#ccccc0;border:0px solid black;width:100%;height:3%; font-size:16px;color:black;text-align:center">School House Set Up </div>
+
+
+    <div align="center" style="color:red;font-family:verdana;font-size:15px;background-color:#ffffff;height:5%; " > {{varerr}}</div>
+
+
+
+
+
+        <form action="" method="post" name ="main" id="form1" onsubmit="disable(this)">
+
+
+        <table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+                <tr>
+                    <td>{{ form.house.label }}:</td>
+                    <td>{{form.house}}    </td>
+
+                </tr>
+
+
+</table>
+
+
+
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+                <tr>
+
+                    <td >
+                        <div style='text-align:center'>
+
+                        <input name="submit" type= "submit" value="   ADD HOUSE  " >
+                        </div>
+                    </td>
+
+                </tr>
+                
+            </table>
+
+
+
+</table>
+
+
+
+         </form>
+    </tr>
+</table>
+
+
+
+
+
+{% if getdetails %}      
+
+
+
+
+            <div style="margin-top:02%;margin-bottom:0.2%">
+                 <td>
+                    <input name="submitprint" type= "submit" value="Print house colours" class = "submit" onclick = "openrecprint();">
+                    <div class="printable"></div>
+                </td>
+            </div>
+
+
+
+
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                  <tr style = "font-weight:bold">
+
+
+                        <td > S/N </td>
+                        <td > School Houses </td>
+                        <td > Delete </td>
+                    </tr>
+                    {% for pincode in getdetails %}
+                        <tr>
+                            <td >{{ forloop.counter}}.</td>
+                          <td >{{ pincode.house}}</td>
+                          <td ><a href="/setup/house/delete/{{ pincode.id }}/" title="Delete {{ pincode.house}} house " style ="color:blue;">{{ pincode.house}}</a> </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+  {% else %}
+
+  <div style='text-align:center'> No inter house sports colours entered yet</div>
+{% endif %}
+               
+<script language="javascript" type="text/javascript">
+    function openrecprint()
+    {
+        //alert("welcome");
+        $( ".printable" ).print();
+    }
+</script>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+        <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $("#id_house").focus();
+        });
+    </script>
+    {% endblock %}

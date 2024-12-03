@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+{% if section %}
+
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+  <tr>
+    <td>S/N</td>
+    <td>Section</td>
+    <td>Status</td>
+  </tr>
+
+      {% for s in section %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{s.subsection.subsection}}</td>
+        <td>{{s.status}}</td>
+      </tr>
+
+      {% endfor %}
+</table>
+
+
+{% else %}
+
+
+  <input type= 'hidden' name='branch_code' value ='{{branch_code}}'>
+  <input type= 'hidden' name='act' value ='{{act}}'>
+<tr><td>Activate {{act}}   subsection </td><td><input type= 'checkbox' name ='section'></td> </tr>
+
+           <div class="card-footer">
+            <td >
+              <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Save">
+            </td>
+          </div>
+{% endif %}
+
+
+
+</form>
+

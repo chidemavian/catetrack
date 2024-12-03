@@ -1,0 +1,34 @@
+
+
+{% if sett %}
+                  <div> Curriculum for  {{subject}} {{term }} term, {{klass}}</div>
+
+     <table style="margin-top:0.7%;margin-bottom:02% ; font-size:0.9em"  class="table  table-bordered" id="dataTables-example">
+                
+
+                       <tr >
+                        <td> S/N</td>
+                        <td > Subject </td>
+                        <td > Topic </td>
+                        <td > Class </td>
+            
+                    <td> Term </td>
+                    </tr>
+
+
+                     
+            {% for pincode in sett %}
+                        <tr >
+                            <td >{{ forloop.counter}}</td>
+                            <td > {{ pincode.subject}}</td>
+                            <td> <a  href="/lesson/set_up/delete/{{ pincode.id }}/"  title="Delete '{{ pincode.topic}}' from {{ pincode.subject}}"> {{ pincode.topic}}</a></td>
+                            <td> {{ pincode.klass}}</td>
+                            <td> {{ pincode.term}}</td>
+                {% endfor %}
+
+                    </tr>
+            </table>
+
+                     {% else %}
+<td align="left" style = "background-color:white;font-size:1em;color:#000000">  .......No Record Found</td>
+    {% endif %}

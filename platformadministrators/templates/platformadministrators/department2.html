@@ -1,0 +1,55 @@
+{% load humanize %}
+
+
+
+<form action="/admin/onboarding/client/departments/" method="POST"  onsubmit="disable(this)">
+
+   <table style="margin-top:01%;margin-bottom:0%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <tr>
+      <td >{{school.company.name}}</td>
+    </tr>
+
+    <tr>
+      <td >{{school.address}}</td>
+    </tr>
+
+        <tr>
+      <td >{{section}} Section</td>
+    </tr>
+
+</table>
+
+
+   <table style="margin-top:01%;margin-bottom:0%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+      <tr >
+            <td>{{state}}    {{department}}  Department </td>
+            <td>
+              <input name = 'myselection' type='checkbox' {{sec}} >
+            </td>
+      </tr>
+
+</table>
+
+<table style="margin-top:0.9%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+           <div class="card-footer">
+            <td >
+              <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Save">
+            </td>
+          </div>
+
+</table>
+
+
+ <input type= 'hidden' name='branch_code' value ='{{branch_code}}'>
+  <input type= 'hidden' name='section' value ='{{section}}'>
+  <input type= 'hidden' name='dept_code' value ='{{dept_code}}'>
+  <input type= 'hidden' name='subsection_code' value ='{{subsection_code}}'>
+  
+
+</form>
+
+
+
+

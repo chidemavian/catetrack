@@ -1,0 +1,217 @@
+
+{% extends 'platformadministrators/administrators_base.html' %}
+
+
+{% block content %}
+
+
+
+<form action="" method='post' enctype="multipart/form-data"onsubmit="disable(this)">
+
+
+
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+         <tr >
+           <td >{{ form.client.label_tag }} </td><td>{{ form.client }}</td>
+       </tr>
+
+
+         <tr >
+           <td >{{ form.location.label_tag }} </td><td>{{ form.location }}</td>
+       </tr>
+
+    <tr >
+     <td><label for="id_month">Sections</label></td>
+        <td> 
+                  <select name="section" id="id_section" required>
+                      {% for pincode in sec %}
+                          <option value="{{pincode}}">{{pincode}}</option>
+                      {% endfor %}
+                 </select>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<table style="margin-top:01%;margin-bottom:0.2%" width="100%" class="table  table-bordered" id="dataTables-example">
+           <tr >
+                <div class="boxsections"></div>
+           </tr>
+</table>
+
+
+</form>
+ 
+<input type="hidden" name="wallet" id="wallet"  readonly="readonly" value="{{ wallet }}" class ="loginTxtbox">
+
+
+
+
+</form>
+
+    <script>
+        $(document).ready(function() {
+            var pickerOpts = {
+                //appendText: "mm/dd/yy",
+                //defaultDate: "+5",
+                showOtherMonths: true,
+                changeMonth: true,
+                changeYear: true,
+                dateFormat:"yy-mm-dd"
+            };
+
+            getclient();
+        });
+    </script>
+
+
+
+  <script type="text/javascript" >
+        $(document).ready(function() {            
+
+            $("#id_client").change(function () {
+                getlocation();
+            });
+
+
+            $("#id_location").change(function () {
+                getsection();
+            });
+    
+
+            $("#id_section").change(function () {
+                autopostsection();
+            });    
+        });
+    </script>
+
+
+
+        <script type="text/javascript" language="javascript">
+        function getclient(){
+            var state = "{{varuser}}";
+            // alert(state);
+            var url = "/admin/onboarding/client/section/getclient/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_client").val('');   
+            $("#id_client").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_client").append(options);
+                        getlocation();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+
+        <script type="text/javascript" language="javascript">
+        function getlocation(){
+            var state = "{{varuser}}" + ":" + $("#id_client").val();
+            // alert(state);
+            var url = "/admin/onboarding/client/section/getlocation/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_location").val('');   
+            $("#id_location").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_location").append(options);
+                        getsection();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+
+        <script type="text/javascript" language="javascript">
+        function getsection(){
+            var state = "{{varuser}}" + ":" + $("#id_client").val();
+            // alert(state);
+            var url = "/admin/onboarding/client/section/getsubsection/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_section").val('');   
+            $("#id_section").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_section").append(options);
+                        autopostsection();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+        <script type="text/javascript" language="javascript">
+        function autopostsection(){
+
+            var state =  $("#id_client").val()+ ":" + $("#id_location").val()+ ":" + $("#id_section").val();
+
+            // alert(state);
+
+            var url = "/admin/onboarding/client/subjects/select/view/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    $(".boxfunddsd").hide();
+                    $(".boxsections").show();
+                    $(".boxsections").html(html);
+
+                }
+            });
+            return false;
+        }
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

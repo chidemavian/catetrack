@@ -1,0 +1,7821 @@
+[
+{
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "admin", 
+        "first_name": "", 
+        "last_name": "", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2024-08-12T04:26:02", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$rw1fPDiLVcdW$AWXHOEMPc2SC7Jl+mAoGHPKHSqYNv2d+uZgiqB0NRAY=", 
+        "email": "admin@gmail.com", 
+        "date_joined": "2024-08-12T04:26:02"
+    }
+},
+{
+    "pk": "04bue5chu4pybk09gamx5frkq5m4m43d", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-01T02:12:05", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "0sck5ek7bjhsz5wanke8km4pjs8peszr", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-22T15:15:27", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "168bd3cd2wbllp7culwwfnuso0fntish", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-27T01:35:35", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "1ux4x0pung0o3hsgcbunpgo2vtk4gugh", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-20T09:05:49", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "2rdeo8emiouh19cusniwsopvz8dwbwj8", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-22T11:16:28", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "2wg8m6yiz3sph89ek7rh651fuilimg3c", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-01T01:05:36", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "32vxpsf5f879estkky8m8h0y0pp6gkff", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-13T00:40:14", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "34h4xe6i4raxo763v9jzme56rmvikw9t", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-09T20:25:30", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "34pbnznre5tsgomqh7xsqxsgq5dfzfo2", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-07T17:06:54", 
+        "session_data": "ZGNkZjQwMDZmNmU5MWIxMTM3NmMwZmZjNTVmNjg3ZGY1MDJjZWYyNTqAAn1xAVUGdXNlcmlkWA8AAABhZG1pbkBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "48xwyb65h8y1j5rwa8cwvs0wpmtme5iu", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-07T16:43:30", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "4abmv37523917jybmyqy77as2v98ztwt", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-09T20:24:53", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "4bn5uu2zcyww0k5ltviw6ilvesw35trn", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-31T22:24:06", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "4fxtd2bwugk1t3omz9w64kx9xnx99e49", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-25T17:51:15", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "4l8w4wqntbaf7hqayzd951xy00h2urik", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-01T11:53:10", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "4m9m9zfe4htuf685l6llx37y1new1210", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-17T13:18:03", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "4tteqqnxhfz6no05gsd4tcat3zvvauya", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-12T20:41:51", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "4vti95kxp9hml51kg5zpmduj7siakudc", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-10T22:55:00", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "52uxjnhi3rpo2zb4fhberdqpvpaq5ydt", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-22T08:21:33", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "5npbp58jgzn8mrpxj799kv36ap1m4uib", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-27T09:36:05", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "5t3um8i7xjeminlq6hotw0a5llt141bk", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-19T11:06:32", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "6ftahhmcut39ej6ckisahlqw0lhr2t5m", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-12T20:15:15", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "7t767cwomsch5nv0o3ejkavoz7u52vt0", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-29T10:29:01", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "7uipe1fhqkkfb0xh8dctp4k866gh6wqa", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T16:59:16", 
+        "session_data": "ZGNkZjQwMDZmNmU5MWIxMTM3NmMwZmZjNTVmNjg3ZGY1MDJjZWYyNTqAAn1xAVUGdXNlcmlkWA8AAABhZG1pbkBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "8yeprc6y8sanls1t5wx1ac2f182wga7i", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-15T01:05:38", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "8yqej36ocsn5w22mwnj10zr6uukaqnpj", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-24T03:36:31", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "91gmzryyia1y9mvqqnktca9z2e0ix1in", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-09T20:31:46", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "a96ew4zqy2j4pwozzq3zyg778tcus48s", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-05T17:16:08", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "aeg4g7v3u6cjcf9z440cedh7grq45jgl", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-07T16:43:29", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "amktm74hfhfb2e1fsbycbquc968v0832", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-06T19:58:31", 
+        "session_data": "ZGNkZjQwMDZmNmU5MWIxMTM3NmMwZmZjNTVmNjg3ZGY1MDJjZWYyNTqAAn1xAVUGdXNlcmlkWA8AAABhZG1pbkBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "b1cdd3osz83gx2szhql015yimwprty6g", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-27T07:18:45", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "b4jk60i9fg4gp3jkhj47qqmnw2iriifj", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-16T21:10:08", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "brokx34bnfn2ozjym4qv5x6s5msnko93", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-18T19:47:06", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "btp4he2n56o3satx28pshvqwsf80fpvy", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T17:33:45", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "bxjzszzwfh2r68w61dupkl0t8get4ncn", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-15T09:46:19", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "c9c4s47bektj3v54c0hz26inh0xm1rez", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-09T20:24:55", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "cezz39jbhnaw3g2csp8j0lrx66kcoymb", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-19T19:10:25", 
+        "session_data": "ZGNkMTFiNjYzNmJjMGY0MTU5NDFlYmY0NWFjNTVhNzA0ODNlOWY0MjqAAn1xAVUGdXNlcmlkWA0AAAB3YWxAZ21haWwuY29tcy4="
+    }
+},
+{
+    "pk": "ch1qcjdldrgnh8e5ziqbcj6ptz3i04hq", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-06T06:40:37", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "cn6cn319qgpehlx5hoivh5x95lw8iv23", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-30T08:18:21", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "d8dojjhlxz6zwpxcxwakg591gmkcun75", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-01T01:05:36", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "dosn24dqm48luxte98k8b9l8bsr2lquj", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-14T16:24:30", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "fn35gighstsas0rsz88btwmbochgpmeh", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-10T22:55:00", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "g3x4m2prdu7aaq6p0x2qvbpf3v35iedk", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-31T18:20:14", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "g747ysvpjoh4p1jd0ycru5jz913cmi4z", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-27T07:18:57", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "g8oj4uma5nr5f45ujh8quz1em9avyvq0", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-08T12:44:03", 
+        "session_data": "Y2Y5YmFiYWMwYTE0NTg5OWU2NWE5NzlmY2RkYmIwZDc5ZDBmYWRjODqAAn1xAVUGdXNlcmlkWA8AAABnZnhoZkBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "ggnn1dpft8z4n80nsup393yjv14472nf", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-24T10:39:36", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "h8l28l1vbykiiebf9htpdt8ga0jpl1vk", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T17:29:25", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "hm1saxgxh917irgj9sfrii0r2je82hij", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-14T17:05:28", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "hurfedkg3yqa6t9nl8byiydh9m8ftxk2", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-13T03:49:34", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "i32zlkeju9kdp3m86hlle7ix9p454p58", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-12T20:41:51", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "ifklbwdj3yv3hrwcly9tx0r713d5hryg", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-10T22:42:51", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "ir11k29irex6i7l1qxapkng03k4g8xgt", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-23T20:54:58", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "irb1e8e1elfkq7mgdfhfg9x5k5awnwge", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-09T20:24:53", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "jccz245sp9yenee3vfr1pnb2ekyuufu8", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-13T02:58:55", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "jivpamqrymnhuwaubvemk5mrtoq543nh", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-03T20:52:42", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "jrxq8k2lriln04mr6fjoxadmzajwrhq3", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-13T16:35:00", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "ksocram13ak9upxtt5a3x27m7db93813", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-20T09:20:05", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "ktnwqdy1uxgt42k5aq0836119ikf5k0x", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-01T11:53:21", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "l59ba7v8y5qs19atob7a2p4pr6666zhq", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-19T11:06:31", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "lbq5nc223mp2lihg9iw26b0dy6z9wehz", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T20:39:21", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "lq9nupm422t8gvwsq18ah5kpeuwqmxri", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-19T10:44:19", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "mollmhz14tt41butosqhrdscgpxw9jhe", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-31T07:56:54", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "mwhbtgckt3qv45m3y7crs15zoephf314", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-19T20:30:02", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "na86znzzgjrtnguodi9behfgkn6d8k6v", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-09T20:24:53", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "o0x5gh48ui601k6253fps6v5nwr6u9h4", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-20T22:03:05", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "o87hu57qnt7cnwprjeq5m1cahzmn6p3c", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T17:31:09", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "oyyvi3ghxxfr16t2xphqif3dmgqh3rww", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-08T14:10:48", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "purcv8kegdusvhqqmm1tbgekwxch6onu", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-24T18:58:51", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "q0j39xasbrt9mdfnqz4jznpq2b96abt8", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-24T18:47:35", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "q4nhu6up66rcuv31c6fxzzw16704ojvb", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-27T07:18:55", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "r4kxxmfe16jokhn1zxyhm62sebysykl0", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-08T18:27:18", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "rs28o0vwg0rbe74nabqpk77h93yxhoa5", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-24T10:31:12", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "s89zzxmvyk9az9mgeej075vysswmi69p", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T17:30:18", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "sf4cl4jjhd7obt49jmgbiw047xuhsqnx", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-03T20:19:35", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "t5obn5hegldh4k00tmiqriyslpioozlo", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-08T14:10:31", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "tg4orqvalfdvbewb7ygsy9fcr8yael09", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-08-31T13:46:57", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "tng35nguel1ag7tzovt7lhuqfxawioup", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-18T16:43:42", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "trxbcno0xgdgc0gbu6e5f7b21op90rg3", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-27T20:19:15", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "u8ouiszzjbogpcvictkcjh8uodfpioe2", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-30T17:31:55", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "uf4rqshgmlh6852967iqpo9rqsdf3zgl", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-09T17:09:47", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "uqlvm33nj6s149trbfg7zk8rzjrthax2", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-22T15:09:02", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "w0cocs5xmoyy0s1vdegs91b5vua6cj5x", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-20T09:20:32", 
+        "session_data": "ZGNkMTFiNjYzNmJjMGY0MTU5NDFlYmY0NWFjNTVhNzA0ODNlOWY0MjqAAn1xAVUGdXNlcmlkWA0AAAB3YWxAZ21haWwuY29tcy4="
+    }
+},
+{
+    "pk": "xeokcy59rwmvnek4xt43kny5xqur7qtm", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-24T17:32:11", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "xpt6fxj1d1owcy6zqcdskehc85b1yrlo", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-04T15:47:46", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "xqk30y1xpuy0f6xw5w9hewkegrsnjayc", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-12-01T02:32:48", 
+        "session_data": "ZGNkZjQwMDZmNmU5MWIxMTM3NmMwZmZjNTVmNjg3ZGY1MDJjZWYyNTqAAn1xAVUGdXNlcmlkWA8AAABhZG1pbkBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "y74ns1eu8awcfudt376jcgfsc8qshyug", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-08T14:30:29", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "y830gadts6gyt9te7bu6xz2f36o3nhti", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-11-08T18:20:58", 
+        "session_data": "ODhjYmI3NGQ2ZGI2MmVlNjY5MzIxNzVjM2MzMTgyMTFiNWNkNThjNjqAAn1xAS4="
+    }
+},
+{
+    "pk": "ylrt03q0kvmm7dwbbisira0sejz2m1x6", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-10-31T21:44:57", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": "zj0p5tshhs0ai2gxpjs1p91167dzf1gb", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2024-09-05T22:31:51", 
+        "session_data": "NTg3NTliY2MxY2E4MDI4MWY1YWM5ZTA3Mzg2NDI1ZDUzYmI2NzE5ZDqAAn1xAVUGdXNlcmlkWAwAAABtZUBnbWFpbC5jb21zLg=="
+    }
+},
+{
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+        "domain": "example.com", 
+        "name": "example.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformowners", 
+    "fields": {
+        "status": true, 
+        "surname": "abaegbu", 
+        "firstname": "mathew", 
+        "othername": "okechukwu", 
+        "platformowners_code": "324245", 
+        "email": "me@gmail.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Aba North"
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Aba South"
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Abadam"
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Federal Capital Territory", 
+        "lga": "Abaji"
+    }
+},
+{
+    "pk": 5, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Abak"
+    }
+},
+{
+    "pk": 6, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Abakaliki"
+    }
+},
+{
+    "pk": 7, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Abeokuta North"
+    }
+},
+{
+    "pk": 8, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Abeokuta South"
+    }
+},
+{
+    "pk": 9, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Abi"
+    }
+},
+{
+    "pk": 10, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Aboh-Mbaise"
+    }
+},
+{
+    "pk": 11, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Abua/Odual"
+    }
+},
+{
+    "pk": 12, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Federal Capital Territory", 
+        "lga": "Abuja Municipal"
+    }
+},
+{
+    "pk": 13, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Adavi"
+    }
+},
+{
+    "pk": 14, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Ado"
+    }
+},
+{
+    "pk": 15, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ado"
+    }
+},
+{
+    "pk": 16, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ado-Odo/Ota"
+    }
+},
+{
+    "pk": 17, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Afijio"
+    }
+},
+{
+    "pk": 18, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Afikpo North"
+    }
+},
+{
+    "pk": 19, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Afikpo South"
+    }
+},
+{
+    "pk": 20, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Agaie"
+    }
+},
+{
+    "pk": 21, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Agatu"
+    }
+},
+{
+    "pk": 22, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Agege"
+    }
+},
+{
+    "pk": 23, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Aguata"
+    }
+},
+{
+    "pk": 24, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Agwara"
+    }
+},
+{
+    "pk": 25, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ahiazu-Mbaise"
+    }
+},
+{
+    "pk": 26, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Ahoada East"
+    }
+},
+{
+    "pk": 27, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Ahoada West"
+    }
+},
+{
+    "pk": 28, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Aiyedade"
+    }
+},
+{
+    "pk": 29, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Aiyedire"
+    }
+},
+{
+    "pk": 30, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Ajaokuta"
+    }
+},
+{
+    "pk": 31, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Ajeromi-Ifelodun"
+    }
+},
+{
+    "pk": 32, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Ajingi"
+    }
+},
+{
+    "pk": 33, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Akamkpa"
+    }
+},
+{
+    "pk": 34, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Akinyele"
+    }
+},
+{
+    "pk": 35, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Akko"
+    }
+},
+{
+    "pk": 36, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Akoko North East"
+    }
+},
+{
+    "pk": 37, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Akoko North West"
+    }
+},
+{
+    "pk": 38, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Akoko South East"
+    }
+},
+{
+    "pk": 39, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Akoko South West"
+    }
+},
+{
+    "pk": 40, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Akpabuyo"
+    }
+},
+{
+    "pk": 41, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Akuku Toru"
+    }
+},
+{
+    "pk": 42, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Akure North"
+    }
+},
+{
+    "pk": 43, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Akure South"
+    }
+},
+{
+    "pk": 44, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Akwanga"
+    }
+},
+{
+    "pk": 45, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Albasu"
+    }
+},
+{
+    "pk": 46, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Aleiro"
+    }
+},
+{
+    "pk": 47, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Alimosho"
+    }
+},
+{
+    "pk": 48, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Alkaleri"
+    }
+},
+{
+    "pk": 49, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Amuwo-Odofin"
+    }
+},
+{
+    "pk": 50, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Anambra East"
+    }
+},
+{
+    "pk": 51, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Anambra West"
+    }
+},
+{
+    "pk": 52, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Anaocha"
+    }
+},
+{
+    "pk": 53, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Andoni"
+    }
+},
+{
+    "pk": 54, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Aninri"
+    }
+},
+{
+    "pk": 55, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Aniocha"
+    }
+},
+{
+    "pk": 56, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Aniocha South"
+    }
+},
+{
+    "pk": 57, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Anka"
+    }
+},
+{
+    "pk": 58, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Ankpa"
+    }
+},
+{
+    "pk": 59, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Apa"
+    }
+},
+{
+    "pk": 60, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Apapa"
+    }
+},
+{
+    "pk": 61, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Ardo-Kola"
+    }
+},
+{
+    "pk": 62, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Arewa-Dandi"
+    }
+},
+{
+    "pk": 63, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Argungu"
+    }
+},
+{
+    "pk": 64, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Arochukwu"
+    }
+},
+{
+    "pk": 65, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Asa"
+    }
+},
+{
+    "pk": 66, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Asari-Toru"
+    }
+},
+{
+    "pk": 67, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Askira/Uba"
+    }
+},
+{
+    "pk": 68, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Atakumosa East"
+    }
+},
+{
+    "pk": 69, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Atakumosa west"
+    }
+},
+{
+    "pk": 70, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Atiba"
+    }
+},
+{
+    "pk": 71, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Atigbo"
+    }
+},
+{
+    "pk": 72, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Augie"
+    }
+},
+{
+    "pk": 73, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Auyo"
+    }
+},
+{
+    "pk": 74, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Awe"
+    }
+},
+{
+    "pk": 75, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Awka North"
+    }
+},
+{
+    "pk": 76, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Awka South"
+    }
+},
+{
+    "pk": 77, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Ayamelum"
+    }
+},
+{
+    "pk": 78, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Babura"
+    }
+},
+{
+    "pk": 79, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Badagry"
+    }
+},
+{
+    "pk": 80, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Bade"
+    }
+},
+{
+    "pk": 81, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Bagudo"
+    }
+},
+{
+    "pk": 82, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Bagwai"
+    }
+},
+{
+    "pk": 83, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Bakassi"
+    }
+},
+{
+    "pk": 84, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Bakori"
+    }
+},
+{
+    "pk": 85, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Bakura"
+    }
+},
+{
+    "pk": 86, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Balanga"
+    }
+},
+{
+    "pk": 87, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Bali"
+    }
+},
+{
+    "pk": 88, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Bama"
+    }
+},
+{
+    "pk": 89, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Barikin Ladi"
+    }
+},
+{
+    "pk": 90, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Baruten"
+    }
+},
+{
+    "pk": 91, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Bassa"
+    }
+},
+{
+    "pk": 92, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Bassa"
+    }
+},
+{
+    "pk": 93, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Batagarawa"
+    }
+},
+{
+    "pk": 94, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Batsari"
+    }
+},
+{
+    "pk": 95, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Bauchi"
+    }
+},
+{
+    "pk": 96, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Baure"
+    }
+},
+{
+    "pk": 97, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Bayo"
+    }
+},
+{
+    "pk": 98, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Bebeji"
+    }
+},
+{
+    "pk": 99, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Bekwara"
+    }
+},
+{
+    "pk": 100, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Bende"
+    }
+},
+{
+    "pk": 101, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Biase"
+    }
+},
+{
+    "pk": 102, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Bichi"
+    }
+},
+{
+    "pk": 103, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Bida"
+    }
+},
+{
+    "pk": 104, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Billiri"
+    }
+},
+{
+    "pk": 105, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Bindawa"
+    }
+},
+{
+    "pk": 106, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Binji"
+    }
+},
+{
+    "pk": 107, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Biriniwa"
+    }
+},
+{
+    "pk": 108, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Birni Magaji"
+    }
+},
+{
+    "pk": 109, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Birni kudu"
+    }
+},
+{
+    "pk": 110, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Birni-Gwari"
+    }
+},
+{
+    "pk": 111, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Birnin Kebbi"
+    }
+},
+{
+    "pk": 112, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Biu"
+    }
+},
+{
+    "pk": 113, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Bodinga"
+    }
+},
+{
+    "pk": 114, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Bogoro"
+    }
+},
+{
+    "pk": 115, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Boki"
+    }
+},
+{
+    "pk": 116, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Bokkos"
+    }
+},
+{
+    "pk": 117, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Boluwaduro"
+    }
+},
+{
+    "pk": 118, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Bomadi"
+    }
+},
+{
+    "pk": 119, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Bonny"
+    }
+},
+{
+    "pk": 120, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Borgu"
+    }
+},
+{
+    "pk": 121, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Boripe"
+    }
+},
+{
+    "pk": 122, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Bosso"
+    }
+},
+{
+    "pk": 123, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Brass"
+    }
+},
+{
+    "pk": 124, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Buji"
+    }
+},
+{
+    "pk": 125, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Bukkuyum"
+    }
+},
+{
+    "pk": 126, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Bungudu"
+    }
+},
+{
+    "pk": 127, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Bunkure"
+    }
+},
+{
+    "pk": 128, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Bunza"
+    }
+},
+{
+    "pk": 129, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Bursari"
+    }
+},
+{
+    "pk": 130, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Buruku"
+    }
+},
+{
+    "pk": 131, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Burutu"
+    }
+},
+{
+    "pk": 132, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Calabar Municipality"
+    }
+},
+{
+    "pk": 133, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Calabar South"
+    }
+},
+{
+    "pk": 134, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Cassol"
+    }
+},
+{
+    "pk": 135, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Central"
+    }
+},
+{
+    "pk": 136, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Chanchaga"
+    }
+},
+{
+    "pk": 137, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Charanchi"
+    }
+},
+{
+    "pk": 138, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Chibok"
+    }
+},
+{
+    "pk": 139, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Chikun"
+    }
+},
+{
+    "pk": 140, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Dala"
+    }
+},
+{
+    "pk": 141, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Damaturu"
+    }
+},
+{
+    "pk": 142, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Damban"
+    }
+},
+{
+    "pk": 143, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Dambatta"
+    }
+},
+{
+    "pk": 144, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Damboa"
+    }
+},
+{
+    "pk": 145, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Dan Musa"
+    }
+},
+{
+    "pk": 146, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Dandi"
+    }
+},
+{
+    "pk": 147, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Dandume"
+    }
+},
+{
+    "pk": 148, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Dange-Shnsi"
+    }
+},
+{
+    "pk": 149, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Danja"
+    }
+},
+{
+    "pk": 150, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Darazo"
+    }
+},
+{
+    "pk": 151, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Dass"
+    }
+},
+{
+    "pk": 152, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Daura"
+    }
+},
+{
+    "pk": 153, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Dawakin Kudu"
+    }
+},
+{
+    "pk": 154, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Dawakin Tofa"
+    }
+},
+{
+    "pk": 155, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Degema"
+    }
+},
+{
+    "pk": 156, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Dekina"
+    }
+},
+{
+    "pk": 157, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Demsa"
+    }
+},
+{
+    "pk": 158, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Dikwa"
+    }
+},
+{
+    "pk": 159, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Doguwa"
+    }
+},
+{
+    "pk": 160, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Doma"
+    }
+},
+{
+    "pk": 161, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Donga"
+    }
+},
+{
+    "pk": 162, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Dukku"
+    }
+},
+{
+    "pk": 163, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Dunukofia"
+    }
+},
+{
+    "pk": 164, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Dutse"
+    }
+},
+{
+    "pk": 165, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Dutsi"
+    }
+},
+{
+    "pk": 166, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Dutsin-Ma"
+    }
+},
+{
+    "pk": 167, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Eastern Obolo"
+    }
+},
+{
+    "pk": 168, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ebonyi"
+    }
+},
+{
+    "pk": 169, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Edati"
+    }
+},
+{
+    "pk": 170, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ede North"
+    }
+},
+{
+    "pk": 171, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ede South"
+    }
+},
+{
+    "pk": 172, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Edu"
+    }
+},
+{
+    "pk": 173, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Efon"
+    }
+},
+{
+    "pk": 174, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Egbado North"
+    }
+},
+{
+    "pk": 175, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Egbado South"
+    }
+},
+{
+    "pk": 176, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Egbeda"
+    }
+},
+{
+    "pk": 177, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Egbedore"
+    }
+},
+{
+    "pk": 178, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Egor"
+    }
+},
+{
+    "pk": 179, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ehime-Mbano"
+    }
+},
+{
+    "pk": 180, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ejigbo"
+    }
+},
+{
+    "pk": 181, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Ekeremor"
+    }
+},
+{
+    "pk": 182, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Eket"
+    }
+},
+{
+    "pk": 183, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Ekiti"
+    }
+},
+{
+    "pk": 184, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ekiti South-West"
+    }
+},
+{
+    "pk": 185, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ekiti-East"
+    }
+},
+{
+    "pk": 186, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ekiti-West"
+    }
+},
+{
+    "pk": 187, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Ekwusigo"
+    }
+},
+{
+    "pk": 188, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Eleme"
+    }
+},
+{
+    "pk": 189, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Emohua"
+    }
+},
+{
+    "pk": 190, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Emure/Ise/Orun"
+    }
+},
+{
+    "pk": 191, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Enugu East"
+    }
+},
+{
+    "pk": 192, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Enugu North"
+    }
+},
+{
+    "pk": 193, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Enugu South"
+    }
+},
+{
+    "pk": 194, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Epe"
+    }
+},
+{
+    "pk": 195, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Esan Central"
+    }
+},
+{
+    "pk": 196, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Esan North-East"
+    }
+},
+{
+    "pk": 197, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Esan South-East"
+    }
+},
+{
+    "pk": 198, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Esan West"
+    }
+},
+{
+    "pk": 199, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ese-Odo"
+    }
+},
+{
+    "pk": 200, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Esit Eket"
+    }
+},
+{
+    "pk": 201, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Essien Udim"
+    }
+},
+{
+    "pk": 202, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Etche"
+    }
+},
+{
+    "pk": 203, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ethiope East"
+    }
+},
+{
+    "pk": 204, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ethiope West"
+    }
+},
+{
+    "pk": 205, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Eti-Osa"
+    }
+},
+{
+    "pk": 206, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Etim Ekpo"
+    }
+},
+{
+    "pk": 207, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Etinan"
+    }
+},
+{
+    "pk": 208, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Etsako Central"
+    }
+},
+{
+    "pk": 209, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Etsako East"
+    }
+},
+{
+    "pk": 210, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Etung"
+    }
+},
+{
+    "pk": 211, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ewekoro"
+    }
+},
+{
+    "pk": 212, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Ezeagu"
+    }
+},
+{
+    "pk": 213, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ezinihitte"
+    }
+},
+{
+    "pk": 214, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ezza"
+    }
+},
+{
+    "pk": 215, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ezza South"
+    }
+},
+{
+    "pk": 216, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Fagge"
+    }
+},
+{
+    "pk": 217, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Fakai"
+    }
+},
+{
+    "pk": 218, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Faskari"
+    }
+},
+{
+    "pk": 219, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Fika"
+    }
+},
+{
+    "pk": 220, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Fufore"
+    }
+},
+{
+    "pk": 221, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Funakaye"
+    }
+},
+{
+    "pk": 222, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Fune"
+    }
+},
+{
+    "pk": 223, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Funtua"
+    }
+},
+{
+    "pk": 224, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Gabasawa"
+    }
+},
+{
+    "pk": 225, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Gada"
+    }
+},
+{
+    "pk": 226, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Gagarawa"
+    }
+},
+{
+    "pk": 227, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Ganaye"
+    }
+},
+{
+    "pk": 228, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Ganjuwa"
+    }
+},
+{
+    "pk": 229, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Garki"
+    }
+},
+{
+    "pk": 230, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Garko"
+    }
+},
+{
+    "pk": 231, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Garum"
+    }
+},
+{
+    "pk": 232, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Gashaka"
+    }
+},
+{
+    "pk": 233, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Gawabawa"
+    }
+},
+{
+    "pk": 234, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Gaya"
+    }
+},
+{
+    "pk": 235, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Gbako"
+    }
+},
+{
+    "pk": 236, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Gboko"
+    }
+},
+{
+    "pk": 237, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Gbonyin"
+    }
+},
+{
+    "pk": 238, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Geidam"
+    }
+},
+{
+    "pk": 239, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Gezawa"
+    }
+},
+{
+    "pk": 240, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Giade"
+    }
+},
+{
+    "pk": 241, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Gireri"
+    }
+},
+{
+    "pk": 242, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Giwa"
+    }
+},
+{
+    "pk": 243, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Gokana"
+    }
+},
+{
+    "pk": 244, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Gombe"
+    }
+},
+{
+    "pk": 245, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Gombi"
+    }
+},
+{
+    "pk": 246, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Goronyo"
+    }
+},
+{
+    "pk": 247, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Gubio"
+    }
+},
+{
+    "pk": 248, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Gudu"
+    }
+},
+{
+    "pk": 249, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Gujba"
+    }
+},
+{
+    "pk": 250, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Gulani"
+    }
+},
+{
+    "pk": 251, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Guma"
+    }
+},
+{
+    "pk": 252, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Gumel"
+    }
+},
+{
+    "pk": 253, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Gummi"
+    }
+},
+{
+    "pk": 254, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Gurara"
+    }
+},
+{
+    "pk": 255, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Guri"
+    }
+},
+{
+    "pk": 256, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Gusau"
+    }
+},
+{
+    "pk": 257, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Guyuk"
+    }
+},
+{
+    "pk": 258, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Guzamala"
+    }
+},
+{
+    "pk": 259, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Federal Capital Territory", 
+        "lga": "Gwagwalada"
+    }
+},
+{
+    "pk": 260, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Gwale"
+    }
+},
+{
+    "pk": 261, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Gwandu"
+    }
+},
+{
+    "pk": 262, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Gwaram"
+    }
+},
+{
+    "pk": 263, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Gwarzo"
+    }
+},
+{
+    "pk": 264, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Gwer East"
+    }
+},
+{
+    "pk": 265, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Gwer West"
+    }
+},
+{
+    "pk": 266, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Gwiwa"
+    }
+},
+{
+    "pk": 267, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Gwoza"
+    }
+},
+{
+    "pk": 268, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Hadejia"
+    }
+},
+{
+    "pk": 269, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Hawul"
+    }
+},
+{
+    "pk": 270, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Hong"
+    }
+},
+{
+    "pk": 271, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibadan Central"
+    }
+},
+{
+    "pk": 272, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibadan North"
+    }
+},
+{
+    "pk": 273, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibadan North West"
+    }
+},
+{
+    "pk": 274, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibadan South East"
+    }
+},
+{
+    "pk": 275, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibadan South West"
+    }
+},
+{
+    "pk": 276, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Ibaji"
+    }
+},
+{
+    "pk": 277, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibarapa Central"
+    }
+},
+{
+    "pk": 278, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibarapa East"
+    }
+},
+{
+    "pk": 279, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ibarapa North"
+    }
+},
+{
+    "pk": 280, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Ibeju/Lekki"
+    }
+},
+{
+    "pk": 281, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ibeno"
+    }
+},
+{
+    "pk": 282, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ibesikpo Asutan"
+    }
+},
+{
+    "pk": 283, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Ibi"
+    }
+},
+{
+    "pk": 284, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ibiono Ibom"
+    }
+},
+{
+    "pk": 285, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Idah"
+    }
+},
+{
+    "pk": 286, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Idanre"
+    }
+},
+{
+    "pk": 287, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ideato North"
+    }
+},
+{
+    "pk": 288, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ideato South"
+    }
+},
+{
+    "pk": 289, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Idemili North"
+    }
+},
+{
+    "pk": 290, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Idemili South"
+    }
+},
+{
+    "pk": 291, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ido"
+    }
+},
+{
+    "pk": 292, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ido/Osi"
+    }
+},
+{
+    "pk": 293, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Ifako-Ijaye"
+    }
+},
+{
+    "pk": 294, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ife Central"
+    }
+},
+{
+    "pk": 295, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ife East"
+    }
+},
+{
+    "pk": 296, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ife North"
+    }
+},
+{
+    "pk": 297, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ife South"
+    }
+},
+{
+    "pk": 298, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ifedayo"
+    }
+},
+{
+    "pk": 299, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ifedore"
+    }
+},
+{
+    "pk": 300, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Ifelodun"
+    }
+},
+{
+    "pk": 301, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ifelodun"
+    }
+},
+{
+    "pk": 302, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ifo"
+    }
+},
+{
+    "pk": 303, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Igabi"
+    }
+},
+{
+    "pk": 304, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Igalamela-Odolu"
+    }
+},
+{
+    "pk": 305, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Igbo- Ekiti"
+    }
+},
+{
+    "pk": 306, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Igbo-Eze North"
+    }
+},
+{
+    "pk": 307, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Igbo-Eze South"
+    }
+},
+{
+    "pk": 308, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Igueben"
+    }
+},
+{
+    "pk": 309, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Ihiala"
+    }
+},
+{
+    "pk": 310, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ihitte/Uboma"
+    }
+},
+{
+    "pk": 311, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ijebu East"
+    }
+},
+{
+    "pk": 312, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ijebu North"
+    }
+},
+{
+    "pk": 313, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ijebu North East"
+    }
+},
+{
+    "pk": 314, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ijebu Ode"
+    }
+},
+{
+    "pk": 315, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ijero"
+    }
+},
+{
+    "pk": 316, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Ijumu"
+    }
+},
+{
+    "pk": 317, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ika"
+    }
+},
+{
+    "pk": 318, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ika North-East"
+    }
+},
+{
+    "pk": 319, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ika South"
+    }
+},
+{
+    "pk": 320, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Ikara"
+    }
+},
+{
+    "pk": 321, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ikare"
+    }
+},
+{
+    "pk": 322, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ikeduru"
+    }
+},
+{
+    "pk": 323, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Ikeja"
+    }
+},
+{
+    "pk": 324, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ikenne"
+    }
+},
+{
+    "pk": 325, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ikole"
+    }
+},
+{
+    "pk": 326, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Ikom"
+    }
+},
+{
+    "pk": 327, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ikono"
+    }
+},
+{
+    "pk": 328, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Ikorodu"
+    }
+},
+{
+    "pk": 329, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ikot Abasi"
+    }
+},
+{
+    "pk": 330, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ikot Ekpene"
+    }
+},
+{
+    "pk": 331, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Ikwerre"
+    }
+},
+{
+    "pk": 332, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ikwo"
+    }
+},
+{
+    "pk": 333, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Ikwuano"
+    }
+},
+{
+    "pk": 334, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ila"
+    }
+},
+{
+    "pk": 335, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ilaje"
+    }
+},
+{
+    "pk": 336, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ile-Oluji"
+    }
+},
+{
+    "pk": 337, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ilejemeje"
+    }
+},
+{
+    "pk": 338, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ilesha East"
+    }
+},
+{
+    "pk": 339, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ilesha West"
+    }
+},
+{
+    "pk": 340, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Illela"
+    }
+},
+{
+    "pk": 341, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Ilorin East"
+    }
+},
+{
+    "pk": 342, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Ilorin West"
+    }
+},
+{
+    "pk": 343, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Imeko-Afon"
+    }
+},
+{
+    "pk": 344, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Ingawa"
+    }
+},
+{
+    "pk": 345, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ini"
+    }
+},
+{
+    "pk": 346, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ipokia"
+    }
+},
+{
+    "pk": 347, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Irele"
+    }
+},
+{
+    "pk": 348, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Irepo"
+    }
+},
+{
+    "pk": 349, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Irepodun"
+    }
+},
+{
+    "pk": 350, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Irepodun"
+    }
+},
+{
+    "pk": 351, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Irepodun"
+    }
+},
+{
+    "pk": 352, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Irewole"
+    }
+},
+{
+    "pk": 353, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Isa"
+    }
+},
+{
+    "pk": 354, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Ise/Orun"
+    }
+},
+{
+    "pk": 355, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Iseyin"
+    }
+},
+{
+    "pk": 356, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ishielu"
+    }
+},
+{
+    "pk": 357, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Isi-Uzo"
+    }
+},
+{
+    "pk": 358, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Isiala Mbano"
+    }
+},
+{
+    "pk": 359, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Isiala-Ngwa North"
+    }
+},
+{
+    "pk": 360, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Isiala-Ngwa South"
+    }
+},
+{
+    "pk": 361, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Isin"
+    }
+},
+{
+    "pk": 362, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Isokan"
+    }
+},
+{
+    "pk": 363, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Isoko North"
+    }
+},
+{
+    "pk": 364, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Isoko South"
+    }
+},
+{
+    "pk": 365, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Isu"
+    }
+},
+{
+    "pk": 366, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Isuikwato"
+    }
+},
+{
+    "pk": 367, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Itas/Gadau"
+    }
+},
+{
+    "pk": 368, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Itesiwaju"
+    }
+},
+{
+    "pk": 369, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Itu"
+    }
+},
+{
+    "pk": 370, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ivo"
+    }
+},
+{
+    "pk": 371, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Iwajowa"
+    }
+},
+{
+    "pk": 372, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Iwo"
+    }
+},
+{
+    "pk": 373, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Jaba"
+    }
+},
+{
+    "pk": 374, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Jada"
+    }
+},
+{
+    "pk": 375, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Jahun"
+    }
+},
+{
+    "pk": 376, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Jakusko"
+    }
+},
+{
+    "pk": 377, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Jalingo"
+    }
+},
+{
+    "pk": 378, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Jama'are"
+    }
+},
+{
+    "pk": 379, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Jega"
+    }
+},
+{
+    "pk": 380, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Jema'a"
+    }
+},
+{
+    "pk": 381, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Jere"
+    }
+},
+{
+    "pk": 382, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Jibia"
+    }
+},
+{
+    "pk": 383, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Jos East"
+    }
+},
+{
+    "pk": 384, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Jos North"
+    }
+},
+{
+    "pk": 385, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Jos South"
+    }
+},
+{
+    "pk": 386, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Kabba/Bunu"
+    }
+},
+{
+    "pk": 387, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kabo"
+    }
+},
+{
+    "pk": 388, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kachia"
+    }
+},
+{
+    "pk": 389, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kaduna North"
+    }
+},
+{
+    "pk": 390, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kaduna South"
+    }
+},
+{
+    "pk": 391, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Kafur"
+    }
+},
+{
+    "pk": 392, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Kaga"
+    }
+},
+{
+    "pk": 393, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kagarko"
+    }
+},
+{
+    "pk": 394, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Kaiama"
+    }
+},
+{
+    "pk": 395, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Kaita"
+    }
+},
+{
+    "pk": 396, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Kajola"
+    }
+},
+{
+    "pk": 397, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kajuru"
+    }
+},
+{
+    "pk": 398, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Kala/Balge"
+    }
+},
+{
+    "pk": 399, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Kalgo"
+    }
+},
+{
+    "pk": 400, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Kaltungo"
+    }
+},
+{
+    "pk": 401, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "KanKia"
+    }
+},
+{
+    "pk": 402, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Kanam"
+    }
+},
+{
+    "pk": 403, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Kankara"
+    }
+},
+{
+    "pk": 404, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Kanke"
+    }
+},
+{
+    "pk": 405, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Kankia"
+    }
+},
+{
+    "pk": 406, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kano Municipal"
+    }
+},
+{
+    "pk": 407, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Karasuwa"
+    }
+},
+{
+    "pk": 408, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Karawa"
+    }
+},
+{
+    "pk": 409, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Karaye"
+    }
+},
+{
+    "pk": 410, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Karin-Lamido"
+    }
+},
+{
+    "pk": 411, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Karu"
+    }
+},
+{
+    "pk": 412, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Katagum"
+    }
+},
+{
+    "pk": 413, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Katcha"
+    }
+},
+{
+    "pk": 414, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Katsina"
+    }
+},
+{
+    "pk": 415, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Katsina-Ala"
+    }
+},
+{
+    "pk": 416, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kaura"
+    }
+},
+{
+    "pk": 417, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Kaura"
+    }
+},
+{
+    "pk": 418, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kauru"
+    }
+},
+{
+    "pk": 419, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Keana"
+    }
+},
+{
+    "pk": 420, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Kebbe"
+    }
+},
+{
+    "pk": 421, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Keffi"
+    }
+},
+{
+    "pk": 422, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Khana"
+    }
+},
+{
+    "pk": 423, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kibiya"
+    }
+},
+{
+    "pk": 424, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Kirfi"
+    }
+},
+{
+    "pk": 425, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Kiri kasamma"
+    }
+},
+{
+    "pk": 426, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kiru"
+    }
+},
+{
+    "pk": 427, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Kiyawa"
+    }
+},
+{
+    "pk": 428, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Kogi"
+    }
+},
+{
+    "pk": 429, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Koko/Besse"
+    }
+},
+{
+    "pk": 430, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Kokona"
+    }
+},
+{
+    "pk": 431, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Kolokuma/Opokuma"
+    }
+},
+{
+    "pk": 432, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Konduga"
+    }
+},
+{
+    "pk": 433, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Konshisha"
+    }
+},
+{
+    "pk": 434, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Kontagora"
+    }
+},
+{
+    "pk": 435, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Kosofe"
+    }
+},
+{
+    "pk": 436, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kubau"
+    }
+},
+{
+    "pk": 437, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Kudan"
+    }
+},
+{
+    "pk": 438, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Federal Capital Territory", 
+        "lga": "Kuje"
+    }
+},
+{
+    "pk": 439, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Kukawa"
+    }
+},
+{
+    "pk": 440, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kumbotso"
+    }
+},
+{
+    "pk": 441, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kunchi"
+    }
+},
+{
+    "pk": 442, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Kura"
+    }
+},
+{
+    "pk": 443, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Kurfi"
+    }
+},
+{
+    "pk": 444, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Kurmi"
+    }
+},
+{
+    "pk": 445, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Kusada"
+    }
+},
+{
+    "pk": 446, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Kwami"
+    }
+},
+{
+    "pk": 447, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Kwande"
+    }
+},
+{
+    "pk": 448, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Kware"
+    }
+},
+{
+    "pk": 449, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Kwaya Kusar"
+    }
+},
+{
+    "pk": 450, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Lafia"
+    }
+},
+{
+    "pk": 451, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Lagelu Ogbomosho North"
+    }
+},
+{
+    "pk": 452, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Lagos Island"
+    }
+},
+{
+    "pk": 453, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Lagos Mainland"
+    }
+},
+{
+    "pk": 454, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Lamurde"
+    }
+},
+{
+    "pk": 455, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Langtang North"
+    }
+},
+{
+    "pk": 456, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Langtang South"
+    }
+},
+{
+    "pk": 457, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Lapai"
+    }
+},
+{
+    "pk": 458, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Lau"
+    }
+},
+{
+    "pk": 459, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Lavun"
+    }
+},
+{
+    "pk": 460, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Lere"
+    }
+},
+{
+    "pk": 461, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Logo"
+    }
+},
+{
+    "pk": 462, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Lokoja"
+    }
+},
+{
+    "pk": 463, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Machina"
+    }
+},
+{
+    "pk": 464, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Madagali"
+    }
+},
+{
+    "pk": 465, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Madobi"
+    }
+},
+{
+    "pk": 466, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Mafa"
+    }
+},
+{
+    "pk": 467, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Magama"
+    }
+},
+{
+    "pk": 468, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Magumeri"
+    }
+},
+{
+    "pk": 469, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Mai'Adua"
+    }
+},
+{
+    "pk": 470, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Maiduguri"
+    }
+},
+{
+    "pk": 471, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Maigatari"
+    }
+},
+{
+    "pk": 472, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Maiha"
+    }
+},
+{
+    "pk": 473, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Maiyama"
+    }
+},
+{
+    "pk": 474, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Makarfi"
+    }
+},
+{
+    "pk": 475, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Makoda"
+    }
+},
+{
+    "pk": 476, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Makurdi"
+    }
+},
+{
+    "pk": 477, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Mallam"
+    }
+},
+{
+    "pk": 478, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Malumfashi"
+    }
+},
+{
+    "pk": 479, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Mangu"
+    }
+},
+{
+    "pk": 480, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Mani"
+    }
+},
+{
+    "pk": 481, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Maradun"
+    }
+},
+{
+    "pk": 482, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Mariga"
+    }
+},
+{
+    "pk": 483, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Marte"
+    }
+},
+{
+    "pk": 484, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Maru"
+    }
+},
+{
+    "pk": 485, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Mashegu"
+    }
+},
+{
+    "pk": 486, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Mashi"
+    }
+},
+{
+    "pk": 487, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Matazuu"
+    }
+},
+{
+    "pk": 488, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Mayo-Belwa"
+    }
+},
+{
+    "pk": 489, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Mbaitoli"
+    }
+},
+{
+    "pk": 490, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Mbo"
+    }
+},
+{
+    "pk": 491, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Michika"
+    }
+},
+{
+    "pk": 492, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Miga"
+    }
+},
+{
+    "pk": 493, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Mikang"
+    }
+},
+{
+    "pk": 494, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Minjibir"
+    }
+},
+{
+    "pk": 495, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Misau"
+    }
+},
+{
+    "pk": 496, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Mkpat Enin"
+    }
+},
+{
+    "pk": 497, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Moba"
+    }
+},
+{
+    "pk": 498, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Mobbar"
+    }
+},
+{
+    "pk": 499, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Mokwa"
+    }
+},
+{
+    "pk": 500, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Monguno"
+    }
+},
+{
+    "pk": 501, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Mopa-Muro"
+    }
+},
+{
+    "pk": 502, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Moro"
+    }
+},
+{
+    "pk": 503, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Mubi North"
+    }
+},
+{
+    "pk": 504, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Mubi South"
+    }
+},
+{
+    "pk": 505, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Musawa"
+    }
+},
+{
+    "pk": 506, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Mushin"
+    }
+},
+{
+    "pk": 507, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Muya"
+    }
+},
+{
+    "pk": 508, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Nafada/Bajoga"
+    }
+},
+{
+    "pk": 509, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Namoda"
+    }
+},
+{
+    "pk": 510, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Nangere"
+    }
+},
+{
+    "pk": 511, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Nasarawa"
+    }
+},
+{
+    "pk": 512, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Nasarawa"
+    }
+},
+{
+    "pk": 513, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Nasarawa-Eggon"
+    }
+},
+{
+    "pk": 514, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ndokwa East"
+    }
+},
+{
+    "pk": 515, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ndokwa West"
+    }
+},
+{
+    "pk": 516, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Nembe"
+    }
+},
+{
+    "pk": 517, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Ngala"
+    }
+},
+{
+    "pk": 518, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Nganzai"
+    }
+},
+{
+    "pk": 519, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Ngaski"
+    }
+},
+{
+    "pk": 520, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ngor-Okpala"
+    }
+},
+{
+    "pk": 521, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Nguru Potiskum"
+    }
+},
+{
+    "pk": 522, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Ngwa"
+    }
+},
+{
+    "pk": 523, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Ningi"
+    }
+},
+{
+    "pk": 524, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Njaba"
+    }
+},
+{
+    "pk": 525, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Njikoka"
+    }
+},
+{
+    "pk": 526, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Nkanu"
+    }
+},
+{
+    "pk": 527, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Nkanu East"
+    }
+},
+{
+    "pk": 528, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Nkwerre"
+    }
+},
+{
+    "pk": 529, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Nnewi North"
+    }
+},
+{
+    "pk": 530, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Nnewi South"
+    }
+},
+{
+    "pk": 531, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Nsit Atai"
+    }
+},
+{
+    "pk": 532, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Nsit Ibom"
+    }
+},
+{
+    "pk": 533, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Nsit Ubium"
+    }
+},
+{
+    "pk": 534, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Nsukka"
+    }
+},
+{
+    "pk": 535, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Numan"
+    }
+},
+{
+    "pk": 536, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Nwangele"
+    }
+},
+{
+    "pk": 537, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Obafemi-Owode"
+    }
+},
+{
+    "pk": 538, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Obanliku"
+    }
+},
+{
+    "pk": 539, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Obi"
+    }
+},
+{
+    "pk": 540, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Obi"
+    }
+},
+{
+    "pk": 541, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Obi Nwa"
+    }
+},
+{
+    "pk": 542, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Obia/Akpor"
+    }
+},
+{
+    "pk": 543, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Obokun"
+    }
+},
+{
+    "pk": 544, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Obot Akara"
+    }
+},
+{
+    "pk": 545, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Obowo"
+    }
+},
+{
+    "pk": 546, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Obudu"
+    }
+},
+{
+    "pk": 547, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Odeda"
+    }
+},
+{
+    "pk": 548, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Odigbo"
+    }
+},
+{
+    "pk": 549, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Odo-Otin"
+    }
+},
+{
+    "pk": 550, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Odogbolu"
+    }
+},
+{
+    "pk": 551, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Odubra"
+    }
+},
+{
+    "pk": 552, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Odukpani"
+    }
+},
+{
+    "pk": 553, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Offa"
+    }
+},
+{
+    "pk": 554, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Ofu"
+    }
+},
+{
+    "pk": 555, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Ogba/Egbema/Ndoni"
+    }
+},
+{
+    "pk": 556, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Ogbadibo"
+    }
+},
+{
+    "pk": 557, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Ogbaru"
+    }
+},
+{
+    "pk": 558, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Ogbia"
+    }
+},
+{
+    "pk": 559, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ogbomosho South"
+    }
+},
+{
+    "pk": 560, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ogo Oluwa"
+    }
+},
+{
+    "pk": 561, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Ogoja"
+    }
+},
+{
+    "pk": 562, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Ogori/Mangongo"
+    }
+},
+{
+    "pk": 563, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Ogu/Bolo"
+    }
+},
+{
+    "pk": 564, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Ogun Waterside"
+    }
+},
+{
+    "pk": 565, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Oguta"
+    }
+},
+{
+    "pk": 566, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Ohaji/Egbema"
+    }
+},
+{
+    "pk": 567, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ohaozara"
+    }
+},
+{
+    "pk": 568, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Ohaukwu"
+    }
+},
+{
+    "pk": 569, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Ohifia"
+    }
+},
+{
+    "pk": 570, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Ohimini"
+    }
+},
+{
+    "pk": 571, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Oji-River"
+    }
+},
+{
+    "pk": 572, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Ojo"
+    }
+},
+{
+    "pk": 573, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Oju"
+    }
+},
+{
+    "pk": 574, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Oke-Ero"
+    }
+},
+{
+    "pk": 575, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Okehi"
+    }
+},
+{
+    "pk": 576, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Okeigbo"
+    }
+},
+{
+    "pk": 577, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Okene"
+    }
+},
+{
+    "pk": 578, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Okigwe"
+    }
+},
+{
+    "pk": 579, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Okitipupa"
+    }
+},
+{
+    "pk": 580, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Okobo"
+    }
+},
+{
+    "pk": 581, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Okpe"
+    }
+},
+{
+    "pk": 582, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Okpokwu"
+    }
+},
+{
+    "pk": 583, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Okrika"
+    }
+},
+{
+    "pk": 584, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Ola-Oluwa"
+    }
+},
+{
+    "pk": 585, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Olamabolo"
+    }
+},
+{
+    "pk": 586, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Olorunda"
+    }
+},
+{
+    "pk": 587, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Olorunsogo"
+    }
+},
+{
+    "pk": 588, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Oluyole"
+    }
+},
+{
+    "pk": 589, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Omala"
+    }
+},
+{
+    "pk": 590, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Omumma"
+    }
+},
+{
+    "pk": 591, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ona-Ara"
+    }
+},
+{
+    "pk": 592, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ondo East"
+    }
+},
+{
+    "pk": 593, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ondo West"
+    }
+},
+{
+    "pk": 594, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ebonyi", 
+        "lga": "Onicha"
+    }
+},
+{
+    "pk": 595, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Onitsha North"
+    }
+},
+{
+    "pk": 596, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Onitsha South"
+    }
+},
+{
+    "pk": 597, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Onna"
+    }
+},
+{
+    "pk": 598, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Opobo/Nkoro"
+    }
+},
+{
+    "pk": 599, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Oredo"
+    }
+},
+{
+    "pk": 600, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Orelope"
+    }
+},
+{
+    "pk": 601, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Orhionwon"
+    }
+},
+{
+    "pk": 602, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Ori Ire"
+    }
+},
+{
+    "pk": 603, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Oriade"
+    }
+},
+{
+    "pk": 604, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Orlu"
+    }
+},
+{
+    "pk": 605, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Orolu"
+    }
+},
+{
+    "pk": 606, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Oron"
+    }
+},
+{
+    "pk": 607, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Orsu"
+    }
+},
+{
+    "pk": 608, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Oru East"
+    }
+},
+{
+    "pk": 609, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Oru West"
+    }
+},
+{
+    "pk": 610, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Oruk Anam"
+    }
+},
+{
+    "pk": 611, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Orumba North"
+    }
+},
+{
+    "pk": 612, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Orumba South"
+    }
+},
+{
+    "pk": 613, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Ose"
+    }
+},
+{
+    "pk": 614, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Oshimili"
+    }
+},
+{
+    "pk": 615, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Oshimili North"
+    }
+},
+{
+    "pk": 616, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Oshodi-Isolo"
+    }
+},
+{
+    "pk": 617, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Osisioma"
+    }
+},
+{
+    "pk": 618, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Osun", 
+        "lga": "Osogbo"
+    }
+},
+{
+    "pk": 619, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Oturkpo"
+    }
+},
+{
+    "pk": 620, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Ovia South-East"
+    }
+},
+{
+    "pk": 621, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Ovia South-west"
+    }
+},
+{
+    "pk": 622, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Owerri North"
+    }
+},
+{
+    "pk": 623, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "Owerri-Municipal"
+    }
+},
+{
+    "pk": 624, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ondo", 
+        "lga": "Owo"
+    }
+},
+{
+    "pk": 625, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ekiti", 
+        "lga": "Oye"
+    }
+},
+{
+    "pk": 626, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Anambra", 
+        "lga": "Oyi"
+    }
+},
+{
+    "pk": 627, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Oyigbo"
+    }
+},
+{
+    "pk": 628, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Oyo East"
+    }
+},
+{
+    "pk": 629, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Oyo West"
+    }
+},
+{
+    "pk": 630, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Oyun"
+    }
+},
+{
+    "pk": 631, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Pailoro"
+    }
+},
+{
+    "pk": 632, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Pankshin"
+    }
+},
+{
+    "pk": 633, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Patani"
+    }
+},
+{
+    "pk": 634, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kwara", 
+        "lga": "Pategi"
+    }
+},
+{
+    "pk": 635, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Port-Harcourt"
+    }
+},
+{
+    "pk": 636, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Qua'an Pan"
+    }
+},
+{
+    "pk": 637, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Rabah"
+    }
+},
+{
+    "pk": 638, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Rafi"
+    }
+},
+{
+    "pk": 639, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Rano"
+    }
+},
+{
+    "pk": 640, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Remo North"
+    }
+},
+{
+    "pk": 641, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Rijau"
+    }
+},
+{
+    "pk": 642, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Rimi"
+    }
+},
+{
+    "pk": 643, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Rimin Gado"
+    }
+},
+{
+    "pk": 644, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Ringim"
+    }
+},
+{
+    "pk": 645, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Riyom"
+    }
+},
+{
+    "pk": 646, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Rogo"
+    }
+},
+{
+    "pk": 647, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Roni"
+    }
+},
+{
+    "pk": 648, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Sabgama"
+    }
+},
+{
+    "pk": 649, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Sabon Birni"
+    }
+},
+{
+    "pk": 650, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Sabon-Gari"
+    }
+},
+{
+    "pk": 651, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Sabuwa"
+    }
+},
+{
+    "pk": 652, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Safana"
+    }
+},
+{
+    "pk": 653, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Sakaba"
+    }
+},
+{
+    "pk": 654, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Saki East"
+    }
+},
+{
+    "pk": 655, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Sandamu"
+    }
+},
+{
+    "pk": 656, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Sanga"
+    }
+},
+{
+    "pk": 657, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Sapele"
+    }
+},
+{
+    "pk": 658, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Sardauna"
+    }
+},
+{
+    "pk": 659, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Ogun", 
+        "lga": "Shagamu"
+    }
+},
+{
+    "pk": 660, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Shagari"
+    }
+},
+{
+    "pk": 661, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Shanga"
+    }
+},
+{
+    "pk": 662, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Borno", 
+        "lga": "Shani"
+    }
+},
+{
+    "pk": 663, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Shanono"
+    }
+},
+{
+    "pk": 664, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Shelleng"
+    }
+},
+{
+    "pk": 665, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Shendam"
+    }
+},
+{
+    "pk": 666, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Shinkafi"
+    }
+},
+{
+    "pk": 667, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Shira"
+    }
+},
+{
+    "pk": 668, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Shiroro"
+    }
+},
+{
+    "pk": 669, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Shomgom"
+    }
+},
+{
+    "pk": 670, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Shomolu"
+    }
+},
+{
+    "pk": 671, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Silame"
+    }
+},
+{
+    "pk": 672, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Soba"
+    }
+},
+{
+    "pk": 673, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Sokoto North"
+    }
+},
+{
+    "pk": 674, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Sokoto South"
+    }
+},
+{
+    "pk": 675, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Song"
+    }
+},
+{
+    "pk": 676, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Southern Ijaw"
+    }
+},
+{
+    "pk": 677, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Sule-Tankarkar"
+    }
+},
+{
+    "pk": 678, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Suleja"
+    }
+},
+{
+    "pk": 679, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Sumaila"
+    }
+},
+{
+    "pk": 680, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Suru"
+    }
+},
+{
+    "pk": 681, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Lagos", 
+        "lga": "Surulere"
+    }
+},
+{
+    "pk": 682, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "Surulere"
+    }
+},
+{
+    "pk": 683, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Tafa"
+    }
+},
+{
+    "pk": 684, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Tafawa-Balewa"
+    }
+},
+{
+    "pk": 685, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Rivers", 
+        "lga": "Tai"
+    }
+},
+{
+    "pk": 686, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Takali"
+    }
+},
+{
+    "pk": 687, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Takum"
+    }
+},
+{
+    "pk": 688, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Talata Mafara"
+    }
+},
+{
+    "pk": 689, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Tambuwal"
+    }
+},
+{
+    "pk": 690, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Tangaza"
+    }
+},
+{
+    "pk": 691, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Tarauni"
+    }
+},
+{
+    "pk": 692, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Tarka"
+    }
+},
+{
+    "pk": 693, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Tarmua"
+    }
+},
+{
+    "pk": 694, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Taura"
+    }
+},
+{
+    "pk": 695, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Tofa"
+    }
+},
+{
+    "pk": 696, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Toro"
+    }
+},
+{
+    "pk": 697, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Toto"
+    }
+},
+{
+    "pk": 698, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Toungo"
+    }
+},
+{
+    "pk": 699, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Tsafe"
+    }
+},
+{
+    "pk": 700, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Tsanyawa"
+    }
+},
+{
+    "pk": 701, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Tudun Wada"
+    }
+},
+{
+    "pk": 702, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Tureta"
+    }
+},
+{
+    "pk": 703, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Udenu"
+    }
+},
+{
+    "pk": 704, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Udi Agwu"
+    }
+},
+{
+    "pk": 705, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Udu"
+    }
+},
+{
+    "pk": 706, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Udung Uko"
+    }
+},
+{
+    "pk": 707, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ughelli North"
+    }
+},
+{
+    "pk": 708, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ughelli South"
+    }
+},
+{
+    "pk": 709, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Ugwunagbo"
+    }
+},
+{
+    "pk": 710, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Uhunmwonde"
+    }
+},
+{
+    "pk": 711, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Ukanafun"
+    }
+},
+{
+    "pk": 712, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Edo", 
+        "lga": "Ukpoba"
+    }
+},
+{
+    "pk": 713, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Ukum"
+    }
+},
+{
+    "pk": 714, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Ukwa East"
+    }
+},
+{
+    "pk": 715, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Ukwa West"
+    }
+},
+{
+    "pk": 716, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Ukwani"
+    }
+},
+{
+    "pk": 717, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Umu-Neochi"
+    }
+},
+{
+    "pk": 718, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Umuahia North"
+    }
+},
+{
+    "pk": 719, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Abia", 
+        "lga": "Umuahia South"
+    }
+},
+{
+    "pk": 720, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Ungogo"
+    }
+},
+{
+    "pk": 721, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Uruan"
+    }
+},
+{
+    "pk": 722, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Urue-Offong/Oruko"
+    }
+},
+{
+    "pk": 723, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Ushongo"
+    }
+},
+{
+    "pk": 724, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Ussa"
+    }
+},
+{
+    "pk": 725, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Uvwie"
+    }
+},
+{
+    "pk": 726, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Akwa Ibom", 
+        "lga": "Uyo"
+    }
+},
+{
+    "pk": 727, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Enugu", 
+        "lga": "Uzo-Uwani"
+    }
+},
+{
+    "pk": 728, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Benue", 
+        "lga": "Vandeikya"
+    }
+},
+{
+    "pk": 729, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Wamako"
+    }
+},
+{
+    "pk": 730, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nassarawa", 
+        "lga": "Wamba"
+    }
+},
+{
+    "pk": 731, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Warawa"
+    }
+},
+{
+    "pk": 732, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Warji"
+    }
+},
+{
+    "pk": 733, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Warri Central"
+    }
+},
+{
+    "pk": 734, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Warri North"
+    }
+},
+{
+    "pk": 735, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Delta", 
+        "lga": "Warri South"
+    }
+},
+{
+    "pk": 736, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Wasagu/Danko"
+    }
+},
+{
+    "pk": 737, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Plateau", 
+        "lga": "Wase"
+    }
+},
+{
+    "pk": 738, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kano", 
+        "lga": "Wudil"
+    }
+},
+{
+    "pk": 739, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Wukari"
+    }
+},
+{
+    "pk": 740, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Wurno"
+    }
+},
+{
+    "pk": 741, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Niger", 
+        "lga": "Wushishi"
+    }
+},
+{
+    "pk": 742, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Sokoto", 
+        "lga": "Yabo"
+    }
+},
+{
+    "pk": 743, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Yagba East"
+    }
+},
+{
+    "pk": 744, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kogi", 
+        "lga": "Yagba West"
+    }
+},
+{
+    "pk": 745, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Yala"
+    }
+},
+{
+    "pk": 746, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Gombe", 
+        "lga": "Yamaltu/delta"
+    }
+},
+{
+    "pk": 747, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "Yankwashi"
+    }
+},
+{
+    "pk": 748, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Cross River", 
+        "lga": "Yarkur"
+    }
+},
+{
+    "pk": 749, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Yauri"
+    }
+},
+{
+    "pk": 750, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bayelsa", 
+        "lga": "Yenegoa"
+    }
+},
+{
+    "pk": 751, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Yola North"
+    }
+},
+{
+    "pk": 752, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Adamawa", 
+        "lga": "Yola South"
+    }
+},
+{
+    "pk": 753, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Yorro"
+    }
+},
+{
+    "pk": 754, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Yunusari"
+    }
+},
+{
+    "pk": 755, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Yobe", 
+        "lga": "Yusufari"
+    }
+},
+{
+    "pk": 756, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Bauchi", 
+        "lga": "Zaki"
+    }
+},
+{
+    "pk": 757, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "katsina", 
+        "lga": "Zango"
+    }
+},
+{
+    "pk": 758, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Zango-Kataf"
+    }
+},
+{
+    "pk": 759, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kaduna", 
+        "lga": "Zaria"
+    }
+},
+{
+    "pk": 760, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Taraba", 
+        "lga": "Zing"
+    }
+},
+{
+    "pk": 761, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Zamfara", 
+        "lga": "Zurmi"
+    }
+},
+{
+    "pk": 762, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Kebbi", 
+        "lga": "Zuru"
+    }
+},
+{
+    "pk": 763, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Federal Capital Territory", 
+        "lga": "bwari"
+    }
+},
+{
+    "pk": 764, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "kafin Hausa"
+    }
+},
+{
+    "pk": 765, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "kaugama kazaure"
+    }
+},
+{
+    "pk": 766, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Federal Capital Territory", 
+        "lga": "kwali"
+    }
+},
+{
+    "pk": 767, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Jigawa", 
+        "lga": "malam Madori"
+    }
+},
+{
+    "pk": 768, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Nill", 
+        "lga": "ok"
+    }
+},
+{
+    "pk": 769, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Imo", 
+        "lga": "owerri West"
+    }
+},
+{
+    "pk": 770, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Oyo", 
+        "lga": "saki West"
+    }
+},
+{
+    "pk": 771, 
+    "model": "platformowners.tblplatformlga", 
+    "fields": {
+        "state": "Non-Nigeria", 
+        "lga": "Nill"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformclient", 
+    "fields": {
+        "status": true, 
+        "client_type": "Educational", 
+        "client_type_code": "363564645"
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformclient", 
+    "fields": {
+        "status": true, 
+        "client_type": "Religious", 
+        "client_type_code": "867456753"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformsections", 
+    "fields": {
+        "status": true, 
+        "section": "Nursery", 
+        "section_code": "97864756", 
+        "section_type": 1, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformsections", 
+    "fields": {
+        "status": true, 
+        "section": "Primary", 
+        "section_code": "57653650", 
+        "section_type": 1, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformsections", 
+    "fields": {
+        "status": true, 
+        "section": "Secondary", 
+        "section_code": "36455435", 
+        "section_type": 1, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformsections", 
+    "fields": {
+        "status": true, 
+        "section": "Catechism", 
+        "section_code": "67543544", 
+        "section_type": 2, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformsubsections", 
+    "fields": {
+        "status": true, 
+        "section": 1, 
+        "subsection": "Nursery", 
+        "subsection_code": "453452"
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformsubsections", 
+    "fields": {
+        "status": true, 
+        "section": 2, 
+        "subsection": "Primary", 
+        "subsection_code": "676643"
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformsubsections", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "subsection": "Junior Secondary", 
+        "subsection_code": "207857"
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformsubsections", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "subsection": "Senior Secondary", 
+        "subsection_code": "764365"
+    }
+},
+{
+    "pk": 5, 
+    "model": "platformowners.tblplatformsubsections", 
+    "fields": {
+        "status": true, 
+        "section": 4, 
+        "subsection": "Catechism", 
+        "subsection_code": "975453"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformapps", 
+    "fields": {
+        "status": true, 
+        "app": "Student Bill", 
+        "app_code": "8966897", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformapps", 
+    "fields": {
+        "status": true, 
+        "app": "Reportsheet", 
+        "app_code": "4847576", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformapps", 
+    "fields": {
+        "status": true, 
+        "app": "CBT 1 (Promotional Exams )", 
+        "app_code": "3656876", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformapps", 
+    "fields": {
+        "status": true, 
+        "app": "CBT 2 (Admission Seekers)", 
+        "app_code": "6543455", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 5, 
+    "model": "platformowners.tblplatformapps", 
+    "fields": {
+        "status": true, 
+        "app": "Newsletters", 
+        "app_code": "8033445", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformterms", 
+    "fields": {
+        "status": true, 
+        "term": "First", 
+        "term_code": "65767747", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformterms", 
+    "fields": {
+        "status": true, 
+        "term": "Second", 
+        "term_code": "23432555", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformterms", 
+    "fields": {
+        "status": true, 
+        "term": "Third", 
+        "term_code": "24432358", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformsubjects", 
+    "fields": {
+        "subject_code": "896879", 
+        "status": "1", 
+        "section": "JS", 
+        "subject": "MATHEMATICS"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "JS 1", 
+        "section": 3, 
+        "subsection": 3, 
+        "platformowner": 1, 
+        "stream_code": "87698767"
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "JS 2", 
+        "section": 3, 
+        "subsection": 3, 
+        "platformowner": 1, 
+        "stream_code": "55436450"
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "JS 3", 
+        "section": 3, 
+        "subsection": 3, 
+        "platformowner": 1, 
+        "stream_code": "96777777"
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "SS 1", 
+        "section": 3, 
+        "subsection": 4, 
+        "platformowner": 1, 
+        "stream_code": "28787768"
+    }
+},
+{
+    "pk": 5, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "SS 2", 
+        "section": 3, 
+        "subsection": 4, 
+        "platformowner": 1, 
+        "stream_code": "95623406"
+    }
+},
+{
+    "pk": 6, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "SS 3", 
+        "section": 3, 
+        "subsection": 4, 
+        "platformowner": 1, 
+        "stream_code": "87676440"
+    }
+},
+{
+    "pk": 7, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Primary 1", 
+        "section": 2, 
+        "subsection": 2, 
+        "platformowner": 1, 
+        "stream_code": "16457580"
+    }
+},
+{
+    "pk": 8, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Primary 2", 
+        "section": 2, 
+        "subsection": 2, 
+        "platformowner": 1, 
+        "stream_code": "77465234"
+    }
+},
+{
+    "pk": 9, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Primary 3", 
+        "section": 2, 
+        "subsection": 2, 
+        "platformowner": 1, 
+        "stream_code": "70007575"
+    }
+},
+{
+    "pk": 10, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Primary 4", 
+        "section": 2, 
+        "subsection": 2, 
+        "platformowner": 1, 
+        "stream_code": "40097885"
+    }
+},
+{
+    "pk": 11, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Primary 5", 
+        "section": 2, 
+        "subsection": 2, 
+        "platformowner": 1, 
+        "stream_code": "91065456"
+    }
+},
+{
+    "pk": 12, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Primary 6", 
+        "section": 2, 
+        "subsection": 2, 
+        "platformowner": 1, 
+        "stream_code": "81086545"
+    }
+},
+{
+    "pk": 13, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Class1", 
+        "section": 4, 
+        "subsection": 5, 
+        "platformowner": 1, 
+        "stream_code": "34353550"
+    }
+},
+{
+    "pk": 14, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Class 2", 
+        "section": 4, 
+        "subsection": 5, 
+        "platformowner": 1, 
+        "stream_code": "67454455"
+    }
+},
+{
+    "pk": 15, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Class 3", 
+        "section": 4, 
+        "subsection": 5, 
+        "platformowner": 1, 
+        "stream_code": "34350004"
+    }
+},
+{
+    "pk": 16, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Class 4", 
+        "section": 4, 
+        "subsection": 5, 
+        "platformowner": 1, 
+        "stream_code": "10003444"
+    }
+},
+{
+    "pk": 17, 
+    "model": "platformowners.tblplatformstreams", 
+    "fields": {
+        "status": true, 
+        "stream": "Class 5", 
+        "section": 4, 
+        "subsection": 5, 
+        "platformowner": 1, 
+        "stream_code": "30549699"
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 1, 
+        "dept_code": "86566465", 
+        "dept": "Nursery", 
+        "subsection": 1, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 2, 
+        "dept_code": "20007876", 
+        "dept": "Pry", 
+        "subsection": 2, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "dept_code": "28990098", 
+        "dept": "JS", 
+        "subsection": 3, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "dept_code": "21686700", 
+        "dept": "Science", 
+        "subsection": 4, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 5, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "dept_code": "99660000", 
+        "dept": "Commercial", 
+        "subsection": 4, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 6, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "dept_code": "80444465", 
+        "dept": "Art", 
+        "subsection": 4, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 7, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 4, 
+        "dept_code": "36064352", 
+        "dept": "Cathe", 
+        "subsection": 5, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 8, 
+    "model": "platformowners.tblplatformsubjectdept", 
+    "fields": {
+        "status": true, 
+        "section": 3, 
+        "dept_code": "976410976", 
+        "dept": "Remidial", 
+        "subsection": 4, 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformowners.tblplatformassessment", 
+    "fields": {
+        "assessment_status": true, 
+        "assessment": "ca 1", 
+        "assessment_code": "960856", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "platformowners.tblplatformassessment", 
+    "fields": {
+        "assessment_status": true, 
+        "assessment": "ca 2", 
+        "assessment_code": "854665", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "platformowners.tblplatformassessment", 
+    "fields": {
+        "assessment_status": true, 
+        "assessment": "ca 3", 
+        "assessment_code": "254467", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "platformowners.tblplatformassessment", 
+    "fields": {
+        "assessment_status": true, 
+        "assessment": "ca 4", 
+        "assessment_code": "986476", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 5, 
+    "model": "platformowners.tblplatformassessment", 
+    "fields": {
+        "assessment_status": true, 
+        "assessment": "ca 5", 
+        "assessment_code": "675831", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 6, 
+    "model": "platformowners.tblplatformassessment", 
+    "fields": {
+        "assessment_status": true, 
+        "assessment": "ca 6", 
+        "assessment_code": "734578", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "platformadministrators.tblplatformadministrators", 
+    "fields": {
+        "status": true, 
+        "email": "me@gmail.com", 
+        "platformadministrators_code": "356545", 
+        "platformowner": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "staff.tblstaff", 
+    "fields": {
+        "status": true, 
+        "surname": "abaegbu", 
+        "firstname": "mathew", 
+        "photo": "", 
+        "othername": "okechukwu", 
+        "phone": "08078688656", 
+        "branch": 1, 
+        "staff_code": "27367", 
+        "email": "me@gmail.com"
+    }
+},
+{
+    "pk": 2, 
+    "model": "staff.tblstaff", 
+    "fields": {
+        "status": true, 
+        "surname": "wale", 
+        "firstname": "salau", 
+        "photo": "", 
+        "othername": "", 
+        "phone": "090798789", 
+        "branch": 3, 
+        "staff_code": "63728897", 
+        "email": "wal@gmail.com"
+    }
+},
+{
+    "pk": 3, 
+    "model": "staff.tblstaff", 
+    "fields": {
+        "status": true, 
+        "surname": "simbi", 
+        "firstname": "alitu", 
+        "photo": "", 
+        "othername": "", 
+        "phone": "099098099", 
+        "branch": 3, 
+        "staff_code": "56108994", 
+        "email": "sim@gmail.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "staff.tblsectionmanager", 
+    "fields": {
+        "status": true, 
+        "section": 1, 
+        "manager_code": "14923250", 
+        "branch": 3, 
+        "platformowner": 1, 
+        "staff": 2
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblschool", 
+    "fields": {
+        "business_type": 1, 
+        "web": "www.schapp8.com", 
+        "platformadmin": 1, 
+        "name": "schapp8 Admin", 
+        "twitter": "x", 
+        "youtube": "yt", 
+        "logo_coloured": "", 
+        "fb": "fb.com/fb", 
+        "logo_black": "", 
+        "status": true, 
+        "school_code": "98567", 
+        "ig": "ig"
+    }
+},
+{
+    "pk": 2, 
+    "model": "business.tblschool", 
+    "fields": {
+        "business_type": 1, 
+        "web": "", 
+        "platformadmin": 1, 
+        "name": "Bright Future Int'l College", 
+        "twitter": "", 
+        "youtube": "", 
+        "logo_coloured": "", 
+        "fb": "", 
+        "logo_black": "", 
+        "status": true, 
+        "school_code": "47785083", 
+        "ig": ""
+    }
+},
+{
+    "pk": 3, 
+    "model": "business.tblschool", 
+    "fields": {
+        "business_type": 2, 
+        "web": "", 
+        "platformadmin": 1, 
+        "name": "st. Dominics catholic church", 
+        "twitter": "", 
+        "youtube": "", 
+        "logo_coloured": "", 
+        "fb": "", 
+        "logo_black": "", 
+        "status": true, 
+        "school_code": "14009417", 
+        "ig": ""
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblbranch", 
+    "fields": {
+        "status": true, 
+        "phone": "0808766756", 
+        "company": 1, 
+        "branch_code": "343346", 
+        "address": "Ashley Anderson Park, New Orleans"
+    }
+},
+{
+    "pk": 2, 
+    "model": "business.tblbranch", 
+    "fields": {
+        "status": true, 
+        "phone": "08068675475", 
+        "company": 2, 
+        "branch_code": "15969088", 
+        "address": "26, Bajulaiye Rd, Shomolu lagos"
+    }
+},
+{
+    "pk": 3, 
+    "model": "business.tblbranch", 
+    "fields": {
+        "status": true, 
+        "phone": "09088776543", 
+        "company": 3, 
+        "branch_code": "38751047", 
+        "address": "4, ireakari estate isolo lagos"
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblbusinesssections", 
+    "fields": {
+        "status": true, 
+        "section": 4, 
+        "branch": 3
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblbusinesssubsections", 
+    "fields": {
+        "status": true, 
+        "section": 1, 
+        "subsection": 5, 
+        "branch": 3
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblbusinessapp", 
+    "fields": {
+        "section": 1, 
+        "systemadmin": 1, 
+        "app": 2, 
+        "branch": 3
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblbusinessterms", 
+    "fields": {
+        "term_alias": "First", 
+        "school": 2, 
+        "systemadmin": 1, 
+        "term": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "business.tblbusinessterms", 
+    "fields": {
+        "term_alias": "Second", 
+        "school": 2, 
+        "systemadmin": 1, 
+        "term": 2
+    }
+},
+{
+    "pk": 3, 
+    "model": "business.tblbusinessterms", 
+    "fields": {
+        "term_alias": "Third", 
+        "school": 2, 
+        "systemadmin": 1, 
+        "term": 3
+    }
+},
+{
+    "pk": 1, 
+    "model": "business.tblbusinessstream", 
+    "fields": {
+        "status": true, 
+        "stream": 13, 
+        "section": 1, 
+        "subsection": 1, 
+        "branch": 3, 
+        "stream_alias": "Level 1"
+    }
+},
+{
+    "pk": 2, 
+    "model": "business.tblbusinessstream", 
+    "fields": {
+        "status": true, 
+        "stream": 14, 
+        "section": 1, 
+        "subsection": 1, 
+        "branch": 3, 
+        "stream_alias": "Level 2"
+    }
+},
+{
+    "pk": 3, 
+    "model": "business.tblbusinessstream", 
+    "fields": {
+        "status": true, 
+        "stream": 15, 
+        "section": 1, 
+        "subsection": 1, 
+        "branch": 3, 
+        "stream_alias": "Level 3"
+    }
+},
+{
+    "pk": 4, 
+    "model": "business.tblbusinessstream", 
+    "fields": {
+        "status": true, 
+        "stream": 16, 
+        "section": 1, 
+        "subsection": 1, 
+        "branch": 3, 
+        "stream_alias": "Level 4"
+    }
+},
+{
+    "pk": 5, 
+    "model": "business.tblbusinessstream", 
+    "fields": {
+        "status": true, 
+        "stream": 17, 
+        "section": 1, 
+        "subsection": 1, 
+        "branch": 3, 
+        "stream_alias": "Level 5"
+    }
+},
+{
+    "pk": 1, 
+    "model": "sysadmin.tbluserprofile", 
+    "fields": {
+        "status": true, 
+        "platformadmin": true, 
+        "platformownwer": true, 
+        "branch": 1, 
+        "staffrec": 1, 
+        "password": "112", 
+        "email": "me@gmail.com"
+    }
+},
+{
+    "pk": 2, 
+    "model": "sysadmin.tbluserprofile", 
+    "fields": {
+        "status": true, 
+        "platformadmin": false, 
+        "platformownwer": false, 
+        "branch": 3, 
+        "staffrec": 2, 
+        "password": "112", 
+        "email": "wal@gmail.com"
+    }
+},
+{
+    "pk": 3, 
+    "model": "sysadmin.tbluserprofile", 
+    "fields": {
+        "status": true, 
+        "platformadmin": false, 
+        "platformownwer": false, 
+        "branch": 3, 
+        "staffrec": 3, 
+        "password": "56108994", 
+        "email": "sim@gmail.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "sysadmin.tblcurrentsession", 
+    "fields": {
+        "session": "2024", 
+        "branch": 3
+    }
+},
+{
+    "pk": 1, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2024-12-01T08:10:00", 
+        "app_name": "business", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 2, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2024-12-01T09:20:58", 
+        "app_name": "platformowners", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 3, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2024-12-01T09:21:52", 
+        "app_name": "platformowners", 
+        "migration": "0002_auto__chg_field_tblplatformapps_app"
+    }
+}
+]

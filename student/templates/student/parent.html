@@ -1,0 +1,227 @@
+{% extends 'student/base.htm' %}
+{% block sectionTitle %}Student Registration{% endblock %}
+{% block content %}
+
+
+
+
+<div style="text-align:center">Parent Registration Menu</div>
+
+
+
+
+   <table style="margin-top:0%;margin-bottom:0%;font-size:0.98em;background-color: #ccccc0;color:#000000" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <tr style="text-align:center;">
+      <td style="background:blue">
+          <a href="/admissions/register/"  style="color:white    ">New</a>
+      </td>
+
+      <td  >
+          <a href="/admissions/register/retrieve/"  style="color:black">Retrieve</a>
+      </td>      
+    </tr>
+</table>
+
+<form id="form1" action="/student/register/" method="post" enctype="multipart/form-data" onsubmit="disable(this)">
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+         <tr>
+           <td >Guardian</td>
+
+           <td>
+           <select name="guardian" id="id_guardian" required>
+           <option value="">-----</option>
+           <option value="Father">Father </option>
+           <option value="Mother">Mother</option>
+           <option value="Other">Others</option>
+           </select>
+           </td>
+        </tr>
+
+</table>
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                <tr>
+                    <td>{{ form.surname.label_tag }}</td>
+                    <td>{{ form.surname }}</td>
+                    <td>{{ form.firstname.label_tag }}</td>
+                    <td>{{ form.firstname }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.othername.label_tag }}</td>
+                    <td>{{ form.othername }}</td>
+                    <td>{{ form.address.label_tag }}</td>
+                    <td>{{ form.address }}</td>
+
+
+                <tr>
+                    <td>{{ form.birth_place.label_tag }}</td>
+                    <td>{{ form.birth_place }}&nbsp;{{ form.birth_place.errors }}</td>
+                    <td>{{ form.state_of_origin.label_tag }}</td>
+                    <td>{{ form.state_of_origin }}&nbsp;{{ form.state_of_origin.errors }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.lga.label_tag }}</td>
+                    <td>{{ form.lga }}</td>
+                    <td>{{ form.studentpicture.label_tag }}</td>
+                    <td>{{ form.studentpicture }}</td>
+                </tr>
+
+
+
+
+
+         <tr>
+                    <td>{{ form.admitted_session.label_tag }}</td>
+                    <td>{{ form.admitted_session }}&nbsp;{{ form.admitted_session.errors }}</td>
+             <td>{{ form.admissionno.label_tag }}</td>
+
+
+
+
+
+             <td>{{ form.admissionno }}<img src="/static/add.png" style="width:15px;height:15px" onclick="admno();"> &nbsp;{{ form.admissionno.errors }}</td>
+
+
+
+         </tr>
+ 
+                 <tr>
+                    <td colspan="4" style="text-align: center; vertical-align: middle;"><input name="submit" type="submit" value=":: Register ::"></td>
+                </tr>
+            </table>
+
+
+
+        </form>
+
+
+    <script>
+    $(document).ready(function() {
+        var pickerOpts = {
+            //appendText: "mm/dd/yy",
+            //defaultDate: "+5",
+            showOtherMonths: true,
+            changeMonth: true,
+            changeYear: true,
+            dateFormat:"yy-mm-dd"
+            //showButtonPanel: true
+            // showOn: "button"
+        };
+        $("#id_birth_date").datepicker(pickerOpts);
+        //$("#id_dateofresum").datepicker(pickerOpts);
+        $("#id_surname").focus();
+        //$("id_birth_date").attr('disable','True');
+
+        getLGAs();
+        subclass()
+
+    });
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getLGAs(){
+            var state = $("#id_state_of_origin").val() ;
+            //alert(state);
+            var url = "/student/ajaxlga/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_lga").val('');
+            $("#id_lga").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_lga").append(options);
+                    }
+                })
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        function admno(){
+            var state = $("#id_admitted_session").val() ;
+            //alert(state);
+            var url = "/student/admno/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_admissionno").val('');
+            $("#id_admissionno").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = data;
+                        $("#id_admissionno").val(options) ;
+                    }
+                })
+            }
+        }
+
+    </script>
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#id_state_of_origin").change(function () {
+                getLGAs();
+            });
+            $("#id_admitted_class").change(function () {
+                subclass();
+            });
+        });
+    </script>
+    <script type="text/javascript" language="javascript">
+        function subclass(){
+            var state = $("#id_admitted_class").val() ;
+            //alert(state);
+            var p = state.charAt(0).toUpperCase();
+            //alert(p);
+            var url = "/student/subclass/";
+            var i = 0;
+            var data='userid='+p;
+            $("#id_subclass").val('');
+            $("#id_subclass").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_subclass").append(options);
+                    }
+                })
+            }
+        }
+
+    </script>
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+
+ <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $("#id_surname").focus();
+
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,196 @@
+{%extends 'setup/typography.html' %}
+{% block content %}
+
+
+    <div align ="center" style="border-radius:10px;background-color:#ccccc0; color:black;text-align:center"> Subject Set Up </div>
+    
+
+    <div align="center" style="color:red;font-family:verdana;font-size:15px;text-decoration:blink;background-color:#ccccc0; " > {{varerr}}</div>
+    
+
+
+
+            <form action="/setup/subject/" method="post" name ="main" id="form1" onsubmit="disable(this)">
+
+
+
+  <table style="margin-top:0%;margin-bottom:0.4%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+        <tbody>
+                <tr>
+                    <td >{{ form.category.label }}</td>
+                    <td >{{form.category}}</td>
+
+                </tr>
+
+                <tr>
+                    <td >
+                        {{ form.category2.label }}
+                    </td>
+                    <td >
+                        {{form.category2}}
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td >
+                        {{ form.status.label }}
+                    </td>
+                    <td >
+                        {{form.status}}
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td >{{ form.subject.label }} </td>
+                    <td > {{form.subject}} </td>
+                </tr>
+
+                </tbody>
+</table>
+
+  <table style="margin-top:0%;margin-bottom:2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+                <tr>
+
+                    <td >
+                        <div style='text-align:center'>
+
+                        <input name="submit" type= "submit" value="   ADD SUBJECT  ">
+                        </div>
+                    </td>
+
+                </tr>
+                
+            </table>
+            </form>
+
+
+
+
+    
+ {% if suball %}      
+
+                    <div class="printable">
+
+                               <input name="submitprint" type= "submit" value="Print Subject" class = "submit"onclick = "openrecprint();">
+
+
+
+
+        {% for pincode in suball %}
+                {% if pincode.subject %}
+
+                <table style="margin-top:0%;margin-bottom:2%;font-size:1em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                     <div style = "background-color:#ccccc0;text-align:center">{{ pincode.category }}  Subject Category
+                    </div>
+                        
+                        <tr style = "text-align:center;font-weight:bold" >
+                                <td  > S/N </td>
+                                <td > SUBJECT </td>
+                                <td > CATEGORY</td>
+                                <td > Num</td>
+                       </tr>
+                  
+                    {% for j in pincode.subject %}
+                            <tr style = "text-align:center;font-size:0.8em">
+
+                                <td  > <strong>{{ forloop.counter}}.</strong></td>
+
+                                <td  > <strong><a href="#" style ="color:blue;" title="Edit This Subject" onClick= "getdialogtry({{ j.id }});">{{ j.subject}}</a></strong></td>
+                                <td  > <strong><a href="#" style ="color:blue;" title="Edit This Subject" onClick= "getdialogtry({{ j.id }});">{{ j.category2}}</a></strong></td>
+
+                                <td  > <strong><a href="#" style ="color:blue;" title="Edit This Subject" onClick= "getdialogtry({{ j.id }});">{{ j.num}}</a></strong></td>
+
+                            </tr>
+                    {% endfor %}
+                       
+                </table>
+                                   
+             {% endif %}
+        {% endfor %}
+                 
+
+  {% else %}
+
+  <div style='text-align:center'> No subjects entered yet</div>
+{% endif %}
+                            
+       
+
+  </div>  
+
+    <div id="myDialog" title="Edit Account"></div>
+
+    <script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+    </script>
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#myDialog").hide();
+            $("#id_category").focus();
+
+        });
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getdialogtry(vid){
+            //alert(vid);
+            var state = vid;
+            var url = "/setup/getsubject/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    //$("#myDialog").show();
+                    $("#myDialog").html(html);
+                    getdialog();
+                }
+            });
+            return false;
+        }
+
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getdialog(){
+            var dialogOpts = {
+                autoOpen:true,
+                modal:true,
+                position: ["center", "middle"],
+                height:350,
+                width:490,
+                title:'Edit Subject',
+                closeOnEscape:true,
+                show: true,
+                hide: true,
+                bgiframe: true
+            };
+            $("#myDialog").dialog(dialogOpts);
+        }
+
+    </script>
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

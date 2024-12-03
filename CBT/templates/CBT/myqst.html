@@ -1,0 +1,170 @@
+<!-- <script type='text/javascript' src='/static/JS/jquery-ui-1.8.18.custom.min.js'></script> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SchApp 8.0 {% block title %}{% endblock %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+
+
+<table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+
+  <tr>
+     <td >
+            <textarea  name='question' class="form-control" rows="3"> </textarea>
+     </td >
+   </tr>
+
+   <tr>
+   <td> <input name="pix" type= "file"> </td>
+  </tr>
+</table>
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " id="dataTables-example">
+   <tr>
+                <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="    Save Question "> 
+
+   </tr>
+</table>
+
+
+                            {% if myqst %}
+<table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+<div> <span style='color:blue'>{{exam}} </span>questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session  </div>
+
+
+</table>
+
+                          
+</table>
+
+                          
+     <table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+                           
+                            <tr style='font-weight:bold;text-align:center'>
+                                <td >S/N</td>
+                                <td >QUESTIONS</td>
+                                <td >OPTIONS</td>
+                                <td >IMAGES</td>
+
+                            </tr>
+  {% for student in myqst%}
+                                <tr style='text-align:center'>
+                                    <td >{{ forloop.counter }}.</td>
+                                    <td>  {{ student.question.qstn }}</td>
+
+                                    <td>{{ student.options }}</td>
+
+
+
+
+                                    {% if student.question.image = '/ax/image' %}
+
+                             <td >
+                                    <img src="/static/{{ student.question.image }}" alt="{{ k.studentinfo.fullname  }}">
+                              </td>
+
+
+                                    <td >
+                                        <a style='color:blue' href="#" title="Click here to add picture" onClick= "getdialogtry({{ student.id  }})"><i class="fa fa-upload"></i></a>
+                                    </td>
+
+                                    {% else %}
+
+                                                                 <td >
+                                    <img src="/static/{{ student.question.image }}" alt="{{ k.studentinfo.fullname  }}">
+                              </td>
+                              
+
+                                    <td >
+                                        <a style='color:green' href="#" title="Click here to view image" onClick= "getdialogtrys({{ student.id  }})"><i class="fa fa-download"></i></a>
+                                    </td>
+                                    {% endif %}
+                            {% endfor %}
+        {% else %}
+        <table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+            
+        
+         <td style = "color:blue">No questions found .................... </td>        
+    </table>
+        {% endif %}
+    </tr>
+  
+    <!-- </table> -->
+
+
+     </table>
+
+<div id="myDialog" title="Enter Assessment Score"></div>
+
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script type="text/javascript" language="javascript">
+    function getdialogtry(vid){
+        var state = vid;
+        var url = "/cbt/enter/question/majax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    function getdialogtrys(vid){
+        var state = vid;
+        var url = "/cbt/enter/question/ajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:450,
+                    width:550,
+                    title:'<a>SchApp 8.0 Student Score</a>' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>
+</body>
+
+
+</html>

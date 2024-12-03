@@ -1,0 +1,29 @@
+
+
+
+ 
+
+
+
+   <!-- <div>Which section of {{school}} {{address}} will use this app</div> -->
+
+<form action = "" method='post'  enctype="multipart/form-data" onsubmit="disable(this)"
+ >
+
+
+<div style="text-align:center">Admin Details for <span style="color:red">{{sec}}</span> Section</div>
+
+
+
+    {% for k in manager %}
+<tr style="text-align:left" ><td>{{forloop.counter}}.  {{k.staff.surname}}  {{k.staff.firstname}}</td>
+
+</tr>
+{% endfor %}
+
+
+<input type="hidden" name="branch_code"  readonly="readonly" value="{{ branch_code }}" class ="loginTxtbox">
+
+<div>Click <a href="">here</a> to add admin</div>
+
+</form>

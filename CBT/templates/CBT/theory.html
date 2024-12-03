@@ -1,0 +1,224 @@
+{% extends 'CBT/base.html' %}
+{% block sectionTitle %}Success{% endblock %}
+
+
+{% block content %}
+
+
+        
+<table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+        <tr>
+            <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.9em">
+                 EXAM DETAIL
+            </td>
+        </tr>
+</table>
+
+
+
+
+<form action="/cbt/enter/theory/" method="POST" enctype="multipart/form-data">
+
+
+    <table style="margin-top:1%;margin-bottom:02%" width="100%" class="table  table-bordered" id="dataTables-example">
+           <tr >
+               <td >Session</td>
+               <td> {{ form.session }}</td>
+           </tr>
+
+            <tr>
+               <td >Term</td>
+               <td>{{ form.term }}</td >
+            </tr>
+            <tr>
+               <td >Class</td>
+               <td>{{ form.klass }}</td>    
+            </tr>
+            <tr>          
+               <td >Subject</td>
+               <td>{{ form.subject }}</td >
+            </tr>
+            <tr>
+                <td >Exam Type</td>
+                <td>{{ form.exam_type }}</td >
+
+            </tr>                
+            <tr>
+                <td >Theory</td>
+                <td>{{ form.pix}}</td >
+
+            </tr>  
+
+    </table>
+         
+
+    <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="    Save    "> 
+
+<div style="margin-top:0%;margin-bottom:2%"class=="row">
+    <tr>
+        <td>
+             <td><div class="box2"> </div></td>
+
+        </td>
+
+    </tr>
+</div>
+    
+
+    
+   <script type="text/javascript" >
+        $(document).ready(function() {
+
+            $("#id_subject").change(function () {
+                autopost2();
+            });
+
+            $("#id_klass").change(function () {
+                getcbtsubject();
+            });
+
+            cbtclass();
+
+        });
+    </script>
+
+   <script type="text/javascript" language="javascript">
+        function cbtclass(){
+            var state = $("#id_session").val() ; // i need session to determine my
+            // alert(state);
+            var url = "/cbt/enter/ajaxclass/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_klass").val('');   
+            $("#id_klass").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_klass").append(options);
+
+                        getcbtsubject();
+                    }
+                })
+            }
+        }
+
+    </script>
+ 
+
+   <script type="text/javascript" language="javascript">
+        function getterm(){
+            var state = $("#id_session").val() ;
+            // alert(state);
+            var url = "/assessment/getterm/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_term").val('');
+            $("#id_term").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_term").append(options);
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+
+ <script type="text/javascript" language="javascript">
+        function getcbtsubject(){
+            var state = $("#id_session").val() + ':'+ $("#id_klass").val();
+            var url = "/cbt/getcbtsubject/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_subject").val('');
+            $("#id_subject").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_subject").append(options);
+                        getexam();
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+
+      <script type="text/javascript" language="javascript">
+        function getexam(){
+            var state = $("#id_session").val();
+            var url = "/cbt/getexam/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_exam_type").val('');
+            $("#id_exam_type").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_exam_type").append(options);
+                        autopost2();
+                    }
+                })
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        function autopost2(){
+            var state = $("#id_session").val() + ':'+ $("#id_klass").val()+':'+ $("#id_exam_type").val() +':'+ $("#id_term").val()+':'+ $("#id_subject").val() ;
+            // alert(state);
+            var url = "/cbt/getmytheoryquestons/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    $(".box2").show();
+                    $(".box2").html(html);
+
+                }
+            });
+            return false;
+        }
+    </script>
+
+
+
+
+{% endblock %}

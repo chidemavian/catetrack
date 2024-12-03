@@ -1,0 +1,232 @@
+
+
+
+
+   <table style="margin-top:0%;margin-bottom:0%;font-size:0.7em" class="table">
+
+    <tr style="text-align:center">
+
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td ><a href="#" onClick= "autopost2()" >Comprehension</a></td>
+            </tr>
+            </table>
+
+
+            <table style="margin-top:0%;margin-bottom:0%;font-size:0.9em" class="table  table-bordered">
+                <tr>
+                    <td ><a href="#" onClick= "autopost2()">Passage</a></td>
+                     <td> <a href="#" onClick= "autoobjq()" style="color:whdite">Questions</a></td>
+                </tr>            
+            </table>
+
+        </td>
+
+    <td >
+
+        <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+        <tr>
+            <td><a href="#" onClick= "autoblock2()" style="color:whte">Block</a></td>
+        </tr>
+        </table>
+
+            <table style="margin-top:0%;margin-bottom:0;font-size:0.9em%" class="table  table-bordered">
+
+                <tr>
+                    <td><a href="#" onClick= "autoblock2()">Instruction</a></td>
+
+                     <td> <a href="#" onClick= "autbklq()" style="color:whdite">Questions</a></td>
+                </tr> 
+
+            </table>
+
+        </td>
+          <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td style="background:blue"><a href="#" onClick= "autoothers()" style="color:white">Others</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0;font-size:0.9em%" class="table  table-bordered">
+                <tr>
+                    <!-- <td><a href="#" onClick= "autoothers()">Instruction</a></td> -->
+
+                     <td style="background:grey"> <a href="#" onClick= "autoothers()" style="color:white">Questions</a></td>
+                </tr>         
+            </table>
+
+        </td>
+
+
+    </tr>
+
+
+</table>
+
+
+<body>
+
+
+<table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+
+  <tr>
+     <td >
+            <textarea  name='question' class="form-control" rows="3"> </textarea>
+     </td >
+   </tr>
+
+   <tr>
+   <td> <input name="pix" type= "file"> </td>
+  </tr>
+</table>
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " id="dataTables-example"
+
+>
+   <tr>
+                <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="    Save Question "> 
+
+   </tr>
+</table>
+
+
+{% if qq %}
+
+
+<table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+<div> <span style='color:blue'>{{exam}} </span>questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session  </div>
+
+
+</table>
+
+                          
+
+
+                          
+     <table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+                           
+                            <tr style='font-weight:bold;text-align:center'>
+                                <td >S/N</td>
+                                <td >QUESTIONS</td>
+                                <td >OPTIONS</td>
+                                <td >IMAGE</td>
+
+                            </tr>
+                  {% for student in qq %}
+                        <tr style='text-align:center'>
+                            <td >{{ forloop.counter }}.</td>
+                            <td>  {{ student.question.q1 }}</td>
+
+                            <td>{{ student.options }}</td>
+
+
+                            {% if student.question.image = '/ax/image' %}
+
+                            <td >
+                                <a style='color:blue' href="#" title="Click here to add picture" onClick= "getdialogtry({{ student.id  }})"><i class="fa fa-upload"></i></a>
+                            </td>
+
+                            {% else %}
+
+                            <td >
+                                <a style='color:green' href="#" title="Click here to view image" onClick= "getdialogtrys({{ student.id  }})"><i class="fa fa-download"></i></a>
+                            </td>
+                            {% endif %}
+                        </tr>                                                    
+                    {% endfor %}
+
+        </table>
+
+{% else %}
+        <table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+            
+        
+         <td style = "color:blue">No questions found .................... </td>        
+    </table>
+        {% endif %}
+
+  
+
+
+     
+
+<div id="myDialog" title="Enter Assessment Score"></div>
+
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script type="text/javascript" language="javascript">
+    function getdialogtry(vid){
+        var state = vid;
+        var url = "/cbt/enter/question/englishajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    function getdialogtrys(vid){
+        var state = vid;
+        var url = "/cbt/enter/question/ajaxnv/cjyd/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    height:'auto',
+                    width:'auto',
+                    title:'' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>
+</body>
+
+
+</html>
+
+
+

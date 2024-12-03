@@ -1,0 +1,116 @@
+
+
+<!-- <script type='text/javascript' src='/static/JS/jquery-1.7.1.min.js'></script> -->
+
+
+
+
+<html>
+<head>
+
+   
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<form  action="/cbt/enter/question/blockq/{{q.code}}/" 
+method="post" onsubmit="disable(this)">
+
+        <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+
+        <tr>
+          <td style='font-weight:bold'>Category</td>
+          <td>
+          <select name="categories" id="categories">
+          <option value="-----">-----</option>
+          <option value="Comprension">Comprension</option>
+          <option value="Block">Block</option>
+          <option value="Others">Others</option>
+          </select>
+          </td>
+        </tr>
+
+        </table>
+
+
+        <table>
+
+                    <tr>
+                        <td>
+                            <input type="hidden" name="term" value="{{ term }}" >
+                        </td>
+
+                         <td>
+                            <input type="hidden" name="session" value="{{ session }}" >
+                        </td>
+
+                        <td>
+                            <input type="hidden" name="klass" value="{{ klass }}" >
+                        </td>
+
+                         <td>
+                            <input type="hidden" name="subject" value="{{ subject }}" >
+                        </td>
+
+                         <td>
+                            <input type="hidden" name="exam" value="{{ exam}}" >
+                        </td>
+                    </tr>
+        </table>
+
+
+</form>
+
+
+    <div style="margin-top:0.1%;margin-bottom:0%" class=="row">
+         <div  class="qstbox"></div>
+        </div>
+
+
+
+
+   <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#categories").change(function () {
+                getcategories();
+            });
+
+            // getcategories();
+
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript" language="javascript">
+        function getcategories(){
+            var state = $("#id_session").val()+ ':'+ $("#id_term").val() + ':'+ $("#id_klass").val()+':'+ $("#id_subject").val()+ ':'+ $("#id_exam_type").val()+':'+ $("#categories").val();
+                // alert(state)
+            var url = "/cbt/enter/options/alleng/";            
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    $(".qstbox").show();
+                    $(".qstbox").html(html);
+
+                }
+            });
+
+            return false;
+        }
+    </script>

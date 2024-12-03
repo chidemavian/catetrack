@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+ 
+
+
+<div> Psychomotive domain test for  <span style="color:red">{{school}} {{address}} </span></div>
+
+
+
+  {% if sec %}
+
+
+<table style="margin-top:01%;margin-bottom:03%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+  
+
+                <tr style="font-weight:bold">
+                  <td>S/N</td>
+                  <td>Psychomotive</td>
+                
+                </tr>
+
+                      {% for j in sec %}
+
+                      <tr>
+
+                        <td>{{forloop.counter}}</td>
+                        <td><a style='color:green' href="#" onClick= "poppsych()">{{j.psychomotive}} </a> </td>
+
+                      </tr>
+                            {% endfor %}
+
+</table>
+
+<table style="margin-top:01%;margin-bottom:03%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+<tr> Click   <a style='color:green' href="#" onClick= "poppsych({{ j.affective_code }})">  here </a>   to add </tr> 
+
+  {% else %}
+
+
+<tr> No enties made yet. Click   <a style='color:green' href="#" onClick= "poppsych({{ j.affective_code }})">  here </a>   to start</tr>
+
+{% endif %}
+
+  </table>
+
+
+
+<div id="myDialog" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script >
+    function poppsych(vid){
+        // var state = vid + ":" + $("#id_branch_code").val();
+        var state =  '{{section_code}}' + ":" + '{{branch_code}}';
+         // alert(state)
+        var url = "/admin/onboarding/client/popview/psycho/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myDialog").dialog(dialogOpts);
+    }
+
+</script>
+
+</body>
+
+</html>

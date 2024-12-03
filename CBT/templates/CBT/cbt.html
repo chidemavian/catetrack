@@ -1,0 +1,149 @@
+{% extends 'welcome1.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+
+
+   <table style="margin-top:0.8%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+        <tr >
+
+            <td style=" text-align:right;float:centre">
+
+                <img style="width: 5em; height: 6em;text-align:right" src="/static/{{ school.logo }}" alt="{{ school.name }}" >
+            </td>
+
+            <td  style="text-align:center;font-family:verdana;font-size:1em">
+                <span style="font-size:1.5em"> {{ school.name  }}</span><br>
+                <span style="font-size:1em"> {{ school.address }}</span>
+            </td>
+
+          <td style=" text-align:right;float:centre">
+                <img style="width: 5em; height: 6em;" src="/static/{{ form.studentpicture }}" alt="{{ k.studentinfo.fullname  }}">
+          </td>
+
+        </tr>
+</table>
+
+     
+  <table style="margin-top:0.8%;margin-bottom:0.1%;" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+    <tr>
+        <td style="text-align:center;color:black;background-color:#ccccc0;font-size:1em;">
+            STUDENT INFORMATION
+        </td>
+    </tr>
+ </table>
+
+ <table style="margin-top:0%;margin-bottom:0.3%;" width="100%" class="table  table-bordered" id="dataTables-example">  
+        <tr >
+            <td style="font-weight:bold; color:blue"> Name </td >
+                <td>{{ pop.fullname}} </td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold; color:blue"> Student Code</td>
+                <td >{{ pop.admissionno}} </td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold; color:blue;">Classroom</td>
+            <td> {{ pop.admitted_class}}{{pop.admitted_arm}}</td>
+        </tr>
+        <tr>
+           <td style="font-weight:bold; color:blue;">Session</td>
+            <td> {{ pop.admitted_session}} </td>
+        </tr>
+</table>
+
+ <table style="margin-top:0%;margin-bottom:0.1%;" width="100%" class="table  table-bordered" id="dataTables-example"> 
+        <tr>
+            <td style="text-align:center;background-color:#ccccc0;font-size:1em;">  ASSESSMENT DETAIL
+            </td>
+        </tr>
+    </table>   
+ <table style="margin-top:0%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">         
+               <tr>
+                    <td style="font-weight:bold; color:blue;" > Exam Type
+                    </td> <td>{{exam}} Examination</td>
+                </tr>
+
+              <tr>
+                        <td style="text-align:left;font-weight:bold; color:blue;" >Term
+                            <td> {{ term}} Term</td></td>
+                </tr>
+                <tr>
+                        <td style="text-align:left;font-weight:bold; color:blue;" >Subject
+                            <td> {{qpick.subject}} </td></td>
+                </tr>
+
+                <tr>
+                            <td style="font-weight:bold; color:blue;">Question Type</td>
+                            <td>Multiple Choice</td>
+            </tr>
+
+   
+                 <tr>
+                        <td style="font-weight:bold; color:blue;">Total Number Of Questions</td>
+
+                        <td>{{qp}}</td>
+                </tr>
+
+                <tr>
+                        <td style="font-weight:bold; color:blue;">Start</td> 
+                        <td>{{qpick.st_time}}</td>
+                </tr>
+        
+                <tr>
+                        <td style="font-weight:bold; color:blue;">Stop</td> 
+                        <td>{{qu}}</td>
+                </tr>
+        
+
+
+                    <tr>
+                        <td style="font-weight:bold; color:blue;" >Duration</td>
+                        <td>{{duration}}</td>
+                    </tr>
+                    <tr>
+                    <td style="font-weight:bold; color:blue;" > Instruction
+                        </td><td> Attempt all questions</td>
+                    </tr>
+
+
+
+            
+        </table>
+
+
+
+
+
+                <form action ="/cbt/take_test/start/" method="post" role="form" >
+                      <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="    Start    "> 
+                </form>
+        <table>
+ <div style="text-align:center;font-weight:bold; color:brown">
+  PUSH THE START BUTTON, WHEN YOU ARE GOOD TO GO.<br>
+   GOOD LUCK!!!</div>
+</table>
+ </div>
+      </div>
+
+
+
+<!-- 
+ <input name="submitprint" type= "submit" value="Print Report" onclick = "openrecprint();">
+        <div class="printable">
+
+ <script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+ </script>
+ -->
+
+{% endblock %}
+
+
+

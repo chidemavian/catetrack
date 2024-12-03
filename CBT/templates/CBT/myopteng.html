@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+ 
+<body>
+
+
+
+
+
+{% if sublist %}
+
+        
+        <div style = 'font-weight:bold;text-align:center;font-size:0.81em;color:red'>ATTACH OPTIONS WITH THE PAPERCLIP. CLICK IMAGE TO EXPAND</div>
+       
+             
+                {% for pin in sublist %}
+            
+                <table style=" margin-top:0%;margin-bottom:0.3%" width="100%" class="table  table-bordered " id="dataTables-example">
+                 
+                      <td ><b> {{forloop.counter}}.&nbsp;&nbsp;{{pin.question.qstn}}</b></td>
+
+
+                     <td align="right" ><a href="#" onClick= "get({{ pin.question.id}})"title="Enter options for Q{{forloop.counter}}."><i class="fa fa-paperclip fa-2x"></i></a></td>
+            
+  
+        </table>
+
+
+
+
+         {% if pin.options %}
+      
+        
+                <table  width="100%" class="table  table-bordered " id="dataTables-example">                                   
+                            <td > (A.) {{ options.a}}</td>
+                            <td > (B.) {{ options.b}}</td>
+                            <td > (C.) {{ options.c}}</td>
+                            <td > (D.) {{ options.d}}</td>
+
+                 </table>
+                      
+
+                 
+
+            {% else %}
+                     <table style=" margin-top:0%;margin-bottom:0.9%" width="100%" class="table  table-bordered " id="dataTables-example">
+
+                         <td style ='text-align:center' >  ....No Options Found for Q {{forloop.counter}}.  .......</td>
+                    </table>
+             {% endif %}   
+
+        {% endfor %}
+
+
+
+{% else %}
+    <td style = 'font-weight:bold;font-size:1em;color:red'colspan="7" class= 'null' >  .......No questions Found. Kindly use the 'section A' menu to begin </td>
+
+{% endif %}
+      
+
+
+
+
+
+
+
+
+
+        
+    <div id="myDialognew" > </div>
+
+      <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#myDialognew").hide();
+        });
+    </script>
+
+<script type="text/javascript" language="javascript">
+    function getdialogopt(vid){
+        // alert(vid);
+        var state = vid;
+        var url = "/cbt/options/enteropt/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialognew").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    function enlarge(vid){
+        // alert(vid);
+        var state = vid;
+        var url = "/cbt/options/enlarge/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialognew").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    function get(vid){
+        // alert(vid);
+        var state = vid;
+        var url = "/cbt/options/choose/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialognew").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+  <script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialognew").dialog(dialogOpts);
+            }
+        </script>
+
+</body>
+</html>

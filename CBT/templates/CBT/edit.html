@@ -1,0 +1,203 @@
+{% extends 'CBT/base.html' %}
+{% block sectionTitle %}Success{% endblock %}
+
+
+{% block content %}
+
+
+
+    <div class ="row">
+               <table width="100%" class="table  table-bordered " id="dataTables-example">
+        <tr>
+            <td style="text-align:center;color:black;background-color:#ccccc0;font-size:14px;">
+                EDIT ENTRIES
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+       <form action="/cbt/set_qstn/subject/" method="POST">
+
+             <table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+           <tr >
+               <td >Session:</td>
+               <td> {{ form.session }}</td>
+            </tr>
+            <tr>
+               <td >Term:</td>
+               <td>{{ form.term }}</td >
+            </tr>
+            <tr>
+               <td >Class:</td>
+               <td>{{ form.klass }}</td>      
+            </tr>
+            <tr>        
+               <td >Subject:</td>
+               <td>{{ form.subject }}</td >
+            </tr>
+            <tr>
+                <td >Exam Type:</td><td>{{ form.exam_type }}</td >
+            </table>
+        </form>
+
+
+    <div style="margin-top:0.1%;margin-bottom:0%" class=="row">
+        <tr>
+            <td >
+                <div class="boxedit"> </div>
+            </td>
+        </tr>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            var pickerOpts = {
+                //appendText: "mm/dd/yy",
+                //defaultDate: "+5",
+                showOtherMonths: true,
+                changeMonth: true,
+                changeYear: true,
+                dateFormat:"yy-mm-dd"
+            };
+
+            cbtclass();
+            //getarm();
+            // getterm();
+        });
+    </script>
+    
+   <script type="text/javascript" >
+        $(document).ready(function() {
+
+            $("#id_subject").change(function () {
+                autopost2();
+            });
+
+
+
+            $("#id_klass").change(function () {
+                getcbtsubject();
+            });
+
+
+
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript" language="javascript">
+        function cbtclass(){
+            var state = $("#id_session").val() ; // i need session to determine my class
+            // alert(state);
+            var url = "/cbt/enter/ajaxclass/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_klass").val('');   
+            $("#id_klass").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_klass").append(options);
+
+                        getcbtsubject();
+                    }
+                })
+            }
+        }
+
+    </script>
+ 
+
+        <script type="text/javascript" language="javascript">
+        function getcbtsubject(){
+            var state = $("#id_session").val() + ':'+ $("#id_klass").val();
+            var url = "/cbt/getcbtsubject/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_subject").val('');
+            $("#id_subject").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_subject").append(options);
+                        getexam();
+                    }
+                })
+            }
+        }
+
+    </script>
+
+     <script type="text/javascript" language="javascript">
+        function getexam(){
+            var state = $("#id_session").val();
+            var url = "/cbt/getexam/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_exam_type").val('');
+            $("#id_exam_type").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_exam_type").append(options);
+                        autopost2();
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+    <script type="text/javascript" language="javascript">
+        function autopost2(){
+            var state = $("#id_session").val()+ ':'+ $("#id_term").val() + ':'+ $("#id_klass").val()+':'+ $("#id_subject").val()+ ':'+ $("#id_exam_type").val();
+                // alert (state)
+            var url = "/cbt/enter/englishh/options/getopt/";
+            // var url = "/cbt/enter/options/edit/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    $(".boxedit").show();
+                    $(".boxedit").html(html);
+
+                }
+            });
+            return false;
+        }
+    </script>
+
+{% endblock %}

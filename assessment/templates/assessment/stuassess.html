@@ -1,0 +1,115 @@
+
+
+
+ <input name="submitprint" type= "submit" value="Print Report" onclick = "openrecprint();">
+
+   <div class="printable">
+
+
+  <table style="margin-top:5%;margin-bottom:0.5%;font-size:0.5em;border:0.001em solid black" width="100%" class="table  table-bordered table" id="dataTables-example">
+    <tr > 
+      <td style='border:0px solid black'>
+          <img style="width: 10em; height: 10em;" src="/static/{{school.logo }}" alt="{{ k.studentinfo.fullname }}">
+      </td>
+    
+            <td  style="border:0px solid black">
+
+            <table >
+              <span style="letter-spacing:0.02em;border:0em solid black;font-weight:bold;text-align:center;font-family:verdana;font-size:2.5em;">{{school.name }} </span>
+            </table> 
+
+            <table style="font-weight:bold;margin-top:-0%;margin-bottom:0%">
+                <span style="letter-spacing:0.8em;font-size:1.2em;background-color:red;color:white">GOVERNMENT APPROVED </span>
+            </table>
+
+        <table style="margin-top:-1%;margin-bottom:0%">
+            <span  style="font-weight:bold;letter-spacing:1em;font-size:0.8em">WAEC & NECO ACCREDITED</span> 
+        </table>
+    </td>
+
+        <td style='border:0px solid black'>
+          <img style="width: 10em; height: 10em;" src="/static/{{k.studentinfo.studentpicture }}" alt="{{ k.studentinfo.fullname  }}">
+      </td>
+    
+    </tr>
+</table>
+
+
+    <div style='argin-top:7%;margin-bottom:0.8%;font-weight:bold;border:0px solid black;font-size:1em;text-align:center'>
+      <td >{{term}} TERM SUBJECTS ANALYSIS SHEET {{ k.studentinfo.admitted_session }}
+      </td>
+
+    </div>
+
+  <table style="margin-top:0%;margin-bottom:0%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">
+        <td style="border:0.5px solid black;font-weight:bold;font-size:1mem"> NAME </td>
+        <td style="border:0.5px solid black">  {{ studentinfo.fullname}} </td>
+        <td style="border:0.5px solid black;font-weight:bold;font-size:k"> STUDENT CODE </td>
+        <td style="border:0.5px solid black">  {{ studentinfo.admissionno}} </td>
+     <td style='border:0.5px solid black;font-weight:bold'>GENDER</td>
+    <td style="border:0.5px solid black">{{ studentinfo.sex }}</td> 
+  </table>
+
+
+
+
+   <table style="margin-top:0%;margin-bottom:0.82%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">   
+
+        <td style='border:0.5px solid black;font-weight:bold' > CLASSROOM</td>
+        <td style="border:0.5px solid black">{{studentinfo.admitted_class }}{{ studentinfo.admitted_arm }}</td>  
+
+          <td style='border:0.5px solid black;font-weight:bold'> TOTAL SUBJECT</td>
+        <td style="border:0.5px solid black">{{ count }}</td>
+
+        <td style='border:0.5px solid black;font-weight:bold'>POSITION</td>
+        <td  style="border:0.5px solid black">{{ pos }}</td>
+
+    </table>
+
+
+
+
+{% for p in replist %}
+  <table style="margin-top:0.7%;margin-bottom:0%;font-size:0.8em" width="100%" class="table  table-bordered table" id="dataTables-example">
+
+   
+            <tr >
+                 <td style='border:0.5px solid black'>  {{forloop.counter}}. </td>
+                <td style="font-weight:bold;border:0.5px solid black">SUBJECT</td>
+                 <td style="text-align:center;border:0.5px solid black">  {{p.subject}} </td>
+            </tr>
+            <tr>
+</table>
+
+  <table style="margin-top:0%;margin-bottom:1.2%;font-size:.7em;text-align:center" width="100%" class="table  table-bordered table" id="dataTables-example">
+        <tr>
+                <td style="font-weight:bold;border:0.5px solid black"> TERM SCORE </td>
+                <td style="font-weight:bold;border:0.5px solid black"> GRADE </td>
+                <td style="font-weight:bold;border:0.5px solid black"> POSITION</td>
+                <td style="font-weight:bold;border:0.5px solid black"> SUBJECT AVERAGE   </td>
+
+            </tr>
+        
+            <tr >
+
+                <td style='border:0.5px solid black'>  {{p.end_term_score}} </td>
+                <td style='border:0.5px solid black'>  {{p.grade}} </td>
+                <td style='border:0.5px solid black'>  {{p.subposition}} </td>
+                <td style='border:0.5px solid black'>  {{p.subject_avg}} </td>
+            </tr>
+        
+        </table>
+
+    {% endfor %}
+
+</div>
+
+
+
+    <script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+    </script>

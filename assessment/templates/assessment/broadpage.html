@@ -1,0 +1,74 @@
+
+
+
+<!--  -->
+
+<html lang="en">
+<body>
+
+
+{% extends 'welcome1.html' %}
+
+{% block sectionTitle %}{% endblock %}
+
+{% block content %}
+
+                <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"><i class="fa fa-book fa-1x"></i> My Results</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+       
+
+
+   <table style="margin-top:0%;margin-bottom:01%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <tr style="text-align:center;">
+      <td  >
+          <a href="/reportsheet/student/my_results/"  style="color:red">Summary Sheet</a>
+      </td>
+      <td style="background:blue">
+          <a href="/reportsheet/student/my_broadsheet/"  style="color:white">Accummulation</a>
+      </td>
+    </tr>
+</table>
+
+
+
+<form action = ""  method="post" role="form">
+
+        <table style="margin-top:0.8%;margin-bottom:0%" class="table  table-bordered" id="dataTables-example">
+               <tr >
+                   <td >Session </td><td>{{ form.session }}</td>
+               </tr>
+
+
+
+
+
+<tr>
+ <td style='font-weight:bojd'>Term</td>
+ <td>
+ <select name="term" id="term">
+ <option value="-----">-----</option>
+ <option value="First">First</option>
+ <option value="Second">Second</option>
+ <option value="Third">Third</option>
+ </select>
+ </td>
+</tr>
+
+
+        </table>
+
+        <table width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+            <td  style="text-align: center; vertical-align: middle;">
+                <input type="submit" value=":: View ::" name = "submit">
+            </td>
+        </table>
+
+</form>
+  
+
+{% endblock %}

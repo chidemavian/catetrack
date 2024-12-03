@@ -1,0 +1,90 @@
+
+
+
+{{secj}}
+
+{% if sec %}
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                    <tr style = "font-weight:bold">
+                        <td > S/N</td>
+                        <td > Classrooms </td>
+                        <!-- <td > Delete </td> -->
+                    </tr>
+
+                    {% for pincode in sec %}
+                        <tr>
+                            <td >{{ forloop.counter}}.</td>                          
+                            <!-- <td > {{ pincode.klass}}</td> -->
+                            <td > <a href="/setup/class/delete/{{ pincode.id }}/"  title="Delete {{ pincode.klass}}">{{ pincode.stream.stream_alias}} {{ pincode.room}}</a></td>
+                            {% endfor %}
+                    </tr>
+     
+                </table>
+
+                
+{% else %}
+<div style='text-align:center'> No Class streams set up yet </div>
+
+{% endif %}
+
+<div style='text-align:right'>Click <a href="#" style="color:blue" onClick= "streampop({{pstream.stream_code}})" title="Click here to setup new classrom">here </a> to add a classroom</div>
+
+
+
+
+
+
+<div id="myclassrooms" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myclassrooms").hide();
+            });
+</script>
+<script >
+    function streampop(vid){
+        var state = vid + ":" + '{{branch_code}}' + ':' + '{{stream}}';
+         // alert(state)
+        var url = "/setup/configuration/popupstreamajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myclassrooms").show();
+                $("#myclassrooms").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myclassrooms").dialog(dialogOpts);
+    }
+
+</script>
+
+
+

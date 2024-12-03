@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+
+
+<form action ="/admin/onboarding/client/psycho/" method ='post'>
+
+
+  <table style="margin-top:01%;margin-bottom:03%;font-size:0.7em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <tr>
+        
+        <td>{{k.company.name}}</td>
+
+    </tr>
+    <tr>
+        <td>{{k.address}}</td>
+
+    </tr>
+
+    <tr>
+        <td>{{section}}  section</td>
+
+    </tr>
+
+</table>
+
+  <table style="margin-top:01%;margin-bottom:03%;font-size:0.7em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+    <tr>
+        <td>psychomotive</td>
+        <td>  <input type= 'text' name='psychomotive' required></td>
+
+    </tr>
+
+
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+           <div class="card-footer">
+            <td >
+              <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Save">
+            </td>
+          </div>
+
+</table>
+
+
+
+
+
+
+</table>
+
+
+
+
+<input type= 'hidden' name='branch_code' value ='{{branch_code}}'>
+
+<input type= 'hidden' name='section_code' value ='{{section_code}}'>
+
+
+
+</form>
+
+
+
+
+<div id="myDialog" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+
+
+<script >
+    function newbranch(vid){
+        var state = vid;
+         alert(state)
+        var url = "/admin/onboarding/client/branches/new/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myDialog").dialog(dialogOpts);
+    }
+
+</script>
+
+</body>
+
+</html>

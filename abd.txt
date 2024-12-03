@@ -1,0 +1,32 @@
+
+
+
+hi abdul, here are all the endpoints of this project
+
+to view the webapp, kindly visit schapp.pythonanywgere.com
+
+
+
+landing page : www.schapp8.com
+when you enter credentials, and click the button
+it runs at /login/
+
+from here, if successful, you see a dashboard
+
+dashboard items
+1. reportsheet
+
+if you click reportsheet, it runs at /reportsheet/wel/
+
+reportsheet menus are
+A. class list  /reportsheet/studentreport/, /reportsheet/getclassaff/ (ajax) and /reportsheet/getarmaff/ (ajax)
+B. course form  /reportsheet/addsubject/, /reportsheet/getclassaff/ (ajax), /reportsheet/getarmaff/ (ajax) and /reportsheet/getstudentsubject/ (ajax) /reportsheet/getsubject4student/
+
+C. subject scores  /reportsheet/enterca/,  /reportsheet/getclass/ (ajax),  /reportsheet/getarmgrp/ (ajax) /reportsheet/getsubject/ (ajax), and /reportsheet/getstudent/
+
+D. comments  /reportsheet/ca_comments/, /reportsheet/getclassaff/ (ajax), /reportsheet/getarmaff/ (ajax), /reportsheet/getterm/ (ajax) and /reportsheet/stucacom/
+E. half term /reportsheet/half_term/, /reportsheet/getclassaff/ (ajax),/reportsheet/getarmaff/ (ajax)
+
+F. P S D 
+G. summary sheet  /reportsheet/reportsheet/ 
+

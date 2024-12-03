@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+ 
+
+
+<div>Which subsection of <span style="color:red">{{school}} {{address}} </span>will use this app</div>
+
+
+<table style="margin-top:01%;margin-bottom:03%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                <tr style="font-weight:bold">
+                  <td>S/N</td>
+                  <td>Sub section</td>
+                  <td>Select</td>
+                </tr>
+
+      {% for j in sec %}
+
+      <tr>
+
+        <td>{{forloop.counter}}</td>
+        <td>{{j.subsection}}</td>
+        {% if j.alias = 'selected' %}
+            <td >
+                <a style='color:green' href="#" onClick= "subsectionselect({{ j.subsection_code }})">
+                    Activated
+                 </a>
+            </td>
+        {% else %}
+            <td>
+                <a style='color:blue' href="#" onClick= "subsectionselect({{ j.subsection_code }})">
+                    Click to activate
+            </td>
+        {% endif %}
+
+      </tr>
+            {% endfor %}
+
+  </table>
+
+
+<div id="myDialog" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script >
+    function subsectionselect(vid){
+        // var state = vid + ":" + $("#id_branch_code").val();
+        var state = vid + ":" + '{{branch_code}}';
+         // alert(state)
+        var url = "/admin/onboarding/client/select/subsection/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script >
+    function newbranch(vid){
+        var state = vid;
+         alert(state)
+        var url = "/admin/onboarding/client/branches/new/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myDialog").dialog(dialogOpts);
+    }
+
+</script>
+
+</body>
+
+</html>

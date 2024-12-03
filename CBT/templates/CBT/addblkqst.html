@@ -1,0 +1,100 @@
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+   
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+
+
+<form  action="/cbt/enter/question/blockq/{{q.code}}/" 
+method="post" 
+enctype= "multipart/form-data" onsubmit="disable(this)">
+
+
+
+{% if q %}
+
+
+  <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+
+  <div ><span style='font-weight:bold'>Instruction:  </span>{{q.instruction}}</div>
+
+  </table>
+
+                <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+        <div style="margin-top:0%;margin-bottom:-3.1%">Question</div>
+
+          <tr>
+            <td >
+                  <textarea name='q' class="form-control" rows="3"></textarea>
+             </td >
+           </tr>
+
+        </table>
+
+         <div><input type='file' name ='qfilem'></div>
+{% else %}
+
+
+
+  <div>No instruction found</div>
+
+
+{% endif %}
+
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " >
+   <tr>
+
+    <input type= "submit" class="btn btn-lg btn-success btn-block"   name="submit" value="Continue">
+
+   </tr>
+</table>
+
+
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam}}" >
+                </td>
+            </tr>
+</table>
+
+
+</form>

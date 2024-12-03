@@ -1,0 +1,193 @@
+{%extends 'setup/typography.html' %}
+{% block content %}
+
+  <!--   <div align ="center" style="border-radius:10px;background-color:#ccccc0;border:0px solid black;width:100%;height:3%; font-size:14px;color:black;text-align:center"> Class Set Up </div> -->
+    <div align="center" style="color:red;font-family:verdana;font-size:15px;text-decoration:blink;background-color:;" > {{varerr}}</div>
+
+
+
+
+
+<form action="" method="post" name ="main" id="form1" onsubmit="disable(this)">
+
+                
+    <div align ="center" style="background-color:#ccccc0;border:0px solid black;width:100%;height:3%; font-size:16px;color:black;text-align:center">Class Set Up </div>
+
+ 
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+            <tr>
+                <td align ="left" style="width:auto;">{{ form.section.label }}</td>
+                <td align ="left" style="width:auto;">{{form.section}}</td>
+    
+            </tr>
+
+
+            <tr>
+                <td align ="left" style="width:auto;">{{ form.subsection.label }}</td>
+                <td align ="left" style="width:auto;">{{form.subsection}}</td>
+    
+            </tr>
+
+
+            <tr>
+                <td align ="left" style="width:auto;">{{ form.stream.label }}</td>
+                <td align ="left" style="width:auto;">{{form.stream}}</td>
+    
+            </tr>
+
+
+
+</table>
+
+
+
+<tr >
+    <div class="boxstreams"></div>
+</tr>
+
+
+
+        
+  <script type="text/javascript" >
+        $(document).ready(function() {            
+
+            $("#id_section").change(function () {
+                subsectionpost();
+            });
+
+            $("#id_subsection").change(function () {
+                getstream();
+            });
+
+            $("#id_stream").change(function () {
+                streampost();
+            });
+
+            getsection()
+    
+        });
+    </script>
+
+ </form>
+
+
+
+
+
+        <script type="text/javascript" language="javascript">
+        function getsection(){
+            var state = "{{varuser}}" ;
+            // alert(state);
+            var url = "/setup/configuration/getsection/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_section").val('');   
+            $("#id_section").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_section").append(options);
+                        getsubsection();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+
+
+        <script type="text/javascript" language="javascript">
+        function getsubsection(){
+            var state = "{{varuser}}" + ":" + $("#id_section").val();
+            // alert(state);
+            var url = "/setup/configuration/getsubsection/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_subsection").val('');   
+            $("#id_subsection").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_subsection").append(options);
+                        getstream();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+        <script type="text/javascript" language="javascript">
+        function getstream(){
+            var state = "{{varuser}}" + ":" + $("#id_subsection").val();
+            // alert(state);
+            var url = "/setup/configuration/getstream/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_stream").val('');   
+            $("#id_stream").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_stream").append(options);
+                        streampost();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" language="javascript">
+    function streampost(){
+
+        var state =  "{{varuser}}"+ ":" +$("#id_stream").val();
+
+        // alert(state);
+
+        var url = "/setup/configuration/getstreamajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $(".boxstreams").show();
+                $(".boxstreams").html(html);
+
+            }
+        });
+        return false;
+    }
+</script>
+
+    {% endblock %}

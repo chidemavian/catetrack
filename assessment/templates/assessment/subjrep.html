@@ -1,0 +1,106 @@
+
+
+
+             
+ <input name="submitprint" type= "submit" value="Print Report" onclick = "openrecprint();">
+
+   <div class="printable">
+
+
+    
+
+  <table style="margin-top:5%;margin-bottom:0.5%;font-size:0.7em;border:0.001em solid black" width="100%" class="table  table-bordered table" id="dataTables-example">
+    <tr > 
+      <td style='border:0px solid black'>
+          <img style="width: 10em; height: 10em;" src="/static/{{school.logo }}" alt="{{ replist.studentinfo.fullname }}">
+      </td>
+    
+            <td  style="border:0px solid black">
+
+            <table >
+              <span style="letter-spacing:0.02em;border:0em solid black;font-weight:bold;text-align:center;font-family:verdana;font-size:2.5em;">
+                {{replist.count }} 
+              </span>
+            </table> 
+
+            <table style="font-weight:bold;margin-top:-0%;margin-bottom:0%">
+                <span style="letter-spacing:0.8em;font-size:1.2em;background-color:red;color:white">GOVERNMENT APPROVED </span>
+            </table>
+
+        <table style="margin-top:-1%;margin-bottom:0%">
+            <span  style="font-weight:bold;letter-spacing:1em;font-size:0.8em">WAEC & NECO ACCREDITED</span> 
+        </table>
+    </td>
+
+   
+    </tr>
+</table>
+
+
+
+    <div style='font-weight:bold;border:0px solid black;font-size:1em;text-align:center'>
+      <td >
+
+        Best performing students in   {{ subject }} for {{klass}}{{arm}} {{term}}  TERM {{ session }}
+      </td>
+
+    </div>
+
+
+
+<body>
+
+      <div style = "background-image: url(/static/school-logo/log2.jpg);
+    background-repeat:no-repeat;
+    background-size:cover">
+
+      
+
+
+    <table style="text-align:center;margin-top:0%;margin-bottom:0%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">
+
+  <tr  style="border:0.5px solid black;font-weight:bold">
+        <td style="border:0.5px solid black" >S/N</td>
+         <td style="border:0.5px solid black">NAME</td>
+         <td style="border:0.5px solid black">SCORE</td>
+      </tr>
+
+{% for replist in replist %}
+  <tr>
+    <td style="border:0.5px solid black"> {{forloop.counter}}.</td>
+
+    <td style="border:0.5px solid black;text-align:left">
+      {{ replist.academic_rec.student.fullname}}
+    </td>
+  
+    <td style="border:0.5px solid black">
+      {{ replist.end_term_score }}</td>
+
+
+  </tr>
+{% endfor %}
+</table>
+
+
+
+
+
+
+</div>
+</body>     
+      </div>
+
+
+
+
+
+
+    <script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+    </script>
+
+

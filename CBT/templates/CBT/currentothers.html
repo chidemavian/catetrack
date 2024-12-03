@@ -1,0 +1,333 @@
+{% extends 'welcome1.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+   <table style="margin-top:0.8%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+       <tr style=" text-align:center" >
+
+            <td >
+
+                <img style="width: 5em; height: 6em;text-align:right" src="/static/{{ school.logo }}" alt="{{ school.name }}" >
+            </td>
+
+            <td  style="text-align:center;font-family:verdana;font-size:1em">
+                <span style="font-size:1.5em"> {{ school.name  }}</span><br>
+                <span style="font-size:1em"> {{ school.address }}</span>
+            </td>
+
+          <td >
+                <img style="width: 5em; height: 6em;" src="/static/{{ form.studentpicture }}" alt="{{ k.studentinfo.fullname  }}">
+          </td>
+
+        </tr>
+</table>
+
+   <table style="margin-top:0.8%;margin-bottom:0.1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+
+<div style='text-align:center'>
+  <tr>
+    <td style='font-weight:bold'>Session </td>
+    <td>{{session}} </td>
+   </tr>
+
+<tr>
+  <td style='font-weight:bold'>Term </td>
+  <td> {{term}} Term</td>
+</tr>
+
+<tr>
+    <td style='font-weight:bold'>Type </td>
+      <td> {{exam}} Examinations</td>
+</tr>
+
+<tr>
+    <td style='font-weight:bold'>Subject </td>
+    <td> {{subject}} </td>
+</tr>
+
+<tr>
+  <td style='font-weight:bold'> Class </td>
+  <td> {{klass}}</td>
+</tr> 
+
+</div>
+   </table>
+
+
+
+   <table style="margin-top:0.6%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+              <tr>
+                <td style="font-weight:bold">Candidate</td>
+                <td>{{name}}  </td>
+
+            </tr>
+
+</table>
+
+             
+
+
+
+
+ <table style="margin-top:0%;margin-bottom:02%" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+  <tr> 
+    <td style='font-weight:bold'>Time Left</td> 
+    <td style="color:red"><div id="countdown"></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<table style="margin-top:0.1%;margin-bottom:0.3%;" width="100%" class="table  table-bordered" id="dataTables-example">
+  <tr><td style=" text-size= 0.7em;text-align:center">Q {{ qq }} of {{total}}</td></tr>
+  <tr><td style=" color:blue;font-weight:bold;text-size= 1em" >{{ question.q1 }}</td></tr>
+</table>
+
+
+
+
+{% if question.image != '/ax/image' %}
+ <table style="margin-top:0%;margin-bottom:0%" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+    <div style= 'text-align:center'>          
+          <img src="/static/{{question.image}}" alt="{{question.image}}">
+</div>
+</table>
+
+{% endif %}
+
+
+
+  <table style = "margin-top:0%; margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example ">
+
+    
+  <form action="/cbt/take_test_eng/nextng/" method="post" enctype="multipart/form-data" role="form">
+
+
+{% if pos = 'low' %}
+
+        <tr>
+                
+
+            <td>
+                <input type="radio" name="gender" id="A" value='{{ options.a}}' >
+                <label class="custom-control-label" for="A">(A). {{ options.a}}</label>
+            </td>
+    </tr>
+    <tr>
+
+            <td>
+                <input type="radio" name="gender" id="B" value='{{ options.b}}' >
+                <label class="custom-control-label" for="B">(B). {{ options.b}}</label>
+            </td>
+    </tr>
+    <tr>
+
+        <td>
+            <input type="radio" name="gender" id="C" value='{{ options.c}}' >
+            <label class="custom-control-label" for="C">(C). {{ options.c}}</label>
+        </td>
+    </tr>
+    <tr>
+
+            <td>
+                <input type="radio" name="gender" id="D" value='{{ options.d}}' >
+                <label class="custom-control-label" for="D">(D). {{ options.d}}</label>
+            </td>
+   </tr>
+
+{% else %}
+
+
+          <table style = "margin-top:0%; margin-bottom:0%;border:0px solid black" width="100%" class="table  table-bordered" id="dataTables-example ">
+            <tr style='border:0px solid black'>
+               <td>
+                    <input type="radio" name="gender" id="A" value='{{ options.a}}'>
+            
+                    <label class="custom-control-label" for="A">(A).
+                      <img  src="/static/{{options.a}}" alt="{{getdetails.question.image}}">
+                    </label>
+                </td>   
+</tr>
+<tr style='border:0px solid black'>
+
+                <td>
+                    <input type="radio" name="gender" id="B" value='{{ options.b}}'>
+            
+                    <label class="custom-control-label" for="B">(B).
+                      <img  src="/static/{{options.b}}" alt="{{getdetails.question.image}}">
+                    </label>                
+
+                </td>   
+
+</tr>
+<tr style='border:0px solid black'>
+                <td>
+                    <input type="radio" name="gender" id="C" value='{{options.c}}'>
+            
+                    <label class="custom-control-label" for="C">(C).
+                      <img  src="/static/{{options.c}}" alt="{{getdetails.question.image}}">
+                    </label>
+                </td>   
+</tr>
+<tr style='border:0px solid black'>
+
+
+                <td>
+                    <input type="radio" name="gender" id="D" value='{{options.d}}'>
+            
+                    <label class="custom-control-label" for="D">(D).
+                      <img  src="/static/{{options.d}}" alt="{{getdetails.question.image}}">
+                    </label>
+                
+                </td>   
+</tr>
+        </table>
+{% endif %}
+         
+
+
+    
+</table>
+
+
+
+
+</table>
+
+
+<table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <td>     
+        <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test/enggglish/previous/" >
+            <i class="fa fa-backward fa-1x"></i>
+        </button>
+    </td>
+
+<!--     <td>
+        <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test_eng/spin/" >
+            <i class="fa fa-mail-forward fa-1x"></i>
+        </button>
+    </td> -->
+
+    <td>
+        <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test_eng/wheel/" >
+            <i class="fa fa-refresh fa-spin"></i>
+        </button>
+    </td>
+
+    <td>
+        <button class="btn btn-lg btn-success btn-block" type ='submit' >
+            <i class="fa fa-forward fa-1x"></i>
+        </button>
+    </td>
+
+    
+</table>
+
+ <input type="hidden" name="code"   readonly="readonly" value="{{ code }}">
+<input type="hidden" name="groupcode"  readonly="readonly" value="{{ groupcode }}">
+ </form>
+
+
+
+ <div style="margin-top:0%;margin-bottom:02%;text-align:center;font-weight:bold; color:brown">
+    IF YOU DON'T HAVE THE ANSWER RIGHT NOW, YOU MAY HIT THE MIDDLE BUTTON
+</div>
+
+</table>
+
+
+
+
+
+<script type="text/javascript" >
+    $(document).ready(function() {
+        $("#myDialog").hide();
+        $("#comment").hide();
+
+    });
+</script>
+
+
+<script type="text/javascript" language="javascript">
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+};
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+$(function () {
+  jQuery.fn.extend({
+      countdown: function () {
+           // 24 hour countdown
+           // Change variable here to see what will happen :D
+            let hour = 1, min = 20, sec = 0
+            render(hour, min, sec)
+            
+            const timer = setInterval(() => {
+              if (hour == 0 && min == 0 && sec == 0) {
+                  clearInterval(timer)
+                    return ;
+                }
+                
+              sec = dealSec(sec)
+                min = dealMin(min, sec)
+                hour = dealhour(hour, min, sec)
+                render(hour, min, sec)
+            }, 1000)
+        },
+    })
+    
+    $('#countdown').countdown()
+})
+
+function dealSec (sec) {
+    const timeRange = [...Array(60).keys()].reverse()
+  const idxNow = timeRange.indexOf(sec)
+    const idxNext = (idxNow + 1) % timeRange.length
+    return timeRange[idxNext]
+}
+
+function dealMin(min, sec) {
+    const timeRange = [...Array(60).keys()].reverse()
+    if (sec === 59) {
+      const idxNow = timeRange.indexOf(min)
+        const idxNext = (idxNow + 1) % timeRange.length
+        return timeRange[idxNext]
+    }
+    return min
+}
+
+function dealhour (hour, min, sec) {
+  if (min === 59 && sec === 59) return hour - 1
+    return hour
+}
+
+function render(hour, min, sec) {
+  hour = ("00" + hour).slice(-2)
+    min  = ("00" + min).slice(-2)
+    sec  = ("00" + sec).slice(-2)
+    
+    $('#countdown').text(`${hour}:${min}:${sec}`)
+}
+
+</script>
+
+{% endblock %}

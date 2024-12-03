@@ -1,0 +1,179 @@
+
+
+<html>
+<head>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<form  action="/cbt/enter/option/changeblkans/{{qst.qstcode}}/" 
+method="post"
+enctype="multipart/form-data"
+onsubmit="disable(this)">
+
+
+
+                        
+<table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+
+{% if qst.q1 != "" %}  
+        <tr>
+          <td >{{qst.q1}}</td >
+         </tr>
+
+ {% else %}
+        <tr>
+            <td><img  src="/static/{{qst.image}}" alt="{{choose}}"></td>
+         </tr>
+ {% endif %}
+</table>
+
+<table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " >
+
+
+ {% if ans.option == 'A' %}
+
+
+
+    <tr>
+                
+
+            <td>
+                <input type="radio" checked name="gender" id="A" value='{{ opt.a}}' >
+                <label class="custom-control-label" for="A">(A). <img  src="/static/{{ opt.a}}" alt="{{choose}}"> </label>
+            </td>
+    </tr>
+
+
+
+ {% else %}
+
+    <tr>
+                
+
+            <td>
+                <input type="radio" name="gender" id="A" value='{{ opt.a}}' >
+                <label class="custom-control-label" for="A">(A). <img  src="/static/{{ opt.a}}" alt="{{choose}}"> </label>
+            </td>
+    </tr>
+
+ {% endif %}
+
+
+
+{% if ans.option == 'B' %}
+    <tr>
+
+            <td>
+                <input type="radio" checked name="gender" id="B" value='{{ opt.b}}' >
+                <label class="custom-control-label" for="B">(B). <img  src="/static/{{ opt.b}}" alt="{{choose}}"></label>
+            </td>
+    </tr>
+
+{% else %}
+    <tr>
+
+            <td>
+                <input type="radio" name="gender" id="B" value='{{ opt.b}}' >
+                <label class="custom-control-label" for="B">(B). <img  src="/static/{{ opt.b}}" alt="{{choose}}"></label>
+            </td>
+    </tr>
+
+{% endif %}
+
+
+
+    {% if ans.option == 'C' %}
+    <tr>
+
+        <td>
+            <input type="radio" checked name="gender" id="C" value='{{ opt.c}}' >
+            <label class="custom-control-label" for="C">(C). <img  src="/static/{{ opt.c}}" alt="{{choose}}"></label>
+        </td>
+    </tr>
+
+    {% else %}
+    <tr>
+
+        <td>
+            <input type="radio" name="gender" id="C" value='{{ opt.c}}' >
+            <label class="custom-control-label" for="C">(C). <img  src="/static/{{ opt.c}}" alt="{{choose}}"></label>
+        </td>
+    </tr>
+    {% endif %}
+
+
+
+
+
+{% if ans.option == 'D' %}
+
+    <tr>
+
+            <td>
+                <input type="radio" checked name="gender" id="D" value='{{ opt.d}}' >
+                <label class="custom-control-label" for="D">(D). <img  src="/static/{{ opt.d}}" alt="{{choose}}"></label>
+            </td>
+   </tr>
+
+
+{% else %}
+
+    <tr>
+
+            <td>
+                <input type="radio" name="gender" id="D" value='{{ opt.d}}' >
+                <label class="custom-control-label" for="D">(D). <img  src="/static/{{ opt.d}}" alt="{{choose}}"></label>
+            </td>
+   </tr>
+{% endif %}
+
+
+</table>
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " >
+   <tr>
+
+        <input class="btn btn-lg btn-success btn-block"   name="submit" type= "submit" value="Save">
+
+   </tr>
+</table>
+
+</form>
+
+
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam}}" >
+                </td>
+            </tr>
+</table>
+
+

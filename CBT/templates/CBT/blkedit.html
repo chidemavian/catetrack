@@ -1,0 +1,438 @@
+
+
+
+
+
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:1em;"><span style='color:blue'>{{exam}} </span>Edit entries for Block questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session</td>
+            </tr>
+      </table>
+
+
+
+
+{% if inst %}
+<div style="text-align:center">Touch the paperclip to add options</div>
+
+{% for h in inst %}
+
+            <table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+            <div style="margin-top:02%;margin-bottom:-3.1%">Block {{forloop.counter}}</div>
+
+              <tr>
+          <td >
+            <a href="#" onClick= "edinstr({{h.code}})" style='color:green'>{{ h.instruction }}</a>
+          </td >
+          </tr>
+
+            </table>
+
+
+
+
+ 
+       {% for pp in q %}
+
+
+       {% if pp.qst.block.instruction == h.instruction %}
+
+        <table style="margin-top:0%;margin-bottom:0%" class="table table-bordered" >
+            <tr>
+                <td > {{forloop.counter}}.</td >
+
+
+                    {% if pp.qst.q1 %}
+                <td >
+                    <a href="#" style='color:red' onClick= "editqstblk({{pp.qst.qstcode}})">{{ pp.qst.q1 }}</a>
+                 </td >
+                    {% endif %}
+
+
+                 {% if pp.qst.image != "studentpix/user.png" %}
+            <td>
+            <a href="#" onClick= "editqstblk({{ pp.qst.qstcode}})" title="Edit question">
+              <img  src="/static/{{pp.qst.image}}">                        
+                 </a>
+            </td>
+
+        
+        </tr>
+        </table>
+                {% endif %}
+  
+
+                {% if pp.opt %}
+
+
+                    {% if pp.msg == 'txt' %}
+
+
+                                {% for kl in pp.opt %}
+
+                                   <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                        <tr>
+                                            <td>
+
+                                                <a href="#"  onClick= "editopta({{ pp.qst.qstcode}})">A. {{kl.a}}</a>
+                                            </td>
+
+
+                                            <td>
+
+                                                <a href="#"  onClick= "editoptb({{ pp.qst.qstcode}})">B. {{kl.b}}</a>
+                                            </td>
+
+                                            <td>
+
+                                                <a href="#"  onClick= "editoptc({{ pp.qst.qstcode}})">C. {{kl.c}}</a>
+                                            </td>
+
+
+                                            <td>
+
+                                                <a href="#"  onClick= "editoptd({{ pp.qst.qstcode}})">D. {{kl.d}}</a>
+                                            </td>
+
+                                            <td > <a href="#" onClick= "editblkans({{ pp.qst.qstcode}})">Ans = {{ pp.ans }}</a>
+                                             </td >
+
+                                            
+                                        </tr>
+                                    </table>
+                                {% endfor %}
+
+
+                    {% else %}
+
+
+                                {% for kl in pp.opt %}
+
+
+
+                              <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                    <tr style='border:0px solid black' align='center'>
+                                        <td><a href="#"  onClick= "editopta({{ pp.qst.qstcode}})">A.
+                                        <img  src="/static/{{kl.a}}" alt="{{choose}}"></a>
+                                        </td>
+                                        <td><a href="#"  onClick= "editoptb({{ pp.qst.qstcode}})">B.
+                                        <img  src="/static/{{kl.b}}" alt="{{choose}}"></a>
+                                        </td>
+                                        <td><a href="#"  onClick= "editoptc({{ pp.qst.qstcode}})">C.
+                                        <img  src="/static/{{kl.c}}" alt="{{choose}}"></a>
+                                        </td>
+                                        <td><a href="#"  onClick= "editoptd({{ pp.qst.qstcode}})">D.
+                                        <img  src="/static/{{kl.d}}" alt="{{choose}}"></a>
+                                        </td>
+                                        <td > <a href="#" onClick= "editblkans({{ pp.qst.qstcode}})">Ans = {{ pp.ans }}</a>
+                                         </td >
+
+
+
+                                    </tr>
+                                </table>
+
+
+                                {% endfor %}
+
+
+                    {% endif %}
+
+
+                {% else %}
+                            <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                            <div>No options found</div>
+                            </table>
+               {% endif %}
+
+
+
+
+{% endif %}
+ 
+
+
+        {% endfor %}                    
+
+
+
+            
+
+
+
+
+
+                    
+        {% endfor %}
+               </tr>
+            </table>
+
+
+
+
+{% endif %}
+
+
+
+  <div id="myD" ></div>
+
+
+
+
+
+
+<script >
+    function edinstr(vid){
+        var state = vid;
+        // alert(vid);
+        var url = "/cbt/enter/question/editblkqstinst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script >
+    function editqstblk(vid){
+        var state = vid;
+        // alert(vid);
+        var url = "/cbt/enter/blkquestion/editblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+<script >
+    function editopta(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/blkedt/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script >
+    function editoptb(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/blkedtb/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script >
+    function editoptc(vid){
+        var state = vid;
+
+        // alert(vid);
+        var url = "/cbt/enter/option/blkedtc/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script >
+    function editoptd(vid){
+        var state = vid;
+        // alert(vid);
+        var url = "/cbt/enter/option/blkedtd/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script >
+    function editblkans(vid){
+        var state = vid;
+        // alert(vid);
+        var url = "/cbt/enter/blkoption/answers/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialogans();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+            function getdialogans(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Edit Answer' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myD").dialog(dialogOpts);
+            }
+
+</script>
+
+
+
+
+<script >
+    function addblkqopt(vid){
+        
+        var state = vid;
+        // alert(vid);      
+        var url = "/cbt/enter/options/blockqstin/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script >
+    function addoblkqsts(vid){
+
+        var state = vid;
+        var url = "/cbt/enter/question/addblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myD").show();
+                $("#myD").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+        <script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    height:"auto",
+                    width:"auto",
+                    title:'Edit Entries' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myD").dialog(dialogOpts);
+            }
+
+</script>
+
+

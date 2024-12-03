@@ -1,0 +1,122 @@
+
+
+{% extends 'welcome1.html' %}
+{% block sectionTitle %}{% endblock %}
+{% block content %}
+
+
+
+
+
+     <input name="submitprint" type= "submit" value="Print Report" onclick = "openrecprint();">
+
+    <div class="printable">
+    {% for k in st %}
+
+ 
+  <table style="margin-top:2%;margin-bottom:1%" width="100%" class="table  table-bordered table" id="dataTables-example">
+    <tr > 
+      <td style='border:0px solid black'>
+          <img style="width: 7em; height: 7em;" src="/static/school-logo/log.jpeg" alt="{{ k.studentinfo.fullname  }}">
+      </td>
+
+        <td  style="border:0px solid black">
+
+            <table style="margin-top:0%;margin-bottom:0%" >
+              <span style="border:0px solid black;font-weight:bold;text-align:center;font-family:verdana;font-size:2em;">BRIGHT FUTURE COLLEGE </span>
+            </table> 
+
+            <table style="font-weight:bold;margin-top:-1%;margin-bottom:2%">
+                <span style="letter-spacing:10.5px;font-size:10.5px;background-color:red;color:white">GOVERNMENT APPROVED </span>
+            </table>
+
+        <table style="margin-top:2%;margin-bottom:0%">
+            <span  style="font-weight:bold;letter-spacing:11px;font-size:11px">WAEC & NECO ACCREDITED</span> 
+        </table>
+    </td>    
+    </tr>
+</table>
+
+
+ <table style="margin-top:1.6%;margin-bottom:1.2%; text-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+November 14, 2022
+</table>
+
+ <table style="margin-top:0.4%;margin-bottom:0%; text-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+<tr>
+
+Dear Mr & Mrs <span style="font-weight:bold">{{k.surname}}</span>,
+</tr>
+
+</table>
+
+ <table style="margin-top:0.5%;margin-bottom:0.4%;justify:block; fontt-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+<tr>
+	I am writing to welcome you to our college as well as officially inform you about our procedure for diseminating examinaton results.
+</tr>
+
+</table>
+
+ <table style="margin-top:-2%;margin-bottom:0%; text-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+<tr>
+
+ As you may have already known, our results are only available online and you will be needing the following details to check <span style='font-weight:bold'> {{ k.student.fullname}}</span> 's result 
+
+</tr>
+</table>
+
+ <table style="margin-top:0%;margin-bottom:1%; text-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+<br>
+
+ <span style='font-weight:bold'>Username:</span> {{k.student.admissionno}}
+ <br>
+ <span style='font-weight:bold'>Password:</span>  {{k.student.surname}}
+ <br>
+ <span style='font-weight:bold'>Portal: </span>  <a href=""><span style="font-size:1.2em"> https://bit.ly/3pdEuL5</span></a>
+ <br>
+
+</table>
+ 
+
+ <table style="margin-top:0.7%;margin-bottom:1%; text-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+Using your favourite browser, kindly visit the web address above and key in the details provided in the appropriate boxes.
+ it is our hope that you find our learning environment inspiring enough for {{k.gender}}.
+</table>
+
+
+ <table style="margin-top:1%;margin-bottom:1%; text-size:2.2em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+Thank you,
+<br>
+Mr. Babatunde Olushsola
+<br>
+Administrator
+<br>
+</table>
+
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+<!--  -->
+
+    </div>
+
+<script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+</script>
+{% endblock %}
+
+
+
+
+
+

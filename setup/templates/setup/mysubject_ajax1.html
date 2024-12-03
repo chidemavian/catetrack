@@ -1,0 +1,175 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form action="/setup/subject/" method="post" name ="main" id="form1" onsubmit="disable(this)">
+
+
+     <table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+         <tr>
+           <td >Category</td>
+           <td>
+           <select name="category" id="categories" required>
+
+               <option value="">-----</option>
+               <option value="Compulsory">Compulsory</option>
+               <option value="Optional">Optional</option>
+           </select>
+           </td>
+         </tr>
+
+        <tr>
+            <td >subject</td>
+            <td ><input type='text' name='subject' required></td>
+        </tr>
+    </table>
+
+     <table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+        <tr>                        
+            
+            <input name="submit" type= "submit" value="   ADD SUBJECT  ">               
+        </tr>
+                  
+    </table>
+
+
+
+
+ <input type= 'hidden' name='dept_code' value ='{{dept_code}}'>
+  <input type= 'hidden' name='department' value ='{{department}}'>
+</form>
+
+
+
+
+<table style="margin-top:2%;margin-bottom:0.2%;font-size:0.8em;text-align: center
+" width="100%" class="table  table-bordered" id="dataTables-example">
+                        
+                            <tr>
+                                <td colspan="5" style="text-align:left;vertical-align:top;width:auto">
+                                    <input name="submitprint" type= "submit" value="Print Subject list" class = "submit"onclick = "openrecprint();"><div class="printable"></div>
+                                </td>
+                            </tr>
+              
+
+<table style="margin-top:0%;margin-bottom:10%;font-size:0.8em;text-align: center
+" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                {% for pincode in suball %}
+                      {% if pincode.subject %}
+                             <tr>
+                                <td colspan="6" align="center" valign="top" style = "background-color:#ccccc0;font-size:15px;width:auto;color:#000000">{{ pincode.category }}  Subject Category</td>
+                            </tr>
+                                
+                            <tr>
+                                
+                                <td > S/N </td>
+                                <td> Subject </td>
+
+
+
+
+                                <td > Status</td>
+
+
+
+                            </tr>
+
+                            {% for j in pincode.subject %}
+                            <tr>
+                                
+                                <td >{{ forloop.counter}}</td>
+
+                                <td ><a href="#" style ="color:blue;" title="Edit This Subject" onClick= "getdialogtry({{ j.id }});">{{ j.subject}}</a></td>
+              
+
+                                <td ><a href="#" style ="color:blue;" title="Edit This Subject" onClick= "getdialogtry({{ j.id }});">{{ j.category}}</a></td>                                
+                            </tr>
+                            {% endfor %}
+                    {% endif %}
+                 {% endfor %}
+                    
+</table>
+
+
+
+    <div id="myDialog" title="Edit Account">
+    </div>
+
+    <script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+    </script>
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#myDialog").hide();
+            $("#id_category").focus();
+
+        });
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getdialogtry(vid){
+            //alert(vid);
+            var state = vid;
+            var url = "/setup/getsubject/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    //$("#myDialog").show();
+                    $("#myDialog").html(html);
+                    getdialog();
+                }
+            });
+            return false;
+        }
+
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getdialog(){
+            var dialogOpts = {
+                autoOpen:true,
+                modal:true,
+                position: ["center", "middle"],
+                height:350,
+                width:490,
+                title:'Edit Subject',
+                closeOnEscape:true,
+                show: true,
+                hide: true,
+                bgiframe: true
+            };
+            $("#myDialog").dialog(dialogOpts);
+        }
+
+    </script>
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+

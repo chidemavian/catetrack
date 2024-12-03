@@ -1,0 +1,81 @@
+
+{% extends 'platformowners/managerbase.html' %}
+
+{% block content %}
+
+
+{% load humanize %}
+
+
+
+
+
+<input name="submitprint" type= "submit" value="Print Receipt" onclick = "openrecprint();">
+
+<div class="printable">
+
+{% for g in dsr %}
+
+<div class="card card-primary card-outline">               
+
+            <div class="card-header">
+              <h5 class="m-0" style='text-align:center'>Transaction Successfull!!!</h5>
+            </div>
+
+ 
+
+              <div class="printable">
+                <div class="card-body">           
+                    <p class="card-text"></p>
+                    <p style='text-align:center'>{{company.company.name}} <br> {{company.Address}}</p>
+                    <div style='text-align:center'>Reconciliation Receipt (Esusu)</div>
+
+                    <div>Reconciliator: {{admin.staffrec.surname}}  {{admin.staffrec.firstname}}  {{staff.staffrec.othername}} </div>
+
+                    <div>Field Officer:  {{g.mer.staff.surname}} {{g.mer.staff.firstname}} {{g.mer.staff.othername}} ({{g.mer.id}})</div>
+
+                    <div>Date : {{date}}</div><div>Time: {{time}}</div>
+
+                    <div>Amount:   {{currency}}  {{g.sales|intcomma}} </div>
+              </div>
+          </div>
+
+
+
+</div>
+
+
+    </div>
+
+
+{% endfor %}
+
+<table style="margin-top:0.5%;margin-bottom:0.6%;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+<tr >
+<td ><a href="/fts/thrift/approvals/">Reconciliation</a></td>
+<td><a href="/fts/thrift/payouts/">Payments</a></td>
+</tr>
+</table>
+
+
+<script type="text/javascript" language="javascript">
+
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+};
+
+</script>
+
+
+
+<script language="javascript" type="text/javascript">
+        function openrecprint()
+        {
+            //alert("welcome");
+            $( ".printable" ).print();
+        }
+</script>
+
+{% endblock %}

@@ -1,0 +1,254 @@
+
+
+
+{% if qq %}
+
+    <table style="margin-top:1%;margin-bottom:02%" class="table table-bordered " >
+        <tr>
+            <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;">Options for  <span style='color:blue'> {{exam}} </span>   <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session
+            </td>
+        </tr>
+
+
+    </table>  
+
+
+
+
+    {% if others %}
+    <div style="text-align:center">Touch the paperclip to add options</div>
+
+
+
+        {% for h in qq %}
+
+
+                    <table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+                        <div style="margin-top:02%;margin-bottom:-3.1%">Q {{forloop.counter}}.</div>
+                        <tr>
+                            <td >{{ h.question.q1 }} </td >
+
+
+
+                             {% if h.question.image != '/ax/image' %}
+                            <td>
+                                <img  src="/static/{{h.question.image}}" alt="{{choose}}">
+                            </td>
+                             {% endif %}
+
+
+
+
+                                {% if h.ans == 'No ans yet' %}
+                            <td>
+                                <a href="#" onClick= "otheropt({{h.question.qstcode}})" >
+                                    <i class="fa fa-paperclip fa-2x"></i>
+                                </a>
+                            </td>
+                                {% endif %}
+
+                                
+
+                        </tr>
+                    </table>
+
+
+                        {% if h.options %}
+                            {% if h.msg == 'txt' %}
+                                {% for kl in h.options %}
+                                   <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                            <tr>
+                                                <td>A. {{kl.a}}</td>
+
+                                                <td>B.  {{kl.b}}</td>
+
+                                                <td>C.  {{kl.c}}</td>
+
+                                                <td>D.  {{kl.d}}</td>
+                                                <td>Ans = {{h.ans}}</td>
+                                            </tr>
+                                    </table>
+                                {% endfor %}
+                            {% else %}
+                                {% for kl in h.options %}
+                                    <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                        <tr style='border:0px solid black' align='center'>
+                                            <td>A.
+                                            <img  src="/static/{{kl.a}}" alt="{{choose}}">
+                                            </td>
+                                            <td>B.
+                                            <img  src="/static/{{kl.b}}" alt="{{choose}}">
+                                            </td>
+                                            <td>C.
+                                            <img  src="/static/{{kl.c}}" alt="{{choose}}">
+                                            </td>
+                                            <td>D.
+                                            <img  src="/static/{{kl.d}}" alt="{{choose}}">
+                                            </td>
+                                            <td>Ans = {{h.ans}}</td>
+                                        </tr>
+                                    </table>
+                                {% endfor %}
+                            {% endif %}
+
+
+                        {% else %}
+                            <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                <div>No options foundfe</div>
+                            </table>
+                        {% endif %}
+        {% endfor %}
+    {% endif %}
+
+{% endif %}
+
+
+
+
+ 
+
+
+
+
+
+<div id="myDialog" title="Enter Assessment Score"></div>
+
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script type="text/javascript" language="javascript">
+    function getdialogtry(vid){
+        var state = vid;
+        var url = "/cbt/enter/question/majax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    function getdialogtrys(vid){
+        var state = vid;
+        var url = "/cbt/enter/question/ajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:'auto',
+                    width:'auto',
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>
+</body>
+
+
+
+
+
+<script >
+    function otheropt(vid){
+        
+        var state = vid;
+        // alert(vid);      
+        var url = "/cbt/enter/options/odaoption/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script >
+    function addoblkqsts(vid){
+
+        var state = vid;
+        var url = "/cbt/enter/question/addblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    // position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'To Cancel Click here ---> ' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+</script>
+
+</html>
+
+
+

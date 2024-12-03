@@ -1,0 +1,205 @@
+{% extends "sysadmin/base.htm" %}
+{%block head %}
+    {%block title %}{%endblock%}
+{%endblock %}
+{%block content%}
+    <!-- <div align ="center" style = "width:100%;heigth:10%;background:black;color:white;font-size:18px"> CONTROL PANEL</div>-->
+    <div 
+        <div  style="background-color:#ccccc0;width:100%; font-size:1em;text-align:center;">AUTO COMMENT TABLE  </div>
+
+
+    <table style="margin-top:0%;margin-bottom:0.4%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+    <tr style="text-align:center;">
+      <td style="background:blue">
+          <a href="/controllers/comauto/"  style="color:white">Set up</a>
+      </td>
+
+      <td  >
+          <a href="/controllers/autorun/"  style="color:red">Run</a>
+      </td>      
+    </tr>
+</table>       
+
+        <div  style="color:red;font-family:verdana;font-size:13px;text-decoration:blink;background-color:#ffffff;text-align:center;" > {{varerr}}</div>
+
+
+
+
+        <form action="" method="post" name ="main" onsubmit="disable(this)">
+    <table style="margin-top:0%;margin-bottom:0.4%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+                <tr>
+                    <td>Category</td>
+                    <td>{{ form.category}}</td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td>{{ form.krang}}</td>
+                </tr>
+                <tr>
+
+                    <td >Comment </td>
+                    <td>{{ form.comment}}</td>
+                </tr>
+            </table>
+
+    <table style="margin-top:0%;margin-bottom:2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+                <tr>
+                    <td>
+                    <div style='text-align:center'>
+
+                        <input name="submit" type= "submit" value="::Save Comment::">
+                    </div>
+                    </td>
+
+                </tr>
+            </table>
+        </form>
+
+    <table style="margin-top:0%;margin-bottom:0.4%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+                    <tr>
+                        <td ><strong>S/N</strong></td>
+                        <td ><strong>Category </strong></td>
+                        <td ><strong>Range</strong></td>
+
+                        <td  style= 'text-align:center'><strong> Comment</strong></td>
+                        <td ><strong> Edit</strong></td>
+                    </tr>
+                    {% for pincode in autocom %}
+
+                        <tr>
+                        <!-- <td align="left" valign="top" style = "background-color:white;font-size:11px;width:auto;color:#000000;border:1px solid black"> <strong><a href="/controllers/edituser/{{ pincode.id }}/" style ="color:red" onclick="admno({{ pincode.id }});" title="Edit This User"> {{ pincode.username|upper }} </a></strong></td>-->
+                        <td >  {{ forloop.counter }} </td>
+                        <td >  {{ pincode.category }}</td>
+                        <td > {{ pincode.krang }} </td>
+                        <td > {{ pincode.comment }}</td>
+                        
+                        <td >  <a href="#" style="color:blue" onClick= "getdialogtry({{ pincode.id  }});">Edit Comment</a></td>
+                    {% endfor %}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+    <div id="myDialog" title="Edit Teacher">
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+        var pickerOpts = {
+            //appendText: "mm/dd/yy",
+            //defaultDate: "+5",
+            showOtherMonths: true,
+            changeMonth: true,
+            changeYear: true,
+            dateFormat:"yy-mm-dd"
+            //showButtonPanel: true
+            // showOn: "button"
+        };
+
+ 
+
+        $("#id_surname").focus();
+        //$("id_birth_date").attr('disable','True');
+
+    });
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#myDialog").hide();
+        });
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getdialogtry(vid){
+            //alert(vid);
+            var state = vid;
+            var url = "/controllers/getcommm/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    //$("#myDialog").show();
+                    $("#myDialog").html(html);
+                    getdialog();
+                }
+            });
+            return false;
+        }
+
+    </script>
+    <script type="text/javascript" language="javascript">
+        function getdialog(){
+            var dialogOpts = {
+                autoOpen:true,
+                modal:true,
+                position: ["center", "middle"],
+                height:350,
+                width:510,
+                title:'Delete Class Teacher' ,
+                closeOnEscape:true,
+                show: true,
+                hide: true,
+                bgiframe: true
+            };
+            $("#myDialog").dialog(dialogOpts);
+        }
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#id_comment").focus();
+           // range();
+            $("#id_category").change();
+            range();
+
+            $("#id_category").change(function () {
+                range();
+            });            
+
+        });
+    </script>
+
+
+    <script type="text/javascript" language="javascript">
+        function range(){
+            var state = $("#id_category").val() ;
+            var url = "/controllers/comauto/range/"; 
+            var i = 0;
+            var data='userid='+state;
+            $("#id_krang").val('');
+            $("#id_krang").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_krang").append(options);
+                    }
+                })
+            }
+        }
+
+    </script>
+
+{%endblock%}

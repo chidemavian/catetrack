@@ -1,0 +1,214 @@
+
+
+
+
+
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:1em;"><span style='color:blue'>{{exam}} </span>Options for Block questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session</td>
+            </tr>
+      </table>
+
+
+
+
+{% if inst %}
+
+    <div style="text-align:center">Touch the paperclip to add options</div>
+
+    {% for h in inst %}
+
+                <table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+                    <div style="margin-top:02%;margin-bottom:-3.1%">Block {{forloop.counter}}</div>
+
+                    <tr>
+                        <td >{{ h.instruction }} </td >
+                    </tr>
+
+                </table>
+
+ 
+        {% for pp in q %}
+            {% if pp.qst.block.instruction == h.instruction %}
+                <table style="margin-top:0%;margin-bottom:0%" class="table table-bordered">
+                    <tr>
+                        <td > {{forloop.counter}}.</td >
+
+                            {% if pp.qst.q1 %}
+                        <td >{{ pp.qst.q1 }}</td >
+                            {% endif %}
+
+
+                            {% if pp.qst.image != "studentpix/user.png" %}
+                    <td>
+                    <a href="#" onClick= "getdialogopt({{ pin.question.id}})" title="Edit Option A.">
+                      <img  src="/static/{{pp.qst.image}}">                            
+                         </a>
+                    </td>
+
+                            {% endif %}
+
+
+                            {% if pp.ans = 'No ans yet' %}                    
+                    <td>
+                        <a href="#" onClick= "addblkqopt({{pp.qst.id}})" >
+                            <i class="fa fa-paperclip fa-2x"></i>
+                        </a>
+                     </td>
+                            {% endif %}
+
+                    </tr>
+                </table>
+
+
+                {% if pp.opt %}
+
+
+                        {% if pp.msg == 'txt' %}
+                                {% for kl in pp.opt %}
+                               <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                        <tr>
+                                            <td>A. {{kl.a}}</td>
+                                            <td>B.  {{kl.b}}</td>
+                                            <td>C.  {{kl.c}}</td>
+                                            <td>D.  {{kl.d}}</td>
+                                            <td>Ans = {{pp.ans}}</td>
+                                        </tr>
+                                </table>
+                                {% endfor %}
+
+
+                        {% else %}
+                                {% for kl in pp.opt %}
+                                  <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                        <tr style='border:0px solid black' align='center'>
+                                            <td>A.
+                                            <img  src="/static/{{kl.a}}" alt="{{choose}}">
+                                            </td>
+                                            <td>B.
+                                            <img  src="/static/{{kl.b}}" alt="{{choose}}">
+                                            </td>
+                                            <td>C.
+                                            <img  src="/static/{{kl.c}}" alt="{{choose}}">
+                                            </td>
+                                            <td>D.
+                                            <img  src="/static/{{kl.d}}" alt="{{choose}}">
+                                            </td>
+                                            <td>Ans = {{pp.ans}}</td>
+                                        </tr>
+                                    </table>
+                                {% endfor %}
+                        {% endif %}
+
+
+                {% else %}
+
+                    <table style="margin-top:0%;margin-bottom:1.5%" class="table table-bordered " >
+                                <div>No options found</div>
+                    </table>
+                {% endif %}
+            {% endif %} 
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam }}" >
+                </td>
+            </tr>
+</table>
+
+
+
+
+  <div id="myDialog" ></div>
+
+
+
+
+
+
+<script >
+    function addblkqopt(vid){
+        
+        var state = vid;
+        // alert(vid);      
+        var url = "/cbt/enter/options/blockqstin/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script >
+    function addoblkqsts(vid){
+
+        var state = vid;
+        var url = "/cbt/enter/question/addblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+        <script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    // position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Add block questions' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+</script>

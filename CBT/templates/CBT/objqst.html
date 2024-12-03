@@ -1,0 +1,213 @@
+
+
+
+
+
+
+
+
+   <table style="margin-top:0%;margin-bottom:0%;font-size:0.7em" class="table">
+
+    <tr style="text-align:center">
+
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td style="background:blue"><a href="#" onClick= "autopost2()" style="color:white">Comprehension</a></td>
+            </tr>
+            </table>
+
+
+            <table style="margin-top:0%;margin-bottom:0%;font-size:0.9em" class="table  table-bordered">
+                <tr>
+                    <td ><a href="#" onClick= "autopost2()">Passage</a></td>
+                     <td style="background:grey"> <a href="#" onClick= "autoobjq()" style="color:white">Questions</a></td>
+                </tr>            
+            </table>
+
+        </td>
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td><a href="#" onClick= "autoblock2()" style="color:whte">Block</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0;font-size:0.9em%" class="table  table-bordered">
+
+                <tr>
+                    <td><a href="#" onClick= "autoblock2()">Instruction</a></td>
+
+                     <td> <a href="#" onClick= "autbklq()" style="color:whdite">Questions</a></td>
+                </tr> 
+
+            </table>
+
+        </td>
+          <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td><a href="#" onClick= "autoothers()" style="color:whte">Others</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0;font-size:0.9em%" class="table  table-bordered">
+                <tr>
+                    <!-- <td><a href="#" onClick= "autoothers()">Instruction</a></td> -->
+
+                     <td> <a href="#" onClick= "autoothers()" style="color:whdite">Questions</a></td>
+                </tr>         
+            </table>
+
+        </td>
+
+    </tr>
+
+
+</table>
+
+
+<table style="margin-top:3%;margin-bottom:0%" class="table table-bordered " >
+
+  <tr>
+     <td >
+            <textarea  name='question' class="form-control" rows="3"> </textarea>
+     </td >
+   </tr>
+</table>
+
+
+
+
+
+
+
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " >
+   <tr>
+
+        <input class="btn btn-lg btn-success btn-block" formaction="/cbt/enter/question/compqst/"  name="submit" type= "submit" value="Save">
+
+   </tr>
+</table>
+
+
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;">Passage 1</td>
+            </tr>
+</table>
+
+
+
+
+{% if quest %}
+
+    {% for p in quest %}
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{p.p.p1}}</div>
+
+            </table>
+
+
+
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{p.p.p2}}</div>
+
+            </table>
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{p.p.p3}}</div>
+
+            </table>
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{p.p.p4}}</div>
+
+            </table>
+
+
+
+    <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+          <tr>
+      
+        <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;"> <span style='color:blue'>{{exam}} </span>Comprehension questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session  </td>
+
+      </tr>
+
+
+        </table>  
+
+        {% for l in p.q %}
+
+                <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+                <div style="margin-top:0%;margin-bottom:-3.1%">Question {{forloop.counter}}.</div>
+
+                  <tr>
+                    <td >
+                            <textarea name='q1' readonly class="form-control" rows="3">{{ l.q1 }}</textarea>
+                     </td >
+                   </tr>
+
+                </table>
+        {% endfor %}
+    {% endfor %}
+
+    {% else %}
+    <div>no questions found !!</div>
+{% endif %}
+
+
+
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam}}" >
+                </td>
+            </tr>
+</table>
+
+
+
+
+
+
+
+
+    <div id="myDialog" title="Enter Assessment Score"></div>
+
+
+

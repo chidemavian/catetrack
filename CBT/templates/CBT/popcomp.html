@@ -1,0 +1,148 @@
+
+<html>
+<head>.
+    <!-- <title>SchApp 8.0 Enterprise School software{% block title %}{% endblock %}</title> -->
+
+
+</head>
+<body>
+
+
+
+
+
+<form  action="/cbt/options/enter/compre/options/{{ getdetails.qstcode }}/" method="post"
+enctype= "multipart/form-data"
+onsubmit="disable(this)">
+
+
+
+<table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+                    <tr>
+                        <td colspan="15" style="font-weight:bold;color:#ffffff;background-color:#000;text-align:center">
+                            Press ESC to close this box
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Session:
+                        </td>
+                        <td>
+                            {{ getdetails.comprehension.session }}
+                        </td>
+  
+
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Class:
+                        </td>
+                        <td  colspan="5">
+                            {{ getdetails.comprehension.klass }}
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Term:
+                        </td>
+                        <td>
+                            {{ getdetails.comprehension.term }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Exam Type:
+                        </td>
+                        <td>
+                            {{ getdetails.comprehension.exam_type }}
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td style="color:blue;">
+                            Question
+                        </td>
+                        <td >
+                            {{getdetails.q1}}
+                        </td>
+                    </tr>
+         </table>
+
+
+
+    <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+
+            <div class="form-group">
+
+
+                <tr>
+                    <div class="form-group">
+                        <input type="radio" name="option" value='A' >A
+                        <input class="form-control" autofocus required  placeholder= "Option A" name="optiona" type="text" >
+
+                    </div>
+
+
+              </tr>
+
+                <div class="form-group">
+                    <input type="radio" name="option" value='B' >B
+                    <input class="form-control"  required placeholder="Option B" name="optionb" type="text" >
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <input type="radio" name="option" value='C' >C
+                    <input class="form-control" required placeholder="Option C" name="optionc" type="text" >
+                    
+
+                </div>
+
+
+
+                <div class="form-group">
+                    <input type="radio" name="option" value='D' >D
+                    <input class="form-control" required placeholder="Option D" name="optiond" type="text" >
+                    
+                </div>
+
+
+                <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="    Continue    "> 
+
+
+
+</form>
+
+</table>
+
+    </table>
+    </form>
+</body>
+
+<script type="text/javascript" >
+    $(document).ready(function() {
+        $("#content").focus();
+    });
+</script>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+</body>
+</html>

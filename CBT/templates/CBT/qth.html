@@ -1,0 +1,106 @@
+{% extends 'welcome1.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+   <table style="margin-top:0.8%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+        <tr >
+
+            <td style=" text-align:right;float:centre">
+
+                <img style="width: 8em; height: 8em;text-align:right" src="/static/{{ school.logo }}" alt="{{ school.name }}" >
+            </td>
+
+            <td  style="text-align:center;font-family:verdana;font-size:1em">
+                <span style="font-size:2em"> {{ school.name  }}</span><br>
+                <span style="font-size:1.1em"> {{ school.address }}</span>
+            </td>
+
+          <td style=" text-align:right;float:centre">
+                <img style="width: 8em; height: 8em;" src="/static/{{ form.studentpicture }}" alt="{{ k.studentinfo.fullname  }}">
+          </td>
+
+        </tr>
+</table>
+
+
+<table style="margin-top:0.8%;margin-bottom:0.1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+
+<div style='text-align:center'>{{term}} End Term {{exam}} Examinations {{subject}} {{klass}},  {{session}}  Session</div>
+   </table>
+
+
+
+   <table style="margin-top:0.6%;margin-bottom:1%;" width="100%" class="table  table-bordered" id="dataTables-example">
+              <tr>
+                <td style="font-weight:bold">Name </td>
+                <td>{{name}}  </td>
+            </tr>
+
+</table>
+
+<div style="text-align:center; color:red"> Time Left: <span style="color:black"> 0 hr 20 Mins</span></div>
+
+
+{% if question %}
+
+    {% for k in question %}
+            <table style="margin-top:0.8%;margin-bottom:0%;font-size:0.8em" class="table  table-bordered" id="dataTables-example">
+                      <thead >
+                                <tr style="text-align:center">
+                                    <!-- <td >S/N</td> -->
+                                    <td >File  {{ forloop.counter }}.</td>
+                                </tr>
+                     </thead>
+                
+                      <tbody> 
+                                <tr style="text-align:center;">
+                                      <!-- <td >{{ forloop.counter }}.</td> -->
+
+                                     <td>
+                                       <img  style="width: 100px; height: 280px;" src="/static/{{ k.image }}"  >
+                                       </td>
+                                </tr> 
+      
+                                
+                    </tbody>         
+            </table>
+    {% endfor %}
+
+         
+
+    {% else %}
+        <div>You have not uploaded any questions yet</div>
+    {% endif %}
+
+
+              <form action="/cbt/take_test/submit/" method="post" enctype="multipart/form-data" role="form">
+
+
+            <table style="margin-top:1%;margin-bottom:02%" width="100%" class="table  table-bordered" id="dataTables-example">
+                <td>     
+                    <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test/previous/done/" ><i class="fa fa-backward fa-1x"></i>Preview</button>
+                </td>
+
+                <td>
+                    <button class="btn btn-lg btn-success btn-block" type ='submit' ><i class="fa fa-forward fa-1x"></i>Submit</button>
+                </td>
+            </table>
+
+             
+             </form>
+
+
+
+<script type="text/javascript" language="javascript">
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+};
+
+</script>
+{% endblock %}

@@ -1,0 +1,8 @@
+dowen2.db
+*.xls
+*.bak
+*.pyc
+sofis.db
+requirements.txt
+
+*.py.bak

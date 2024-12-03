@@ -1,0 +1,343 @@
+
+
+
+
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;">Passage 1</td>
+            </tr>
+</table>
+
+
+
+
+
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p1}}</div>
+
+            </table>
+
+
+
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p2}}</div>
+
+            </table>
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p3}}</div>
+
+            </table>
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p4}}</div>
+
+            </table>
+
+{% if quest %}
+
+
+
+    <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+          <tr>
+      
+        <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;"> <span style='color:blue'>{{exam}} </span>Comprehension questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session  </td>
+
+      </tr>
+
+
+        </table>
+        <div style="text-align:center">Touch the paperclip to add options</div>
+
+    {% for p in quest %}
+        {% if p.opt = 'No options yet' %}
+
+
+                        <table style="margin-top:3%;margin-bottom:0.2%" class="table table-bordered " >
+                  <tr>
+                    <td style="margin-top:0%;margin-bottom:-3.1%"> Q {{forloop.counter}}.</td>
+                    <td ><a href="#" onClick= "edqst({{ p.vid}})">{{ p.ques.q1 }} </a></td >
+               
+                  </tr>
+                </table>
+                <div style="margin-top:0.1%;margin-bottom:2%"> No options found</div>
+
+
+
+        {% else %}
+
+
+
+
+                <table style="margin-top:3%;margin-bottom:0.2%" class="table table-bordered " >
+                  <tr>
+                <td style="margin-top:0%;margin-bottom:-3.1%"> Q {{forloop.counter}}.</td>
+                <td >
+                    <a href="#" onClick= "edqst({{ p.vid}})">{{ p.ques.q1 }} </a>
+                </td >
+                
+                  </tr>
+                </table>
+
+
+                <table style="margin-top:0%;margin-bottom:02%" class="table table-bordered " >
+                  <tr>
+                    <td >A. <a href="#"  onClick= "edopt({{ p.vid}})">{{ p.opt.a }}</a>
+                        <input type="hidden" name="pA" id ="A" value="{{ p.opt.a }}" >
+
+                     </td >
+                   </tr>
+
+                  <tr>
+                    <td >B.<a href="#" onClick= "edoptb({{ p.vid}})">{{ p.opt.b }}</a>
+                        <input type="hidden" name="pB" id ="B" value="{{ p.opt.b }}" >
+                     </td >
+                   </tr>
+
+
+                  <tr>
+                    <td >C. <a href="#" onClick= "edoptc({{ p.vid}})">{{ p.opt.c }}</a>
+                        <input type="hidden" name="pC" id ="C" value="{{ p.opt.c }}" >
+                     </td >
+                   </tr>
+
+                  <tr>
+                    <td > D. <a href="#" onClick= "edoptd({{ p.vid}})">{{ p.opt.d }}</a>
+                        <input type="hidden" name="pD" id ="D" value="{{ p.opt.d }}" >
+                     </td >
+                   </tr>
+                  <tr>
+                    <td > <a href="#" onClick= "editans({{ p.vid}})">Ans = {{ p.ans }}</a>
+                     </td >
+                   </tr>
+                </table>
+        {% endif %}
+
+
+    {% endfor %}
+
+    {% else %}
+    <div>no questions found !!</div>
+{% endif %}
+
+
+
+
+
+
+
+    <div id="myDialog" ></div>
+
+<div id="myDialog" ></div>
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function edopt(vid){
+        var state = vid + ':'+ $("#A").val();
+        // alert(state);
+        var url = "/cbt/enter/option/edt/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    function edoptb(vid){
+        var state = vid + ':'+ $("#B").val();
+        // alert(state);
+        var url = "/cbt/enter/option/edtb/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    function edoptc(vid){
+        var state = vid + ':'+ $("#C").val();
+        // alert(state);
+        var url = "/cbt/enter/option/edtc/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    function edoptd(vid){
+        var state = vid + ':'+ $("#D").val();
+        // alert(state);
+        var url = "/cbt/enter/option/edtd/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+    function compopt(vid){
+        var state = vid;
+        // alert(state);
+        var url = "/cbt/enter/options/compre/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    function edqst(vid){
+        var state = vid;
+        // alert(state);
+        var url = "/cbt/enter/qst/edt/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function editans(vid){
+        var state = vid;
+        // alert(state);
+        var url = "/cbt/enter/option/answers/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogans();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+            function getdialogans(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Edit Answer' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+            function getdialogq(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Edit options' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+</script>
+

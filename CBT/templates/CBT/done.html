@@ -1,0 +1,34 @@
+
+
+
+{% extends 'welcome1.html' %}
+{% block sectionTitle %}Success{% endblock %}
+{% block content %}
+
+
+{{msg}}
+   <span style="font-size:1em;color:blue;text-align:center;"> Bravo!!!. SECTION A completed succcessfully!! <br> You may REVIEW your work or PROCEED to SECTION C(THEORY SECTION)</span>
+<!-- 
+   <div >To see how you have performed, click continue and proceed to script</div> -->
+
+<form action="/cbt/take_test/mytheory/" method="post" enctype="multipart/form-data" role="form">
+
+
+
+
+     <table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+            <td>     
+               <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/take_test/previous/done/" >Preview
+                <i class="fa fa-backward fa-1x"></i></button>
+            </td>
+             <td>
+               
+              <button class="btn btn-lg btn-success btn-block" type ='submit' >
+                <i class="fa fa-forward fa-1x"></i>Theory </button>
+                </td>
+
+     </table>
+
+
+</form>
+{% endblock %}

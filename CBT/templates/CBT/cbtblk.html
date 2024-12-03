@@ -1,0 +1,211 @@
+
+
+
+   <table style="margin-top:0%;margin-bottom:0%;font-size:0.7em" class="table">
+
+    <tr style="text-align:center">
+
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td ><a href="#" onClick= "autopost2()" >Comprehension</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+                <tr>
+                    <td ><a href="#" onClick= "autopost2()">Passage</a></td>
+                     <td > <a href="#" onClick= "autoobjq()" >Questions</a></td>
+                </tr>            
+            </table>
+
+        </td>
+
+        <td >
+            <table style="margin-top:0%;margin-bottom:0%;font-size:0.9em" class="table  table-bordered">
+
+            <tr>
+             <td style="background:blue"><a href="#" onClick= "autoblock2()" style="color:white">Block</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0;font-size:0.9em" class="table  table-bordered">
+
+                <tr>
+                    <td style="background:grey"><a href="#" onClick= "autoblock2()" style="color:white">Instruction</a></td>
+
+                     <td> <a href="#" onClick= "autbklq()" style="color:whdite">Questions</a></td>
+                </tr> 
+
+            </table>
+
+        </td>
+          <td >
+            <table style="margin-top:0%;margin-bottom:0%" class="table  table-bordered">
+
+            <tr>
+             <td><a href="#" onClick= "autoothers()" style="color:whte">Others</a></td>
+            </tr>
+            </table>
+
+            <table style="margin-top:0%;margin-bottom:0;font-size:0.9em%" class="table  table-bordered">
+                <tr>
+                    <!-- <td><a href="#" onClick= "autoothers()">Instruction</a></td> -->
+
+                     <td> <a href="#" onClick= "autoothers()" style="color:whdite">Questions</a></td>
+                </tr>         
+            </table>
+
+        </td>
+
+    </tr>
+
+
+</table>
+
+
+
+        <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+        <div style="margin-top:02%;margin-bottom:-3.1%">Enter Instruction</div>
+
+          <tr>
+            <td >
+                    <textarea name='instruction' class="form-control" rows="3"></textarea>
+             </td >
+           </tr>
+
+        </table>
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " >
+   <tr>
+
+        <input class="btn btn-lg btn-success btn-block" formaction="/cbt/enter/question/blkqst/"  name="submit" type= "submit" value="Save Instruction">
+
+   </tr>
+</table>
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:1em;"><span style='color:blue'>{{exam}} </span>instructions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session</td>
+            </tr>
+      </table>
+
+
+
+
+
+      <div>click the instruction tag to edit it</div>
+
+
+
+
+
+{% if q %}
+
+        {% for k in q %}
+            <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+            <div style="margin-top:0%;margin-bottom:-3.1%">
+
+              <a href="#" onClick= "editblock2({{k.code}})" >Instruction {{forloop.counter}}
+              </a>
+
+            </div>
+
+              <tr>
+
+                <td >
+                   <a href="#" onClick= "editblock2({{k.code}})" >
+                      <textarea  class="form-control" readonly rows="2">
+                        {{k.instruction}}
+                      </textarea>
+                       </a>
+                 </td >
+               </tr>
+
+            </table>
+
+            {% endfor %}
+  {% else %}
+  <div>No instructions found</div>
+
+{% endif %}
+
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam}}" >
+                </td>
+            </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<div id="myDialog" ></div>
+
+
+<script >
+    function editblock2(vid){
+        // alert(vid);
+        var state = vid;
+        var url = "/cbt/enter/question/editblkqst/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+        <script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Edit instruction tag' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>

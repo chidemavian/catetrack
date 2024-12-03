@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+ 
+<body>
+
+
+            
+fadgfa
+
+<div align="center" style="color:red;font-family:verdana;" > {{varerr}}</div>
+
+
+   <table style="margin-top:0.7%;margin-bottom:0% ; font-size:0.8em"  class="table  table-bordered" id="dataTables-example">
+    {% for pin in oblist %}
+
+                   <tr >
+                      <td >
+                        <b > Content {{forloop.counter}}.&nbsp;&nbsp;{{pin.content.content}}</b></td>
+                       <td align="right" colspan="4"><a href="#" onClick= "getdialogobj({{ pin.content.id}})"  title="Enter Objectives for {{ pin.content.content}}">Click here to enter Objectives</a></td>
+                   </tr>
+
+                   <tr> 
+                        <td > S/N</td>
+
+                        <td > Subject </td>
+
+                        <td > Class </td>
+
+                        <td > Term</td>
+
+                        <td > Objectives</td>
+                    </tr>
+                     {% if pin.objectives %}
+                          {% for p in pin.objectives  %}
+                         
+                
+                        <tr>
+                            <td >{{ forloop.counter}}</td>
+                            <td > {{ p.content.topic.subject}}</td>
+                            <td >{{ p.content.topic.klass}}</td>
+                            <td >  {{ p.content.topic.term}}</td>
+                            <td ><a href="/lesson/set_up/obj/delete/{{ p.id }}/"  title="Edit/Delete {{ p.subtopic}}">{{ p.objectives}}</a></td>
+                    </tr>
+                            {% endfor %}
+                            {% else %}
+                                <td colspan="7" class='null'>  .......No Contents Found for {{pin.content.content}}.</td>
+                            {% endif %}                      
+                       
+  {% endfor %}
+              
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+    <div id="myDialognew" title="Enter Content"> </div>
+
+      <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#myDialognew").hide();
+        });
+    </script>
+
+<script type="text/javascript" language="javascript">
+    function getdialogobj(vid){
+        //alert(vid);
+        var state = vid;
+        var url = "/lesson/set_up/obj/objajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialognew").html(html);
+                getdialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+        <script type="text/javascript" language="javascript">
+            function getdialog(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:600,
+                    width:650,
+                    title:'<a>SchApp 8.0</a>' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialognew").dialog(dialogOpts);
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+
+
+<div style="text-size:0.9em"> Will any of the options contain underline, italicized or bold charaters?</div>
+
+
+<table>
+
+    <td>
+        <form  action="/cbt/optiojjhgns/engblk/texts/{{state}}/" method="post" onsubmit="disable(this)">
+ 
+
+        <table width="100%" class="table  table-bordered " id="dataTables-example">
+                    <tr rowspan="2" style='border:0px solid black' align='center'>
+                  <img style="width: 230px; height: 230px;" src="/static/{{getdetails.question.image}}" alt="{{choose}}">
+              </tr>
+        </table>
+
+
+
+             <table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+            <td>
+               <button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/options/engothers/odatexts/{{state}}/" >No
+                <!-- <i class="fa fa-backward fa-1x"></i> -->
+            </button>
+            </td>
+     </table>
+        </form>
+    </td>
+<td>
+
+
+<form  action="/cbt/options/chooseothers/imagesothers/{{state}}/" method="post" onsubmit="disable(this)">
+
+<table width="100%" class="table  table-bordered " id="dataTables-example">
+            <tr style='border:0px solid black' align='center'>
+          <img style="width: 230px; height: 230px;" src="/static/{{getdetails.question.image}}" alt="{{getdetails.question.image}}">
+      </tr>
+</table>
+
+
+         <table width="100%" class="table  table-bordered " id="dataTables-example">
+
+            <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Yes">
+        </table>
+
+</form>
+
+</td>
+
+</table>
+
+
+
+
+<script type="text/javascript" >
+    $(document).ready(function() {
+        $("#content").focus();
+    });
+</script>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,175 @@
+
+<html>
+<head>.
+    <title>SchApp 8.0 Enterprise School software{% block title %}{% endblock %}</title>
+
+
+</head>
+<body>
+
+
+
+
+
+<form  action="/cbt/options/options/{{ getdetails.question.id }}/" method="post"
+enctype= "multipart/form-data"
+onsubmit="disable(this)">
+
+
+
+    <table style="margin-top:0.8%;margin-bottom:0%;font-size:0.6em " class="table  table-bordered" id="dataTables-example">
+
+
+                    <tr>
+                        <td style="color:blue;">
+                            Session
+                        </td>
+                        <td>
+                            {{ getdetails.question.block.session }}
+                        </td>
+  
+
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Class
+                        </td>
+                        <td  >
+                            {{ getdetails.question.block.klass }}
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Term
+                        </td>
+                        <td>
+                            {{ getdetails.question.block.term }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="color:blue;">
+                            Exam Type
+                        </td>
+                        <td>
+                            {{ getdetails.question.block.exam_type }}
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td style="color:blue;">
+                            Instruction
+                        </td>
+                        <td >
+                            {{getdetails.question.block.instruction}}
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td style="color:blue;">
+                            Question
+                        </td>
+                        <td >
+                            {{getdetails.question.q1}}
+                        </td>
+                    </tr>
+         </table>
+
+
+
+{% if getdetails.question.image != '/ax/image' %}
+    <table style="margin-top:0.8%;margin-bottom:0%;font-size:0.6em " class="table  table-bordered" id="dataTables-example">
+            <tr style='border:0px solid black' align='center'>
+          <img style="width: 20em; height: 20em;" src="/static/{{getdetails.question.image}}" alt="">
+      </tr>
+</table>
+
+{% endif %}
+
+
+ <table style=" margin-top:0%;margin-bottom:0.3%" width="100%" class="table  table-bordered " id="dataTables-example">
+
+    {% if getdetails.options %}
+
+
+            {% if getdetails.answer %}
+                <div class="form-group">
+                                 
+                    {% if getdetails.answer.ans == getdetails.options.a %}                          
+                                <input type="radio" name="myoptions" value='{{ k.a}}' checked >
+                                <!-- <label style='color:rede'>(A) {{ getdetails.options.a}} </label> -->
+                                <label>(A)<img style="width: 6em; height: 4.5em;" src="/static/{{getdetails.options.a}}" alt=""></label>
+                    {% else %}
+
+                            <label style='color:rede'>(A)<img style="width: 6em; height: 4.5em;" src="/static/{{getdetails.options.a}}" alt=""></label>
+                    {% endif %}
+                </div>
+
+ 
+                <div class="form-group">
+                          
+                    {% if getdetails.answer.ans == getdetails.options.b %}                          
+                        <input type="radio" name="myoptions" value='{{ k.b}}' checked >
+                        <label style='color:rede'>(B) {{ getdetails.options.b}} </label>
+                    {% else %}
+                        
+                        <!-- <label style='color:rede'>(B) {{ getdetails.options.b}} </label>  -->
+                        <label style='color:rede'>(B)<img style="width: 6em; height: 4.5em;" src="/static/{{getdetails.options.b}}" alt=""></label>
+
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                                 
+                    {% if getdetails.answer.ans == getdetails.options.c %}                          
+                        <input type="radio" name="myoptions" value='{{ k.c}}' checked >
+                        <label style='color:rede'>(C) {{ getdetails.options.c}} </label>
+                     {% else %}                           
+                        <label style='color:rede'>(C)<img style="width: 6em; height: 4.5em;" src="/static/{{getdetails.options.c}}" alt=""></label>
+                     {% endif %}
+                </div>
+
+                <div class="form-group">
+                         
+                    {% if getdetails.answer.ans == getdetails.options.d %}                          
+                        <input type="radio" name="myoptions" value='{{ k.d}}' checked >
+                        <label style='color:rede'>(D)<img style="width: 6em; height: 4.5em;" src="/static/{{getdetails.options.d}}" alt=""></label>                        
+                         
+                    {% else %}                             
+                        <label style='color:rede'>(D)<img style="width: 6em; height: 4.5em;" src="/static/{{getdetails.options.d}}" alt=""></label>
+                    {% endif %}
+                </div>
+            {% endif %}
+
+{% endif %}
+</table>
+                <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="    Continue    ">
+
+</form>
+
+
+</body>
+
+<script type="text/javascript" >
+    $(document).ready(function() {
+        $("#content").focus();
+    });
+</script>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+
+</body>
+</html>

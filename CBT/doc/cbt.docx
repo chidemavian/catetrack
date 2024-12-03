@@ -1,0 +1,31 @@
+
+
+
+there are 13 tables in all
+
+1.	tblquestion  			objective questions
+2.	tblcbtexams 			current assessment type [choices are mid and end term]
+3.	tbloptions 				flat options
+4.	tbloptioni 				image options
+5.	tblans 					answers table. 
+6.	tbltheory				theory questions table
+7.	tblcbtuser				users' table
+8.	tblcbtsubject			school schedule table
+9.	scheduled				student subject schedules
+10.	donesubjects			written papers
+11.	cbtcurrentquestion		the question number of question on display
+12.	cbtold					the question detail of the question in display
+13.	cbttrans				already answered questions
+
+
+
+schedulling
+there are two categories of schedulling. one by the sch another by the student
+all schedules by the school are kept in 8, while schedules by the student are stored in 10. 
+
+dynamics
+from the start, you clock in by picking a question. the question itself is stored in cbtold, while the question number is stored in cbtcurrentquestion
+
+
+when u   
+

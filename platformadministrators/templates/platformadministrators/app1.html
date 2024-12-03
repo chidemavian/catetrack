@@ -1,0 +1,85 @@
+
+
+
+<div>Which of these Services is <span style="color:red">{{school.company.name}} {{school.address}} </span>interested in</div>
+
+
+<table style="margin-top:01%;margin-bottom:03%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                <tr style="font-weight:bold">
+                  <td>S/N</td>
+                  <td>App</td>
+                  <td>Select</td>
+                </tr>
+
+      {% for j in sec %}
+
+      <tr>
+
+        <td>{{forloop.counter}}</td>
+        <td>{{j.app}}</td>
+        {% if j.alias = 'selected' %}
+            <td >
+                <a style='color:green' href="#" onClick= "appselect({{ j.app_code }})">
+                    Activated
+                 </a>
+            </td>
+        {% else %}
+            <td>
+                <a style='color:blue' href="#" onClick= "appselect({{ j.app_code }})">
+                    Click to activate
+            </td>
+        {% endif %}
+
+      </tr>
+            {% endfor %}
+
+  </table>
+
+
+
+<div id="myDialog" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script >
+    function appselect(vid){
+        var state = vid + ":" + '{{branch_code}}' + ":" + '{{section}}';
+         // alert(state)
+        var url = "/admin/onboarding/client/select/popapp/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myDialog").dialog(dialogOpts);
+    }
+
+</script>

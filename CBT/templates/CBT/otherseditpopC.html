@@ -1,0 +1,51 @@
+
+
+<html>
+<head>
+
+   
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<form  action="/cbt/enter/optionA/otherschangeC/{{code}}/" 
+method="post" onsubmit="disable(this)">
+
+
+<table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+
+
+<tr>
+  <td >
+  <textarea name='getdetails' class="form-control"  rows="3">{{a}}</textarea>
+   </td >
+ </tr>
+
+</table>
+
+  <table style="margin-top:3%;margin-bottom:0%" class="table  table-bordered " >
+   <tr>
+
+        <input class="btn btn-lg btn-success btn-block"   name="submit" type= "submit" value="Save">
+
+   </tr>
+</table>
+
+<input type="hidden" name="optionA" value="{{ a }}" >
+
+
+</form>
+
+
+
+
+

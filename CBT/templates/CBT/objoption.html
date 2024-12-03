@@ -1,0 +1,206 @@
+
+
+
+
+
+<table style="margin-top:02%;margin-bottom:0%" class="table table-bordered " >
+            <tr>
+               <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;">Passage 1</td>
+            </tr>
+</table>
+
+
+
+
+
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p1}}</div>
+
+            </table>
+
+
+
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p2}}</div>
+
+            </table>
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p3}}</div>
+
+            </table>
+
+            <table style="margin-top:03%;margin-bottom:0%" class="table table-bordered " >
+             
+
+            <div style="margin-top:02%;margin-bottom:-3.1%">{{comp.p4}}</div>
+
+            </table>
+
+{% if quest %}
+
+
+
+    <table style="margin-top:3%;margin-bottom:02%" class="table table-bordered " >
+          <tr>
+      
+        <td style="text-align:center;color:black;background-color:#ccccc0;font-size:0.8em;"> <span style='color:blue'>{{exam}} </span>Comprehension questions for <span style='color:blue'>{{subject}} {{klass}} {{term}} </span>term <span style='color:blue'>{{session}} </span>Session  </td>
+
+      </tr>
+
+
+        </table>
+        <div style="text-align:center">Touch the paperclip to add options</div>
+
+    {% for p in quest %}
+
+        {% if p.opt = 'No options yet' %}
+
+                <table style="margin-top:3%;margin-bottom:0.2%" class="table table-bordered " >
+                  <tr>
+                    <td style="margin-top:0%;margin-bottom:-3.1%"> Q {{forloop.counter}}.</td>
+                    <td >{{ p.ques.q1 }}</td >
+                <td>
+                    <a href="#" onClick= "compopt({{ p.vid}})"title="Enter options for Q{{forloop.counter}}.">
+                    <i class="fa fa-paperclip fa-2x">
+                    </i></a>
+                </td>                
+                  </tr>
+                </table>
+                <div style="margin-top:0.1%;margin-bottom:2%"> No options found</div>
+        {% else %}
+
+
+                <table style="margin-top:3%;margin-bottom:0.2%" class="table table-bordered " >
+                  <tr>
+                    <td style="margin-top:0%;margin-bottom:-3.1%"> Q {{forloop.counter}}.</td>
+                    <td >{{ p.ques.q1 }}</td >
+                  </tr>
+                </table>
+        
+
+
+                <table style="margin-top:0%;margin-bottom:0.2%" class="table table-bordered " >
+                  <tr>
+                    <td >A. {{ p.opt.a }}
+                     </td >
+                   </tr>
+
+                  <tr>
+                    <td >B.{{ p.opt.b }}
+                     </td >
+                   </tr>
+
+
+                  <tr>
+                    <td >C. {{ p.opt.c }}
+                     </td >
+                   </tr>
+
+                  <tr>
+                    <td > D. {{ p.opt.d }}
+                     </td >
+                   </tr>
+                  <tr>
+                    <td > Ans = {{ p.ans }}
+                     </td >
+                   </tr>
+                </table>
+
+        {% endif %}
+
+
+    {% endfor %}
+
+    {% else %}
+    <div>no questions found !!</div>
+{% endif %}
+
+
+
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam}}" >
+                </td>
+            </tr>
+</table>
+
+
+
+
+
+    <div id="myDialog" ></div>
+
+
+
+<div id="myDialog" title="Enter Assessment Score"></div>
+
+
+
+<script type="text/javascript" language="javascript">
+    function compopt(vid){
+        var state = vid ;
+        // alert(state);
+        var url = "/cbt/enter/options/compre/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $("#myDialog").html(html);
+                getdialogq();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+<script type="text/javascript" language="javascript">
+            function getdialogq(){
+                var dialogOpts = {
+                    autoOpen:true,
+                    modal:true,
+                    position: ["center", "middle"],
+                    height:"auto",
+                    width:"auto",
+                    title:'Enter options' ,
+                    closeOnEscape:true,
+                    show: true,
+                    hide: true,
+                    bgiframe: true
+                };
+                $("#myDialog").dialog(dialogOpts);
+            }
+
+        </script>

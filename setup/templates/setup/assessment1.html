@@ -1,0 +1,101 @@
+
+
+
+<table style="margin-top:01%;margin-bottom:0%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+                <tr style="font-weight:bold">
+                  <td> {{reportsheet}} Assessment </td>
+                  <td><input type='text' name='assessment' required ></td>
+                  <td> Obtainable </td>
+                  <td><input type='text' name='obtainable' size ='5' required ></td>
+                </tr>
+
+</table>
+                  
+
+   <table style="margin-top:0.2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+           <div class="card-footer">
+            <td >
+              <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Save">
+            </td>
+          </div>
+
+</table>
+
+{% if sec %}
+<table style="margin-top:01%;margin-bottom:03%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+<tr style="font-weight : bold">
+<td>S/N</td>
+<td>Assessment</td>
+<td>Obtainanble</td>
+</tr>
+
+{% for k in sec %}
+<tr>
+<td>{{forloop.counter}}</td>
+<td>{{k.assessment}}</td>
+<td>{{k.max_in}}</td></tr>
+{% endfor %}
+</table>
+{% else %}
+<div>No record found for {{reportsheet}}</div>
+{% endif %}
+
+
+
+
+<input type='hidden' name='reportsheet' value = '{{reportsheet}}'>
+<input type='hidden' name='section_code' value = '{{section_code}}'>
+
+
+
+
+<div id="myDialog" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myDialog").hide();
+            });
+</script>
+<script >
+    function poppsmnych(vid){
+        // var state = vid + ":" + $("#id_branch_code").val();
+        var state =  '{{section_code}}' + ":" + '{{branch_code}}';
+         // alert(state)
+        var url = "/admin/onboarding/client/popview/psycho/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#myDialog").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myDialog").dialog(dialogOpts);
+    }
+
+</script>
+

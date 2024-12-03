@@ -1,0 +1,119 @@
+
+
+
+
+
+
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                    <tr style = "font-weight:bold">
+                        <td > Value</td>
+                        <td > Remarks </td>
+                    </tr>
+
+                    <tr style = "font-weight:bold">
+                        <td > <input name='vvalue' type='text' size='3' required>  
+                
+                        <td > <input name='remark' type='text' size='15' required> </td>
+                    </tr>
+     
+</table>
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+           <div class="card-footer">
+            <td >
+              <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Save">
+            </td>
+          </div>
+
+</table>
+
+
+{% if sec %}
+<div style="text-align:center"> {{domain}} Grading System for {{subsection}}  section</div>
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                    <tr style = "font-weight:bold">
+                        <td > S/N</td>
+                        <td > Value </td>
+                        <td > Remark </td>
+                    </tr>
+
+                    {% for pincode in sec %}
+                        <tr>
+                            <td >{{ forloop.counter}}.</td>                          
+                            <td > {{ pincode.vrange}}</td>
+                            <td > <a href="/setup/class/delete/{{ pincode.id }}/"  title="Delete {{ pincode.klass}}">{{ pincode.remark}}</a></td>
+                            {% endfor %}
+                    </tr>
+     
+</table>
+
+                
+{% else %}
+<div style='text-align:center'> No grading system found</div>
+
+{% endif %}
+
+
+
+<input type= 'hidden' name='domain' value ='{{domain}}'>
+<input type= 'hidden' name='subsection' value ='{{subsection}}'>
+<input type= 'hidden' name='section' value ='{{section}}'>
+
+
+
+
+
+<div id="myclassrooms" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myclassrooms").hide();
+            });
+</script>
+<script >
+    function streampop(vid){
+        var state = vid + ":" + '{{branch_code}}' + ':' + '{{stream}}';
+         // alert(state)
+        var url = "/setup/conkfiguration/popupstreamajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myclassrooms").show();
+                $("#myclassrooms").html(html);
+                get_ca_dialog();
+            }
+        });
+        return false;
+    }
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript" language="javascript">
+    function get_ca_dialog(){
+        var dialogOpts = {
+            autoOpen:true,
+            // modal:true,
+            // position: ["center", "middle"],
+            title:"Touch  the x to close" ,
+            closeOnEscape:true,
+            show: true,
+            // hide: true,
+            bgiframe: true
+        };
+        $("#myclassrooms").dialog(dialogOpts);
+    }
+
+</script>
+
+
+

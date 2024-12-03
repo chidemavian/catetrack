@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html>
+
+<body>
+
+
+
+
+<form action="/controllers/edituseraca/{{ getdetails.id }}/" method="post" name ="main" onsubmit="disable(this)">
+
+<table style="margin-top:0.8%;margin-bottom:0%; font-size:0.8em" class="table  table-bordered" id="dataTables-example">
+
+<tr>
+        <td>User Name:</td>
+        <td>
+          <input id="id_username" type="text" name="username"  value = "{{ getdetails.username }}"  readonly = "readonly" class="loginTxtbox">
+        </td>
+</tr>
+<tr>
+     <td>Staff Name:</td>
+     <td>
+      <input id="id_staffname" type="text" name="staffname" value = "{{ getdetails.staffname }}" class="loginTxtbox" readonly = "readonly" ></td>
+</tr>
+</table>
+
+<table style="margin-top:02%;margin-bottom:0%; font-size:0.8em" class="table  table-bordered" id="dataTables-example">
+    
+
+  <caption Style='text-align:center;margin-top:0%;margin-bottom:-02%'><b>CONFIGURATION</b></caption>
+
+  <tr style="font-weight:bold">
+    
+    <td > Allow </td><td><input type="checkbox" name="setup" id="setup" {{setup}} ></td>
+
+  </tr>
+</table>
+
+
+  <table style="text-align:center;margin-top:0%;margin-bottom:0%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">
+
+  <caption Style='text-align:center;margin-top:0%;margin-bottom:-02%'><b>ENROLLMENT</b></caption>
+
+  <tr style="font-weight:bold">
+    
+    <td > Enrollment<input type="checkbox" name="studentregistration" id="studentregistration" {{studentregistration}}></td>
+
+    <td >Edit Info<input type="checkbox" name="editregistration" id="editregistration" {{editregistration}}></td>
+
+    <td > Class List<input type="checkbox" name="studentreport" id="studentreport" {{studentreport}}></td>
+</tr>
+<tr>
+    <td > Withdraw Student<input type="checkbox" name="withdraw" id="withdraw" {{withdraw}}></td>
+
+    <td >Return Student<input type="checkbox" name="returngonestudent" id="returngonestudent" {{returngonestudent}}></td>
+
+    <td >Withraw Report<input type="checkbox" name="withdrawnreport" id="withdrawnreport" {{withdrawnreport}}></td>
+
+  </tr>
+</table>
+
+
+<!-- <tr>
+  <caption>Student Info</caption>
+    New Student<input type="checkbox" name="studentregistration" id="studentregistration" {{studentregistration}}>
+      Edit Student<input type="checkbox" name="editregistration" id="editregistration" {{editregistration}}>
+     Student Report<input type="checkbox" name="studentreport" id="studentreport" {{studentreport}}>
+    Withdraw Student<input type="checkbox" name="withdraw" id="withdraw" {{withdraw}}>
+       Return Student<input type="checkbox" name="returngonestudent" id="returngonestudent" {{returngonestudent}}>
+       Withraw Report<input type="checkbox" name="withdrawnreport" id="withdrawnreport" {{withdrawnreport}}></td>
+</tr> -->
+
+
+  <table style="text-align:center;margin-top:0%;margin-bottom:0%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">
+
+  <caption Style='text-align:center'><b>STUDENT BILL</b></caption>
+
+  <tr style="font-weight:bold">
+    
+    <td >  Bill Label<input type="checkbox" name="expensedecription" id="expensedecription" {{expensedecription}}></td>
+
+
+
+    <td > Bill SetUp<input type="checkbox" name="billsetup" id="billsetup" {{billsetup}}></td>
+
+
+    <td > Additional Bill<input type="checkbox" name="additionalexpenses" id="additionalexpenses" {{additionalexpenses}}></td>
+</tr>
+<tr>
+
+
+    <td > Print Bill<input type="checkbox" name="printbill" id="printbill" {{printbill}}></td>
+
+
+
+    <td >Bill Schedule<input type="checkbox" name="billschedule" id="billschedule" {{billschedule}}></td>
+
+  </tr>
+</table>
+
+
+<!--     <tr>
+        <td colspan="2"><strong>Bill Module ::</strong>
+            Bill Desc.<input type="checkbox" name="expensedecription" id="expensedecription" {{expensedecription}}>
+
+            Bill SetUp<input type="checkbox" name="billsetup" id="billsetup" {{billsetup}}>
+
+            Additional Bill<input type="checkbox" name="additionalexpenses" id="additionalexpenses" {{additionalexpenses}}>
+
+
+            Print Bill<input type="checkbox" name="printbill" id="printbill" {{printbill}}>
+            Bill Schedule<input type="checkbox" name="billschedule" id="billschedule" {{billschedule}}>
+          </td>
+    </tr> -->
+
+  <table style="text-align:center;margin-top:0%;margin-bottom:0%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">
+
+  <caption Style='text-align:center'><b>ASSESSMENT</b></caption>
+
+  <tr style="font-weight:bold">
+    
+    <td >Report Sheet<input type="checkbox" name="reportsheet" id="reportsheet" {{reportsheet}}></td>
+
+
+
+    <td>Broad Sheet<input type="checkbox" name="broadsheet" id="broadsheet" {{broadsheet}}></td>
+
+  </tr>
+</table>
+
+
+<!--     <tr>
+        <td colspan="2"><strong>Assessment ::</strong>
+            Report Sheet<input type="checkbox" name="reportsheet" id="reportsheet" {{reportsheet}}>
+
+            Broad Sheet<input type="checkbox" name="broadsheet" id="broadsheet" {{broadsheet}}>
+            </td>
+    </tr> -->
+
+<!-- <tr>
+<td style="text-align:center">
+
+<input name="submit" type= "submit" value="Update User Account">
+ </td>
+
+</tr> -->
+  <table style="text-align:center;margin-top:0%;margin-bottom:0%;font-size:0.7em" width="100%" class="table  table-bordered table" id="dataTables-example">
+  <tr>
+      <td colspan="2" style="text-align:center">
+           <input name="submit" type= "submit" value="Update User Account" >
+       </td>
+  </tr>
+</table>
+</form>
+
+<!-- parti-->
+
+
+</body>
+
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+</html>

@@ -1,0 +1,30 @@
+
+
+
+ 
+
+
+
+   <!-- <div>Which section of {{school}} {{address}} will use this app</div> -->
+
+<form action = "" method='post'  enctype="multipart/form-data" onsubmit="disable(this)"
+ >
+
+
+<div style="text-align:center">List of Subjects for <span style="color:red">{{sec}}</span> Section</div>
+   <table style="margin-top:01%;margin-bottom:0%;font-size:1em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <tr style="font-weight:bold">
+      <td > S/N</td><td > Subjects</td><td > Code</td>
+    </tr> 
+    {% for k in sections %}
+<tr><td>{{forloop.counter}}.</td>
+<td>{{k.subject}}</td><td>{{k.code}}</td></tr>
+{% endfor %}
+</table>
+
+<input type="hidden" name="branch_code"  readonly="readonly" value="{{ branch_code }}" class ="loginTxtbox">
+
+<div>Click <a href="">here</a> to add subjects</div>
+
+</form>

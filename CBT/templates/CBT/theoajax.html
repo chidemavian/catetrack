@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+ 
+<body>
+
+
+    {% if data %}
+      <table style="margin-top:0.8%;margin-bottom:0%;font-size:0.8em" class="table  table-bordered" id="dataTables-example">
+                  <thead >
+                            <tr style="text-align:center">
+                                <td >S/N</td>
+                                <td >Question</td>
+                                <td >Delete</td>
+
+                            </tr>
+                 </thead>
+            
+                  <tbody>
+                                
+                         {% for student in data %}
+                            <tr style="text-align:center;">
+                                  <td >{{ forloop.counter }}.</td>
+
+                                 <td>
+                                   <img  style="width: 80px; height: 180px;" src="/static/{{ student.image }}"  >
+                                   </td>
+                                   <td >
+                                    <a href="#" onClick= "theory({{ student.id}})">Delete</td>
+                            </tr> 
+                                {% endfor %}
+                            
+                </tbody>         
+                  </table>
+                </tr>
+             </table>
+
+    {% else %}
+        <div>You have not uploaded any questions yet</div>
+    {% endif %}
+
+
+<div id="theoo" style="width: 100%;"></div>
+
+
+
+<script type="text/javascript" language="javascript">
+    function theory(vid){
+        //alert(vid);
+        var state = vid;
+        var url = "/cbt/deletheoajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                //$("#myDialog").show();
+                $("#theoo").html(html);
+                getdialogd();
+            }
+        });
+        return false;
+    }
+
+</script>
+<script type="text/javascript" language="javascript">
+    function getdialogd(){
+        var dialogOpts = {
+            autoOpen:true,
+            modal:true,
+            // position: ["center", "middle"],
+            height:'auto',
+            width:'auto',
+            title:'<a>SchApp 8.0 Delete question image</a>' ,
+            closeOnEscape:true,
+            show: true,
+            hide: true,
+            bgiframe: true
+        };
+        $("#theoo").dialog(dialogOpts);
+    }
+
+</script>
+</body>
+
+</html>

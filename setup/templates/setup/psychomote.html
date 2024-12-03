@@ -1,0 +1,108 @@
+{%extends 'setup/typography.html' %}
+{% block content %}
+
+
+
+
+
+<form action="" method="post" name ="main" id="form1" onsubmit="disable(this)">
+
+                
+    <div align ="center" style="background-color:#ccccc0;border:0px solid black;width:100%;height:3%; font-size:16px;color:black;text-align:center">Psychomotive Domain Set Up </div>
+
+ 
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+            <tr>
+                <td align ="left" style="width:auto;">{{ form.section.label }}</td>
+                <td align ="left" style="width:auto;">{{form.section}}</td>
+    
+            </tr>
+
+</table>
+
+
+<table style="margin-top:0%;margin-bottom:2%;font-size:0.8em" width="100%" class="table  table-bordered" id="dataTables-example">
+<tr >
+    <div class="boxstreams"></div>
+</tr>
+</table>
+
+
+        
+  <script type="text/javascript" >
+        $(document).ready(function() {            
+
+            $("#id_section").change(function () {
+                deptpost();
+            });
+
+            getsection()
+    
+        });
+    </script>
+
+ </form>
+
+
+
+
+
+        <script type="text/javascript" language="javascript">
+        function getsection(){
+            var state = "{{varuser}}" ;
+            // alert(state);
+            var url = "/setup/configuration/getsection/";
+            var i = 0;
+            var data='userid='+state;
+            $("#id_section").val('');   
+            $("#id_section").html('');
+            if (state != undefined){
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:data,
+                    success: function(data){
+                        var options = '';
+                        for (i=0; i<data.length; i++){
+                            options += '<option value="' + data[i] +'">' + data[i] + '</option>'
+                        }
+                        $("#id_section").append(options);
+                        deptpost();
+
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+
+
+    <script type="text/javascript" language="javascript">
+    function deptpost(){
+
+        var state =  "{{varuser}}"+ ":" +$("#id_section").val();
+
+        // alert(state);
+
+        var url = "/setup/configuration/getpsychoajax/";
+        var i = 0;
+        var data='userid='+state;
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(html) {
+                $(".boxstreams").show();
+                $(".boxstreams").html(html);
+
+            }
+        });
+        return false;
+    }
+</script>
+
+    {% endblock %}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SchApp 8.0 {% block title %}{% endblock %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+
+
+
+<form  action="/cbt/enter/question/english/" 
+method="post" onsubmit="disable(this)">
+        
+<table>
+
+            <tr>
+                <td>
+                    <input type="hidden" name="term" value="{{ term }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="session" value="{{ session }}" >
+                </td>
+
+                <td>
+                    <input type="hidden" name="klass" value="{{ klass }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="subject" value="{{ subject }}" >
+                </td>
+
+                 <td>
+                    <input type="hidden" name="exam" value="{{ exam}}" >
+                </td>
+            </tr> 
+
+
+            
+</table>
+
+<table style="margin-top:0%;margin-bottom:02%;font-size:0.7em" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+
+  <td >
+    <input class="btn btn-lg btn-success btn-block" formaction="/cbt/enter/question/english/"  name="submit" type= "submit" value="Click here to continue">
+</td>
+        
+</table>
+    
+</form>
+
+</html>

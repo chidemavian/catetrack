@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+{% if getdetails %}
+
+<div style="margin-top:02%;margin-bottom:0.2%;text-align:center" > {{klass}}  Classrooms </div>
+
+<table style="margin-top:0%;margin-bottom:0.2%;font-size:0.8em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+                  <tr style = "font-weight:bold">
+                        <td
+                        > S/N</td>
+                        <td 
+                        > Classrooms </td>
+                        <td > Delete </td>
+
+                    </tr>
+
+                    {% for pincode in getdetails %}
+                        <tr>
+                        <td >{{ forloop.counter}}.</td>
+                        <td >{{ pincode.arm}}</td>
+                        <td ><a href="/setup/arm/delete/{{ pincode.id }}/" title="Delete Arm {{ pincode.arm}}">{{ pincode.arm}}</a></td>
+
+                    {% endfor %}
+                    </tr>
+             
+                </table> 
+
+
+{% else %}
+
+<div style="margin-top:02%;margin-bottom:0.2%;text-align:center" > No Classrooms  found for {{klass}}</div>
+{%endif %}
+
+
+
+
+

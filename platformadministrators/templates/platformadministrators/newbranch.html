@@ -1,0 +1,91 @@
+
+{% extends 'platformadministrators/administrators_base.html' %}
+
+
+{% block content %}
+
+
+<form action="" method='post' enctype="multipart/form-data"onsubmit="disable(this)">
+
+
+
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+             <tr >
+              <td><label for="id_month">Client</label></td>
+                 <td> 
+                           <select name="client" id="id_client" required>
+                            <option value = '-----'>-----</option>
+                               {% for pincode in data %}                              
+                                   <option value="{{pincode.school_code}}">{{pincode.name}}</option>
+                               {% endfor %}
+                          </select>
+                 </td>
+             </tr>
+
+
+</table>
+
+
+<table style="margin-top:01%;margin-bottom:0.2%" width="100%" class="table  table-bordered" id="dataTables-example">
+           <tr >
+                <div class="boxfund"></div>
+           </tr>
+</table>
+
+
+</form>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            var pickerOpts = {
+                //appendText: "mm/dd/yy",
+                //defaultDate: "+5",
+                showOtherMonths: true,
+                changeMonth: true,
+                changeYear: true,
+                dateFormat:"yy-mm-dd"
+            };
+
+            autopostclient();
+        });
+    </script>
+
+
+  <script type="text/javascript" >
+        $(document).ready(function() {            
+
+            $("#id_client").change(function () {
+                autopostclient();
+            });   
+        });
+    </script>
+
+        <script type="text/javascript" language="javascript">
+        function autopostclient(){
+
+            var state =  $("#id_client").val();
+
+            // alert(state)
+
+            var url = "/admin/onboarding/client/branches/select/";
+            var i = 0;
+            var data='userid='+state;
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:data,
+                success:function(html) {
+                    $(".boxfunddsd").hide();
+                    $(".boxfund").show();
+                    $(".boxfund").html(html);
+
+                }
+            });
+            return false;
+        }
+    </script>
+    
+{% endblock %}

@@ -1,0 +1,299 @@
+
+{% extends 'welcome.html' %}
+
+
+{% block content %}
+<html> 
+
+
+            <div class="row">
+           {% if pincode.platformownwer %}
+                <a href="/managers/platformowners/welcome/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">                       
+                        <div class="panel-heading">                            
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-gear fa-5x fa-spin"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Platform Managers</div>
+                                </div>                                
+                            </div>
+                        </div>                        
+                            <div class="panel-footer">
+                                <span class="pull-left">Create Admin</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>                      
+                    </div>
+                </div>
+                </a>
+            {% endif %}
+            {% if pincode.platformadmin %} 
+                <a href="/student/wel/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x fa-vibrate"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Onboarding</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                      
+                    </div>
+                </div>
+                  </a>
+            {% endif %}
+            {% if pincode.reportsheet or pincode.broadsheet %}
+                  <a href="/reportsheet/wel/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-edit fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Reportsheet</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        
+                    </div>
+                </div>
+                </a>
+            {% endif %}
+            {% if pincode.curriculum %}
+                <a href="/lesson/wel/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-maroon">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-paperclip fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Curriculum</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                  </a>
+            {% endif %}
+            {% if pincode.curriculum %}
+                <a href="/cbt/home/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-choco">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-laptop fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>CBT</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                  </a>
+            {% endif %}
+             {% if pincode.curriculum %}
+                <a href="#">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-list fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Library</div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                 </a>
+                {% endif %}
+                
+               {% if pincode.billing or pincode.expensedecription or pincode.billsetup or pincode.additionalexpenses or pincode.printbill or pincode.billschedule %}
+                <a href="/bill/wel/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-purple">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-money fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Billing</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                 </a>
+                 {% endif %}
+                 {%if pincode.accountsppppp %}
+                 <a href="#">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-wine">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-money fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Accounts</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        
+                    </div>
+                </div>
+                </a>
+            {% endif %}
+            {% if pincode.createuser %}
+                <a href="/controllers/createuser/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-light">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-gamepad fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Controllers</div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                 </a>
+            {% endif %}
+<!--             {% if pincode.createuser %} -->
+                <a href="#">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-teal">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-bus fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Transport</div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                 </a>
+<!--             {% endif %} -->
+             {% if pincode.curriculum %}
+                <a href="/assignment/assignment/">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-wine">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-envelope-o fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"></div>
+                                    <div>Assignment</div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                       
+                    </div>
+                </div>
+                 </a>
+                {% endif %}
+
+            </div>
+
+
+{% endblock %}

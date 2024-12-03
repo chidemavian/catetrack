@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+    <title>SchApp 8.0 Enterprise School software{% block title %}{% endblock %}</title>
+
+    <script language="javascript" type="text/javascript">
+        function disable(f)
+        {
+            var button = f.elements['submit'];
+            button.value = 'Processing';
+            button.disabled = 'true';
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<!-- <form  action="/cbt/delete/sche/yes/{{ user.id }}/" method="post" onsubmit="disable(this)"> -->
+   
+<form  action="/cbt/enter/theory/yesdel/{{ data.id }}/" method="post" onsubmit="disable(this)">
+
+
+             
+    <table style="margin-top:0%;margin-bottom:0%" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+                <td colspan="3" style="font-weight:bold;color:#ffffff;background-color:#000;text-align:center"> Press ESC to close this box</td>
+
+    </table>  
+
+     <table style="margin-top:1%;margin-bottom:0%" width="100%" class="table  table-bordered" id="dataTables-example">
+     	<td>
+
+<div style='text-align:center'>
+           <img  style="width: 80px; height: 180px;" src="/static/{{ data.image }}"  >
+ </div>
+</td>
+   </table>
+
+<table style="margin-top:0%;margin-bottom:0%" width="100%" class="table  table-bordered table-hover" id="dataTables-example">
+  <td >
+  	<button class="btn btn-lg btn-success btn-block" type ='submit'><i class="fa fa-check fa-1x"></i>Delete</button>
+  </td>
+
+  <td >
+  	<button class="btn btn-lg btn-success btn-block" type ='submit' formaction="/cbt/enter/theory/" ><i class="fa fa-close fa-1x">Cancel</i></button>
+  </td>
+</table>
+
+
+</form>
+</body>
+
+
+
+</body>
+</html>
+

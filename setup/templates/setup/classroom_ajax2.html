@@ -1,0 +1,78 @@
+
+
+
+
+
+
+
+<form action ="/setup/class/" method ='post'>
+
+
+{% for k in getdetails %}
+  <table style="margin-top:01%;margin-bottom:03%;font-size:0.7em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+    <tr>
+        
+        <td>{{k.company.company.name}}</td>
+
+    </tr>
+    <tr>
+        <td>{{k.company.address}}</td>
+
+    </tr>
+
+    <tr>
+        <td>{{k.stream}}</td>
+
+    </tr>
+
+</table>
+
+  <table style="margin-top:01%;margin-bottom:03%;font-size:0.7em;text-align:center" width="100%" class="table  table-bordered" id="dataTables-example">
+
+
+    <tr>
+        <td>Arm</td>
+        <td>  <input type= 'text' value = '{{k.alias}}' name='room' required></td>
+
+    </tr>
+
+
+<table style="margin-top:2%;margin-bottom:2%;font-size:0.9em" width="100%" class="table  table-bordered" id="dataTables-example">
+           <div class="card-footer">
+            <td >
+              <input class="btn btn-lg btn-success btn-block" name="submit" type= "submit" value="Save">
+            </td>
+          </div>
+
+</table>
+
+<input type= 'hidden' name='branch_code' value ='{{branch_code}}'>
+<input type= 'hidden' name='stream_code' value ='{{stream_code}}'>
+<input type= 'hidden' name='stream' value ='{{stream}}'>
+
+
+</table>
+
+
+{% endfor %}
+
+
+
+
+</form>
+
+
+
+<div id="myclassrooms" title="Sections Dialog Box"></div>
+
+<script type="text/javascript" >
+            $(document).ready(function() {
+                $("#myclassrooms").hide();
+            });
+</script>
+
+
+
+
+
